@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0EA5E9" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0c4a6e" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#FF8C00" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#8B4513" media="(prefers-color-scheme: dark)">
 
     <title>KhaDo Remodeling - Home Design & Video Showcase | Florida</title>
     <meta name="description" content="Explore KhaDo Remodeling's innovative home design concepts and watch our design showcase video to visualize your dream home in Florida.">
@@ -12,7 +12,7 @@
 
     <meta property="og:title" content="KhaDo Remodeling - Innovative Home Design & Video Showcase">
     <meta property="og:description" content="Watch our design showcase and visualize your perfect Florida home with KhaDo Remodeling's design expertise.">
-    <meta property="og:image" content="https://placehold.co/1200x630/0EA5E9/ffffff?text=Home+Design+Studio">
+    <meta property="og:image" content="https://placehold.co/1200x630/FF8C00/FFFDD0?text=Home+Design+Studio">
     <meta property="og:url" content="https://khadoremode.com/design.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="KhaDo Remodeling">
@@ -34,16 +34,26 @@
             theme: {
                 extend: {
                     colors: {
-                        sky: {
-                            50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
-                            400: '#38bdf8', 500: '#0EA5E9', 600: '#0284C7', 700: '#0369A1',
-                            800: '#075985', 900: '#0c4a6e'
+                        'primary-orange': { // Main accent color
+                            DEFAULT: '#FF8C00', // DarkOrange
+                            'light': '#FFA500', // Orange
+                            'dark': '#CC7000',  // Darker Orange
                         },
-                        slate: {
-                            50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1',
-                            400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155',
-                            800: '#1e293b', 900: '#0f172a'
-                        }
+                        'accent-brown': { // Secondary accent/wood color
+                            DEFAULT: '#8B4513', // SaddleBrown
+                            'light': '#A0522D', // Sienn
+                            'dark': '#654321',  // Darker Brown
+                        },
+                        'bg-cream': { // Light background color
+                            DEFAULT: '#FFFDD0', // Cream
+                            'light': '#FFFFF0', // Ivory
+                            'dark': '#F5F5DC',  // Beige
+                        },
+                        'text-dark-brown': { // Dark text color for contrast
+                            DEFAULT: '#4A2C2A', // Darker brown for text
+                            'light': '#6F4F28', // Medium brown
+                            'dark': '#2F1A1A',  // Very dark brown
+                        },
                     },
                     fontFamily: {
                         'inter': ['Inter', 'sans-serif']
@@ -93,19 +103,19 @@
         }
         .guide-step:hover {
             transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 8px 16px rgba(14, 165, 233, 0.15);
+            box-shadow: 0 8px 16px rgba(255, 140, 0, 0.15); /* Primary orange for hover */
         }
     </style>
 </head>
 
-<body class="bg-slate-100 text-slate-800 antialiased font-inter">
+<body class="bg-bg-cream text-text-dark-brown antialiased font-inter">
     <div id="header-placeholder"></div>
 
     <main id="main-content-area" class="pt-20">
         <section class="w-full" data-aos="fade-in" id="home">
             <div class="w-full aspect-[1920/400] overflow-hidden">
                 <img
-                    src="https://placehold.co/1920x400/0EA5E9/ffffff?text=Home+Design+Concepts"
+                    src="https://placehold.co/1920x400/FF8C00/FFFDD0?text=Home+Design+Concepts"
                     alt="KhaDo Remodeling - Home Design Concepts"
                     class="w-full h-full object-cover"
                     loading="eager"
@@ -114,55 +124,55 @@
                 >
             </div>
 
-        <section class="py-16 md:py-20 bg-white" data-aos="fade-up">
+        <section class="py-16 md:py-20 bg-bg-cream-light" data-aos="fade-up">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-10 md:mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">Our Home Designs</h2>
-                    <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-dark-brown mb-3">Our Home Designs</h2>
+                    <p class="text-text-dark-brown max-w-3xl mx-auto">
                         Explore some impressive home designs to spark creativity for your renovation project.
                     </p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="https://placehold.co/400x300/A78BFA/ffffff?text=Kitchen+Design+5" alt="Modern Kitchen Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Kitchen+Design+5" alt="Modern Kitchen Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="350">
-                        <img src="https://placehold.co/400x300/818CF8/ffffff?text=Bathroom+Design+6" alt="Luxury Bathroom Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Bathroom+Design+6" alt="Luxury Bathroom Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="400">
-                        <img src="https://placehold.co/400x300/6366F1/ffffff?text=Living+Room+Design+7" alt="Cozy Living Room Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Living+Room+Design+7" alt="Cozy Living Room Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="450">
-                        <img src="https://placehold.co/400x300/4F46E5/ffffff?text=Bedroom+Design+8" alt="Elegant Bedroom Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Bedroom+Design+8" alt="Elegant Bedroom Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="500">
-                        <img src="https://placehold.co/400x300/A78BFA/ffffff?text=Office+Design+9" alt="Home Office Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Office+Design+9" alt="Home Office Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="550">
-                        <img src="https://placehold.co/400x300/818CF8/ffffff?text=Exterior+Design+10" alt="Exterior Home Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Exterior+Design+10" alt="Exterior Home Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="600">
-                        <img src="https://placehold.co/400x300/6366F1/ffffff?text=Dining+Room+Design+11" alt="Dining Room Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Dining+Room+Design+11" alt="Dining Room Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="650">
-                        <img src="https://placehold.co/400x300/4F46E5/ffffff?text=Laundry+Room+Design+12" alt="Laundry Room Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Laundry+Room+Design+12" alt="Laundry Room Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="https://placehold.co/400x300/A78BFA/ffffff?text=Kitchen+Design+1" alt="Modern Kitchen Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Kitchen+Design+1" alt="Modern Kitchen Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="150">
-                        <img src="https://placehold.co/400x300/818CF8/ffffff?text=Bathroom+Design+2" alt="Luxury Bathroom Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Bathroom+Design+2" alt="Luxury Bathroom Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="https://placehold.co/400x300/6366F1/ffffff?text=Living+Room+Design+3" alt="Cozy Living Room Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Living+Room+Design+3" alt="Cozy Living Room Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="250">
-                        <img src="https://placehold.co/400x300/4F46E5/ffffff?text=Bedroom+Design+4" alt="Elegant Bedroom Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Bedroom+Design+4" alt="Elegant Bedroom Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
 
                 </div>
                  <div class="text-center mt-10 md:mt-12">
-                    <a href="projects.html" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 text-base sm:text-lg">
+                    <a href="projects.html" class="bg-primary-orange hover:bg-primary-orange-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 text-base sm:text-lg">
                         View More Projects
                     </a>
                 </div>
@@ -173,19 +183,19 @@
         </section>
 
         <div class="w-full flex justify-center my-0">
-            <div class="h-1 w-3/4 bg-gradient-to-r from-transparent via-sky-400 to-transparent rounded-full shadow-lg"></div>
+            <div class="h-1 w-3/4 bg-gradient-to-r from-transparent via-primary-orange-light to-transparent rounded-full shadow-lg"></div>
         </div>
 
-        <section class="py-12 md:py-16 bg-slate-50" data-aos="fade-up">
+        <section class="py-12 md:py-16 bg-bg-cream-light" data-aos="fade-up">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-10 md:mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">Discover Our Home Design Process</h2>
-                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">Watch our introductory video on how KhaDo Remodeling creates unique and high-quality home designs.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-dark-brown mb-3">Discover Our Home Design Process</h2>
+                    <p class="text-text-dark-brown max-w-2xl mx-auto">Watch our introductory video on how KhaDo Remodeling creates unique and high-quality home designs.</p>
                 </div>
                 <div class="video-container">
-                    <video controls poster="https://placehold.co/800x450/0EA5E9/ffffff?text=Home+Design+Process+Video" preload="metadata" autoplay muted playsinline>
-                        <source src="https://placehold.co/800x450/0EA5E9/ffffff?text=Home+Design+Process+Video" type="video/mp4">
-                        Your browser does not support the video tag. You can download the video <a href="https://placehold.co/800x450/0EA5E9/ffffff?text=Home+Design+Process+Video">here</a>.
+                    <video controls poster="https://placehold.co/800x450/FF8C00/FFFDD0?text=Home+Design+Process+Video" preload="metadata" autoplay muted playsinline>
+                        <source src="https://placehold.co/800x450/FF8C00/FFFDD0?text=Home+Design+Process+Video" type="video/mp4">
+                        Your browser does not support the video tag. You can download the video <a href="https://placehold.co/800x450/FF8C00/FFFDD0?text=Home+Design+Process+Video">here</a>.
                     </video>
                 </div>
             </div>
@@ -193,7 +203,7 @@
 
         <section
             class="hero-section-main design-hero-section-main relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center text-center"
-            style="background-image: url('https://placehold.co/1920x800/0EA5E9/ffffff?text=Home+Design+Studio');" data-aos="fade-in"
+            style="background-image: url('https://placehold.co/1920x800/FF8C00/FFFDD0?text=Home+Design+Studio');" data-aos="fade-in"
         >
             <div class="design-hero-content container mx-auto px-4 sm:px-6 lg:px-8 text-white py-12 md:py-16">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-shadow-strong animate-slide-up" data-aos="fade-down" data-aos-delay="100">
@@ -202,63 +212,63 @@
                 <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 leading-tight text-shadow-strong animate-slide-up" data-aos="fade-down" data-aos-delay="200">
                     Crafting Your Florida Home Vision
                 </h2>
-                <p class="text-md md:text-lg lg:text-xl max-w-3xl mx-auto text-slate-100 text-shadow mb-8 animate-slide-up" data-aos="fade-up" data-aos-delay="300">
+                <p class="text-md md:text-lg lg:text-xl max-w-3xl mx-auto text-bg-cream-light text-shadow mb-8 animate-slide-up" data-aos="fade-up" data-aos-delay="300">
                     Explore cutting-edge design concepts to bring your ideal home to life.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 animate-slide-up" data-aos="fade-up" data-aos-delay="400">
-                    <a href="projects.html" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <a href="projects.html" class="bg-primary-orange hover:bg-primary-orange-dark text-white font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                         View Our Portfolio
                     </a>
-                    <a href="contact.html" class="bg-white text-sky-700 font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-xl hover:bg-sky-50 hover:text-sky-900 transition-all duration-300 transform hover:scale-105 border-2 border-sky-300">
+                    <a href="contact.html" class="bg-white text-accent-brown-dark font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-xl hover:bg-bg-cream-dark hover:text-accent-brown transition-all duration-300 transform hover:scale-105 border-2 border-primary-orange">
                         Contact Us for Design
                     </a>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-white" data-aos="fade-up">
+        <section class="py-16 bg-bg-cream" data-aos="fade-up">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
                     <div class="design-feature-card p-4 md:p-6 rounded-xl">
                         <div class="stats-counter text-3xl md:text-4xl" data-count="50">0+</div>
-                        <p class="text-slate-600 font-medium text-sm md:text-base">Unique Home Designs Created</p>
+                        <p class="text-text-dark-brown font-medium text-sm md:text-base">Unique Home Designs Created</p>
                     </div>
                     <div class="design-feature-card p-4 md:p-6 rounded-xl">
                         <div class="stats-counter text-3xl md:text-4xl" data-count="10">0+</div>
-                        <p class="text-slate-600 font-medium text-sm md:text-base">Years Home Design Experience</p>
+                        <p class="text-text-dark-brown font-medium text-sm md:text-base">Years Home Design Experience</p>
                     </div>
                     <div class="design-feature-card p-4 md:p-6 rounded-xl">
                         <div class="stats-counter text-3xl md:text-4xl" data-count="98">0%</div>
-                        <p class="text-slate-600 font-medium text-sm md:text-base">Client Satisfaction</p>
+                        <p class="text-text-dark-brown font-medium text-sm md:text-base">Client Satisfaction</p>
                     </div>
                     <div class="design-feature-card p-4 md:p-6 rounded-xl">
                         <div class="stats-counter text-3xl md:text-4xl" data-count="24/7">24/7</div>
-                        <p class="text-slate-600 font-medium text-sm md:text-base">Design Support</p>
+                        <p class="text-text-dark-brown font-medium text-sm md:text-base">Design Support</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 md:py-20 bg-slate-50" data-aos="fade-up">
+        <section class="py-16 md:py-20 bg-bg-cream-light" data-aos="fade-up">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-10 md:mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-3">Featured Home Designs</h2>
-                    <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-dark-brown mb-3">Featured Home Designs</h2>
+                    <p class="text-text-dark-brown max-w-3xl mx-auto">
                         A selection of our top home designs to inspire your renovation project.
                     </p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="https://placehold.co/400x300/A78BFA/ffffff?text=Kitchen+Design+1" alt="Modern Kitchen Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Kitchen+Design+1" alt="Modern Kitchen Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="150">
-                        <img src="https://placehold.co/400x300/818CF8/ffffff?text=Bathroom+Design+2" alt="Luxury Bathroom Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Bathroom+Design+2" alt="Luxury Bathroom Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="https://placehold.co/400x300/6366F1/ffffff?text=Living+Room+Design+3" alt="Cozy Living Room Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Living+Room+Design+3" alt="Cozy Living Room Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="250">
-                        <img src="https://placehold.co/400x300/4F46E5/ffffff?text=Bedroom+Design+4" alt="Elegant Bedroom Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Bedroom+Design+4" alt="Elegant Bedroom Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -267,10 +277,10 @@
         <section class="cta-section py-16 md:py-20 text-white relative" id="contact-cta" data-aos="zoom-in">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-shadow">Ready to Design Your Dream Home?</h2>
-                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-slate-100 leading-relaxed">
+                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-bg-cream-light leading-relaxed">
                     Our experts are ready to assist. Contact KhaDo Remodeling today for a personalized design consultation.
                 </p>
-                <a href="contact.html" class="bg-white text-sky-700 font-bold py-4 px-10 sm:py-5 sm:px-12 rounded-xl text-lg sm:text-xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:bg-sky-50 inline-flex items-center">
+                <a href="contact.html" class="bg-white text-accent-brown-dark font-bold py-4 px-10 sm:py-5 sm:px-12 rounded-xl text-lg sm:text-xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:bg-bg-cream-dark inline-flex items-center">
                     <i class="fas fa-drafting-compass mr-3"></i>
                     Start Designing
                 </a>
@@ -281,9 +291,9 @@
     <div id="footer-placeholder"></div>
 
     <button id="scrollToTopBtn" title="Scroll to top"
-            class="hidden fixed bottom-8 right-8 bg-sky-500 hover:bg-sky-600 text-white
+            class="hidden fixed bottom-8 right-8 bg-primary-orange hover:bg-primary-orange-dark text-white
                    w-12 h-12 md:w-14 md:h-14 rounded-full shadow-2xl flex items-center justify-center
-                   focus:outline-none focus:ring-4 focus:ring-sky-400 focus:ring-opacity-75
+                   focus:outline-none focus:ring-4 focus:ring-primary-orange-light focus:ring-opacity-75
                    transition-all duration-300 z-50 text-xl animate-floatEffect">
         <i class="fas fa-arrow-up"></i>
     </button>

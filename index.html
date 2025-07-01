@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0EA5E9" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0c4a6e" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#FF8C00" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#8B4513" media="(prefers-color-scheme: dark)">
 
     <title>KhaDo Remodeling - Florida's Premier Home Renovation Solutions</title>
     <meta name="description" content="KhaDo Remodeling specializes in custom home renovation, robust remodeling, professional interior design, and comprehensive repair services across Florida. Your trusted home improvement partner.">
@@ -32,16 +32,26 @@
             theme: {
                 extend: {
                     colors: {
-                        sky: {
-                            50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
-                            400: '#38bdf8', 500: '#0EA5E9', 600: '#0284C7', 700: '#0369A1',
-                            800: '#075985', 900: '#0c4a6e'
+                        'primary-orange': { // Main accent color
+                            DEFAULT: '#FF8C00', // DarkOrange
+                            'light': '#FFA500', // Orange
+                            'dark': '#CC7000',  // Darker Orange
                         },
-                        slate: {
-                            50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1',
-                            400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155',
-                            800: '#1e293b', 900: '#0f172a'
-                        }
+                        'accent-brown': { // Secondary accent/wood color
+                            DEFAULT: '#8B4513', // SaddleBrown
+                            'light': '#A0522D', // Sienn
+                            'dark': '#654321',  // Darker Brown
+                        },
+                        'bg-cream': { // Light background color
+                            DEFAULT: '#FFFDD0', // Cream
+                            'light': '#FFFFF0', // Ivory
+                            'dark': '#F5F5DC',  // Beige
+                        },
+                        'text-dark-brown': { // Dark text color for contrast
+                            DEFAULT: '#4A2C2A', // Darker brown for text
+                            'light': '#6F4F28', // Medium brown
+                            'dark': '#2F1A1A',  // Very dark brown
+                        },
                     },
                     fontFamily: {
                         'inter': ['Inter', 'sans-serif']
@@ -62,14 +72,14 @@
         }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800 antialiased font-inter">
+<body class="bg-bg-cream text-text-dark-brown antialiased font-inter">
 
     <div id="header-placeholder"></div>
 
     <main id="main-content-area">
         <section class="full-width-image-section" data-aos="fade-in">
             <img
-                src="https://placehold.co/1920x400/0EA5E9/ffffff?text=Home+Remodeling+Banner"
+                src="https://placehold.co/1920x400/FF8C00/FFFDD0?text=Home+Remodeling+Banner"
                 alt="KhaDo Remodeling Banner"
                 class="w-full h-auto object-cover block"
                 loading="eager"
@@ -80,9 +90,9 @@
 
         <section class="hero-banner-container" data-aos="fade-in">
             <picture>
-                <source srcset="https://placehold.co/1200x600/0EA5E9/ffffff?text=Modern+Kitchen+Remodel" media="(min-width: 768px)">
+                <source srcset="https://placehold.co/1200x600/FF8C00/FFFDD0?text=Modern+Kitchen+Remodel" media="(min-width: 768px)">
                 <img
-                    src="https://placehold.co/800x400/0EA5E9/ffffff?text=Modern+Kitchen+Remodel"
+                    src="https://placehold.co/800x400/FF8C00/FFFDD0?text=Modern+Kitchen+Remodel"
                     alt="KhaDo Remodeling - Florida's Premier Home Renovation Solutions"
                     class="hero-banner-image"
                     loading="eager"
@@ -90,34 +100,34 @@
             </picture>
             <div class="hero-banner-content">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 z-10">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight text-shadow-lg" data-aos="fade-up">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-text-dark-brown mb-6 leading-tight text-shadow-lg" data-aos="fade-up">
                         Transform Your Home <br> with KhaDo Remodeling
                     </h1>
-                    <p class="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto text-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-lg md:text-xl text-text-dark-brown mb-10 max-w-2xl mx-auto text-shadow" data-aos="fade-up" data-aos-delay="200">
                         From stunning kitchen makeovers to luxurious bathroom renovations, we bring your vision to life with precision and passion.
                     </p>
                     <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
-                        <a href="projects.html" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
+                        <a href="projects.html" class="bg-primary-orange hover:bg-primary-orange-dark text-white font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
                             Our Projects
                         </a>
-                        <a href="design.html" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
+                        <a href="design.html" class="bg-primary-orange hover:bg-primary-orange-dark text-white font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
                             Our Designs
                         </a>
-                        <a href="about.html" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
+                        <a href="about.html" class="bg-primary-orange hover:bg-primary-orange-dark text-white font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
                             About Us
                         </a>
                     </div>
                     <div class="mt-4 flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="500">
-                        <a href="services.html#kitchen" class="bg-white text-sky-700 font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:bg-sky-100 hover:text-sky-900 transition duration-300 transform hover:scale-105 border border-sky-500">
+                        <a href="services.html#kitchen" class="bg-white text-accent-brown-dark font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:bg-bg-cream-dark hover:text-accent-brown transition duration-300 transform hover:scale-105 border border-primary-orange">
                             Kitchen Remodel
                         </a>
-                        <a href="services.html#bathroom" class="bg-white text-sky-700 font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:bg-sky-100 hover:text-sky-900 transition duration-300 transform hover:scale-105 border border-sky-500">
+                        <a href="services.html#bathroom" class="bg-white text-accent-brown-dark font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:bg-bg-cream-dark hover:text-accent-brown transition duration-300 transform hover:scale-105 border border-primary-orange">
                             Bathroom Renovation
                         </a>
-                        <a href="services.html#flooring" class="bg-white text-sky-700 font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:bg-sky-100 hover:text-sky-900 transition duration-300 transform hover:scale-105 border border-sky-500">
+                        <a href="services.html#flooring" class="bg-white text-accent-brown-dark font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:bg-bg-cream-dark hover:text-accent-brown transition duration-300 transform hover:scale-105 border border-primary-orange">
                             Flooring Installation
                         </a>
-                         <a href="services.html#painting" class="bg-white text-sky-700 font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:bg-sky-100 hover:text-sky-900 transition duration-300 transform hover:scale-105 border border-sky-500">
+                         <a href="services.html#painting" class="bg-white text-accent-brown-dark font-semibold py-3 px-8 rounded-lg text-base shadow-md hover:bg-bg-cream-dark hover:text-accent-brown transition duration-300 transform hover:scale-105 border border-primary-orange">
                             Interior Painting
                         </a>
                     </div>
@@ -126,166 +136,166 @@
         </section>
 
         <div class="w-full flex justify-center my-0">
-            <div class="h-0.5 w-3/4 bg-sky-400 rounded-full shadow-lg opacity-80"></div>
+            <div class="h-0.5 w-3/4 bg-primary-orange-light rounded-full shadow-lg opacity-80"></div>
         </div>
 
-        <section class="py-16 md:py-24 bg-white" data-aos="fade-up" id="design-summary">
+        <section class="py-16 md:py-24 bg-bg-cream-light" data-aos="fade-up" id="design-summary">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Innovative Home Design</h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto">Explore our gallery of modern home designs and get inspired for your next renovation project.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-dark-brown mb-4">Innovative Home Design</h2>
+                    <p class="text-text-dark-brown max-w-2xl mx-auto">Explore our gallery of modern home designs and get inspired for your next renovation project.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="https://placehold.co/400x300/A78BFA/ffffff?text=Kitchen+Design+1" alt="Modern Kitchen Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Kitchen+Design+1" alt="Modern Kitchen Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="150">
-                        <img src="https://placehold.co/400x300/818CF8/ffffff?text=Bathroom+Design+2" alt="Luxury Bathroom Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Bathroom+Design+2" alt="Luxury Bathroom Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="https://placehold.co/400x300/6366F1/ffffff?text=Living+Room+Design+3" alt="Cozy Living Room Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Living+Room+Design+3" alt="Cozy Living Room Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                     <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="250">
-                        <img src="https://placehold.co/400x300/4F46E5/ffffff?text=Bedroom+Design+4" alt="Elegant Bedroom Design Inspiration" class="design-album-image" loading="lazy">
+                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Bedroom+Design+4" alt="Elegant Bedroom Design Inspiration" class="design-album-image" loading="lazy">
                     </div>
                 </div>
                 <div class="text-center mt-12 md:mt-16">
-                    <a href="design.html" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 text-lg">Explore Designs</a>
+                    <a href="design.html" class="bg-primary-orange hover:bg-primary-orange-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 text-lg">Explore Designs</a>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 md:py-24 bg-white" data-aos="fade-up" id="projects-overview">
+        <section class="py-16 md:py-24 bg-bg-cream" data-aos="fade-up" id="projects-overview">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Our Featured Renovation Projects</h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto">See how we've transformed homes across Florida with our expertise in remodeling and renovation.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-dark-brown mb-4">Our Featured Renovation Projects</h2>
+                    <p class="text-text-dark-brown max-w-2xl mx-auto">See how we've transformed homes across Florida with our expertise in remodeling and renovation.</p>
                 </div>
                 <div class="album-scroll-container overflow-x-auto whitespace-nowrap py-4 px-1 scrollbar-thin">
                     <div class="flex gap-4 md:gap-5">
                         <div class="album-image-item" data-aos="fade-right" data-aos-delay="100">
-                            <img src="https://placehold.co/400x300/0EA5E9/ffffff?text=Kitchen+Project+1" alt="Completed kitchen renovation project" class="album-image-horizontal" loading="lazy"/>
+                            <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Kitchen+Project+1" alt="Completed kitchen renovation project" class="album-image-horizontal" loading="lazy"/>
                         </div>
                         <div class="album-image-item" data-aos="fade-right" data-aos-delay="150">
-                            <img src="https://placehold.co/400x300/0EA5E9/ffffff?text=Bathroom+Project+2" alt="Completed bathroom renovation project" class="album-image-horizontal" loading="lazy"/>
+                            <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Bathroom+Project+2" alt="Completed bathroom renovation project" class="album-image-horizontal" loading="lazy"/>
                         </div>
                         <div class="album-image-item" data-aos="fade-right" data-aos-delay="200">
-                            <img src="https://placehold.co/400x300/0EA5E9/ffffff?text=Flooring+Project+3" alt="Completed flooring installation project" class="album-image-horizontal" loading="lazy"/>
+                            <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Flooring+Project+3" alt="Completed flooring installation project" class="album-image-horizontal" loading="lazy"/>
                         </div>
                         <div class="album-image-item" data-aos="fade-right" data-aos-delay="250">
-                            <img src="https://placehold.co/400x300/0EA5E9/ffffff?text=Painting+Project+4" alt="Completed interior painting project" class="album-image-horizontal" loading="lazy"/>
+                            <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Painting+Project+4" alt="Completed interior painting project" class="album-image-horizontal" loading="lazy"/>
                         </div>
                         <div class="album-image-item" data-aos="fade-right" data-aos-delay="300">
-                            <img src="https://placehold.co/400x300/0EA5E9/ffffff?text=Exterior+Project+5" alt="Completed exterior renovation project" class="album-image-horizontal" loading="lazy"/>
+                            <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Exterior+Project+5" alt="Completed exterior renovation project" class="album-image-horizontal" loading="lazy"/>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-12 md:mt-16">
-                    <a href="projects.html" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 text-lg">View All Projects</a>
+                    <a href="projects.html" class="bg-primary-orange hover:bg-primary-orange-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 text-lg">View All Projects</a>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 md:py-24 bg-slate-50" data-aos="fade-up" id="about-us-overview">
+        <section class="py-16 md:py-24 bg-bg-cream-dark" data-aos="fade-up" id="about-us-overview">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div data-aos="fade-right" data-aos-delay="100" class="md:pr-8">
-                        <img src="https://placehold.co/800x600/0EA5E9/ffffff?text=Remodeling+Team+Planning" alt="KhaDo Remodeling - Team planning a renovation project" class="rounded-xl shadow-2xl w-full h-auto object-cover aspect-[4/3]" loading="lazy" width="800" height="600">
+                        <img src="https://placehold.co/800x600/FF8C00/FFFDD0?text=Remodeling+Team+Planning" alt="KhaDo Remodeling - Team planning a renovation project" class="rounded-xl shadow-2xl w-full h-auto object-cover aspect-[4/3]" loading="lazy" width="800" height="600">
                     </div>
                     <div data-aos="fade-left" data-aos-delay="200">
-                        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">About Us: Crafting Dream Homes</h2>
-                        <p class="text-slate-600 leading-relaxed mb-4">
+                        <h2 class="text-3xl md:text-4xl font-bold text-text-dark-brown mb-6">About Us: Crafting Dream Homes</h2>
+                        <p class="text-text-dark-brown leading-relaxed mb-4">
                             At KhaDoRemodeling.com, our journey began with a singular passion: to craft exceptional home renovation solutions that elevate Florida's unique residential lifestyle.
                         </p>
-                        <p class="text-slate-600 leading-relaxed mb-4">
+                        <p class="text-text-dark-brown leading-relaxed mb-4">
                             Our seasoned team brings years of dedicated industry experience to every project. KhaDo Remodeling is defined by our meticulous attention to detail, unwavering commitment to client satisfaction, and deep expertise in all facets of home improvement.
                         </p>
                         <div class="text-center md:text-left mt-8">
-                            <a href="about.html" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 text-lg">Learn More About Us</a>
+                            <a href="about.html" class="bg-primary-orange hover:bg-primary-orange-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 text-lg">Learn More About Us</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 md:py-24 bg-white" data-aos="fade-up" id="contact-overview">
+        <section class="py-16 md:py-24 bg-bg-cream" data-aos="fade-up" id="contact-overview">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                    <div class="bg-slate-800 p-8 rounded-xl shadow-2xl" data-aos="fade-right" data-aos-delay="100">
+                    <div class="bg-accent-brown-dark p-8 rounded-xl shadow-2xl" data-aos="fade-right" data-aos-delay="100">
                         <h3 class="text-2xl font-bold text-white mb-8 text-center md:text-left">Direct Contact Information</h3>
                         <div class="space-y-6">
                             <div class="contact-info-item flex items-start group">
-                                <div class="contact-icon-circle flex-shrink-0 w-12 h-12 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center mr-5 shadow-md">
+                                <div class="contact-icon-circle flex-shrink-0 w-12 h-12 rounded-full bg-primary-orange-light text-white flex items-center justify-center mr-5 shadow-md">
                                     <i class="fas fa-map-marker-alt fa-lg"></i>
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-semibold text-white">Our Office</h4>
-                                    <p class="text-slate-300">3850 Rollingsford Cir, Lakeland, FL 33810, USA</p>
+                                    <p class="text-primary-orange-light">3850 Rollingsford Cir, Lakeland, FL 33810, USA</p>
                                 </div>
                             </div>
                             <div class="contact-info-item flex items-start group">
-                                <div class="contact-icon-circle flex-shrink-0 w-12 h-12 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center mr-5 shadow-md">
+                                <div class="contact-icon-circle flex-shrink-0 w-12 h-12 rounded-full bg-primary-orange-light text-white flex items-center justify-center mr-5 shadow-md">
                                     <i class="fas fa-phone fa-lg"></i>
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-semibold text-white">Phone</h4>
-                                    <a href="tel:+18139393989" class="text-slate-300 hover:text-sky-300 transition-colors duration-300">+1 813-939-3989</a>
+                                    <a href="tel:+18139393989" class="text-primary-orange-light hover:text-primary-orange transition-colors duration-300">+1 813-939-3989</a>
                                 </div>
                             </div>
                             <div class="contact-info-item flex items-start group">
-                                <div class="contact-icon-circle flex-shrink-0 w-12 h-12 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center mr-5 shadow-md">
+                                <div class="contact-icon-circle flex-shrink-0 w-12 h-12 rounded-full bg-primary-orange-light text-white flex items-center justify-center mr-5 shadow-md">
                                     <i class="fas fa-envelope fa-lg"></i>
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-semibold text-white">Email</h4>
-                                    <a href="mailto:doduykha007@gmail.com" class="text-slate-300 hover:text-sky-300 transition-colors duration-300">doduykha007@gmail.com</a>
+                                    <a href="mailto:doduykha007@gmail.com" class="text-primary-orange-light hover:text-primary-orange transition-colors duration-300">doduykha007@gmail.com</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-xl shadow-2xl" data-aos="fade-left" data-aos-delay="200">
+                    <div class="bg-bg-cream-light p-8 rounded-xl shadow-2xl" data-aos="fade-left" data-aos-delay="200">
                         <div class="flex flex-col items-center mb-8">
-                            <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-sky-500 shadow-lg mb-3">
+                            <div class="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-primary-orange-dark shadow-lg mb-3">
                                 <img src="images/logo/doduykha.png" alt="Mr. Kha Do - KhaDo Remodeling" class="w-full h-full object-cover">
                             </div>
-                            <span class="text-lg font-semibold text-slate-700">Mr. Kha Do</span>
-                            <span class="text-sm text-sky-600">Founder & Director</span>
+                            <span class="text-lg font-semibold text-text-dark-brown">Mr. Kha Do</span>
+                            <span class="text-sm text-primary-orange-dark">Founder & Director</span>
                         </div>
                         <div class="flex justify-center gap-6">
-                            <a href="https://www.facebook.com/profile.php?id=61575043076973" target="_blank" rel="noopener noreferrer" aria-label="KhaDo Remodeling Facebook" class="social-icon-link text-slate-500 hover:text-blue-600">
+                            <a href="https://www.facebook.com/profile.php?id=61575043076973" target="_blank" rel="noopener noreferrer" aria-label="KhaDo Remodeling Facebook" class="social-icon-link text-accent-brown hover:text-primary-orange-dark">
                                 <i class="fab fa-facebook-f fa-3x"></i>
                             </a>
-                            <a href="http://m.me/doduy.kha" target="_blank" rel="noopener noreferrer" aria-label="KhaDo Remodeling Messenger" class="social-icon-link text-slate-500 hover:text-blue-500">
+                            <a href="http://m.me/doduy.kha" target="_blank" rel="noopener noreferrer" aria-label="KhaDo Remodeling Messenger" class="social-icon-link text-accent-brown hover:text-primary-orange-dark">
                                 <i class="fab fa-facebook-messenger fa-3x"></i>
                             </a>
-                            <a href="https://www.instagram.com/khadock/" target="_blank" rel="noopener noreferrer" aria-label="KhaDo Remodeling Instagram" class="social-icon-link text-slate-500 hover:text-pink-600">
+                            <a href="https://www.instagram.com/khadock/" target="_blank" rel="noopener noreferrer" aria-label="KhaDo Remodeling Instagram" class="social-icon-link text-accent-brown hover:text-primary-orange-dark">
                                 <i class="fab fa-instagram fa-3x"></i>
                             </a>
-                            <a href="https://wa.me/18139393989" target="_blank" rel="noopener noreferrer" aria-label="KhaDo Remodeling WhatsApp" class="social-icon-link text-slate-500 hover:text-green-500">
+                            <a href="https://wa.me/18139393989" target="_blank" rel="noopener noreferrer" aria-label="KhaDo Remodeling WhatsApp" class="social-icon-link text-accent-brown hover:text-primary-orange-dark">
                                 <i class="fab fa-whatsapp fa-3x"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-12 md:mt-16">
-                    <a href="contact.html" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 text-lg">Contact Us Now</a>
+                    <a href="contact.html" class="bg-primary-orange hover:bg-primary-orange-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 text-lg">Contact Us Now</a>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 md:py-32 bg-gradient-to-r from-blue-700 to-sky-800 text-white text-center relative overflow-hidden" data-aos="zoom-in">
+        <section class="py-20 md:py-32 bg-gradient-to-r from-accent-brown to-primary-orange-dark text-white text-center relative overflow-hidden" data-aos="zoom-in">
             <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 0V0h2v36h-2zM0 0h2v36H0V0zm0 36h36v2H0v-2z\'/%3E%3C/g%3E%3C/g%3E%3Csvg%3E');"></div>
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-shadow-strong">Ready to Transform Your Home?</h2>
-                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-slate-100 leading-relaxed text-shadow">
+                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-bg-cream-light leading-relaxed text-shadow">
                     Explore innovative home designs or contact us for a personalized consultation and a free estimate.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="design.html" class="bg-white text-sky-700 font-bold py-4 px-10 sm:py-5 sm:px-12 rounded-xl text-lg sm:text-xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:bg-sky-50 inline-flex items-center">
+                    <a href="design.html" class="bg-white text-accent-brown-dark font-bold py-4 px-10 sm:py-5 sm:px-12 rounded-xl text-lg sm:text-xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:bg-bg-cream-dark inline-flex items-center">
                         <i class="fas fa-drafting-compass mr-3"></i>
                         Start Designing Today
                     </a>
-                    <a href="contact.html" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-4 px-10 sm:py-5 sm:px-12 rounded-xl text-lg sm:text-xl shadow-2xl transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+                    <a href="contact.html" class="bg-primary-orange-light hover:bg-primary-orange text-white font-bold py-4 px-10 sm:py-5 sm:px-12 rounded-xl text-lg sm:text-xl shadow-2xl transition-all duration-300 transform hover:scale-105 inline-flex items-center">
                         <i class="fas fa-phone-alt mr-3"></i>
                         Request a Free Quote
                     </a>
@@ -293,14 +303,14 @@
             </div>
         </section>
     
-        <section class="py-16 md:py-24 bg-white" data-aos="fade-up">
+        <section class="py-16 md:py-24 bg-bg-cream-light" data-aos="fade-up">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-10">
                 <div class="w-full md:w-2/3" data-aos="zoom-in-right">
                     <div class="project-video-wrapper rounded-xl shadow-lg">
                         <video
-                            src="https://placehold.co/800x450/0EA5E9/ffffff?text=Home+Renovation+Video"
+                            src="https://placehold.co/800x450/FF8C00/FFFDD0?text=Home+Renovation+Video"
                             controls
-                            poster="https://placehold.co/800x450/0EA5E9/ffffff?text=Home+Renovation+Video+Thumbnail"
+                            poster="https://placehold.co/800x450/FF8C00/FFFDD0?text=Home+Renovation+Video+Thumbnail"
                             preload="metadata"
                             autoplay muted playsinline
                         >
@@ -309,8 +319,8 @@
                     </div>
                 </div>
                 <div class="w-full md:w-1/3" data-aos="fade-left" data-aos-delay="200">
-                    <h2 class="text-2xl md:text-3xl font-bold text-sky-700 mb-4">KhaDo Remodeling Project Quality</h2>
-                    <ul class="list-disc pl-5 text-lg text-slate-700 space-y-3">
+                    <h2 class="text-2xl md:text-3xl font-bold text-accent-brown-dark mb-4">KhaDo Remodeling Project Quality</h2>
+                    <ul class="list-disc pl-5 text-text-dark-brown space-y-3">
                         <li>
                             <span class="font-semibold">Our projects are built to last, ensuring enduring beauty and functionality.</span>
                         </li>
@@ -332,7 +342,7 @@
 
     <div id="footer-placeholder"></div>
 
-    <button id="scrollToTopBtn" title="Go to top" class="hidden fixed bottom-6 right-6 bg-sky-500 hover:bg-sky-600 text-white w-12 h-12 rounded-full shadow-lg items-center justify-center focus:outline-none transition-opacity duration-300 z-40">
+    <button id="scrollToTopBtn" title="Go to top" class="hidden fixed bottom-6 right-6 bg-primary-orange hover:bg-primary-orange-dark text-white w-12 h-12 rounded-full shadow-lg items-center justify-center focus:outline-none transition-opacity duration-300 z-40">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -342,12 +352,15 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Call function to load header/footer and initialize dependent functions
             if (typeof loadAppComponents === 'function') {
                 loadAppComponents();
             } else {
                 console.error('Error: loadAppComponents function not found. Please check js/loadComponents.js file.');
             }
 
+            // Initialize AOS (Animate on Scroll) library
+            // Ensure AOS is loaded from CDN
             if (typeof AOS !== 'undefined') {
                 AOS.init({
                     offset: 120,
