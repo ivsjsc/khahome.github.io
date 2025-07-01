@@ -345,11 +345,13 @@
     <button id="scrollToTopBtn" title="Go to top" class="hidden fixed bottom-6 right-6 bg-primary-orange hover:bg-primary-orange-dark text-white w-12 h-12 rounded-full shadow-lg items-center justify-center focus:outline-none transition-opacity duration-300 z-40">
         <i class="fas fa-arrow-up"></i>
     </button>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/loadComponents.js"></script>
-    <script src="js/app.js"></script>
+    <!-- Load Firebase configuration first -->
+    <script type="module" src="js/firebase.js" defer></script>
     
+    <!-- Load other scripts that might depend on Firebase later -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/loadComponents.js" type="module" defer></script>
+    <script src="js/app.js" type="module" defer></script>    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Call function to load header/footer and initialize dependent functions
