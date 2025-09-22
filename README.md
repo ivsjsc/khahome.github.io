@@ -1,3 +1,5 @@
+IVS Celestech, Nguyen Minh Triet. 0795555789 (Zalo for Help)
+
 # Kha Dock & Home Construction LLC Website
 
 ## 📋 Tổng quan
@@ -119,4 +121,6 @@ Sử dụng AOS attributes:
 
 ## 📄 License
 © 2025 Kha Dock & Home Construction LLC - All rights reserved.
-Designed by IVS Celestech, IVS JSC.
+
+Designed by IVS Celestech, IVS JSC
+Website: ivsacademy.edu.vn
