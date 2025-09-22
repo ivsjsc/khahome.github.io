@@ -81,10 +81,10 @@
             <div class="hero-banner-content bg-white py-20">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-dark-contrast mb-6 leading-tight" data-aos="fade-up">
-                        Get Quotes from Multiple Home Remodeling Companies
+                                    <span style="color:#1e293b;text-shadow:0px 2px 5px rgba(0,0,0,0.15);">Get Quotes from Multiple Home Remodeling Companies</span>
                     </h1>
                     <p class="text-lg md:text-xl text-gray-800 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                        Fill out one quick form and get quotes from remodelers in your area.
+                                    <span style="color:#334155;">Fill out one quick form and get quotes from remodelers in your area.</span>
                     </p>
                     <a href="#contact" class="btn-primary inline-block" data-aos="fade-up" data-aos-delay="400">
                         GET QUOTES
@@ -100,9 +100,7 @@
                         <img src="https://placehold.co/800x600/FF8C00/FFFDD0?text=Home+Renovation+Project" alt="Home renovation team planning" class="rounded-xl shadow-2xl w-full h-auto object-cover aspect-[4/3]" loading="lazy">
                     </div>
                     <div data-aos="fade-left" data-aos-delay="200">
-                        <h2 class="text-3xl md:text-4xl font-bold text-dark-contrast mb-6">
-                            From Tiny Details <br>To Entire Makeovers
-                        </h2>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-dark-contrast mb-6" style="color:#1e293b;">From Tiny Details <br>To Entire Makeovers</h2>
                         <p class="text-gray-800 leading-relaxed mb-4 text-content">
                             Whether you're just looking to touch up part of your bathroom or you're aiming for a total do-over of your entire home, we'll connect you with the best home remodelers in your area. Let us know the details of your remodeling plans, your location, and your budget, and we'll find you the best deals for local remodelers.
                         </p>
@@ -252,6 +250,57 @@
     </main>
 
     <div id="footer-placeholder"></div>
+        <!-- Remodeling Cost Estimator Section -->
+        <section class="py-16 md:py-24 bg-white" data-aos="fade-up" id="cost-estimator">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-dark-contrast mb-4" style="color:#1e293b;">Remodeling Cost Estimator</h2>
+                    <p class="text-gray-800 mb-6" style="color:#334155;">Estimate your home remodeling costs instantly. Enter your project details below.</p>
+                </div>
+                <form id="costEstimatorForm" class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <div class="mb-4">
+                        <label for="projectType" class="block text-lg font-semibold text-dark-contrast mb-2">Project Type</label>
+                        <select id="projectType" class="w-full p-3 rounded border border-gray-300">
+                            <option value="Bathroom">Bathroom Remodel</option>
+                            <option value="Kitchen">Kitchen Remodel</option>
+                            <option value="Dock">Dock Construction</option>
+                            <option value="FullHome">Full Home Renovation</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="areaSize" class="block text-lg font-semibold text-dark-contrast mb-2">Area Size (sq ft)</label>
+                        <input type="number" id="areaSize" class="w-full p-3 rounded border border-gray-300" min="10" max="10000" placeholder="e.g. 200" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="quality" class="block text-lg font-semibold text-dark-contrast mb-2">Quality Level</label>
+                        <select id="quality" class="w-full p-3 rounded border border-gray-300">
+                            <option value="Standard">Standard</option>
+                            <option value="Premium">Premium</option>
+                            <option value="Luxury">Luxury</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="bg-primary-orange hover:bg-primary-orange-dark text-white font-bold py-3 px-8 rounded-lg shadow-md transition-colors text-lg">Estimate Cost</button>
+                    <div id="costResult" class="mt-6 text-xl font-bold text-dark-contrast"></div>
+                </form>
+            </div>
+            <script>
+                document.getElementById('costEstimatorForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const type = document.getElementById('projectType').value;
+                    const area = parseInt(document.getElementById('areaSize').value, 10);
+                    const quality = document.getElementById('quality').value;
+                    let baseRate = 0;
+                    if(type === 'Bathroom') baseRate = 150;
+                    else if(type === 'Kitchen') baseRate = 200;
+                    else if(type === 'Dock') baseRate = 120;
+                    else if(type === 'FullHome') baseRate = 100;
+                    if(quality === 'Premium') baseRate *= 1.3;
+                    else if(quality === 'Luxury') baseRate *= 1.6;
+                    const cost = Math.round(baseRate * area);
+                    document.getElementById('costResult').textContent = `Estimated Cost: $${cost.toLocaleString()}`;
+                });
+            </script>
+        </section>
 
     <button id="scrollToTopBtn" title="Go to top" class="hidden fixed bottom-6 right-6 bg-primary-orange hover:bg-primary-orange-dark text-white w-12 h-12 rounded-full shadow-lg items-center justify-center focus:outline-none transition-opacity duration-300 z-40">
         <i class="fas fa-arrow-up"></i>
