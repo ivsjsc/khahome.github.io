@@ -1,104 +1,45 @@
-<header class="bg-accent-brown-dark text-bg-cream-light shadow-md fixed w-full top-0 z-50 nav-header">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
-            <a href="index.html" class="flex items-center space-x-3 group" aria-label="KhaDo Remodeling Homepage">
-                <img src="images/logo/logo-yellow.png" alt="KhaDo Remodeling Logo" class="h-10 w-10 rounded-full group-hover:opacity-80 transition-opacity" width="40" height="40">
-                <span class="text-2xl font-bold text-primary-orange-light group-hover:text-primary-orange transition-colors">KhaDoRemodeling.com</span>
-            </a>
-
-            <!-- NAV DESKTOP -->
-            <nav class="hidden md:flex space-x-4 lg:space-x-6 items-center" aria-label="Main desktop navigation">
-                <a href="index.html" id="nav-index" class="flex items-center space-x-2 hover:text-primary-orange-light transition-colors duration-300 font-medium px-3 py-2 rounded-md text-sm lg:text-base">
-                    <img src="images/logo/logoicon_512.png" alt="" class="h-5 w-5 lg:h-6 lg:w-6 rounded-sm" width="24" height="24" aria-hidden="true">
-                    <span>Home</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .nav-header {
+            background-color: #f1f5f9;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 50;
+        }
+        .nav-link {
+            transition: color 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #FF8C00;
+        }
+    </style>
+</head>
+<body>
+    <header class="nav-header text-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-3 group" aria-label="Kha Dock & Home Constraction LLC Homepage">
+                    <span class="text-2xl font-bold text-gray-800 group-hover:text-primary-orange transition-colors">Kha Dock & Home Constraction LLC</span>
                 </a>
-                
-                <a href="projects.html" id="nav-projects" class="hover:text-primary-orange-light transition-colors duration-300 font-medium px-3 py-2 rounded-md text-sm lg:text-base">Projects</a>
-                <a href="design.html" id="nav-design" class="hover:text-primary-orange-light transition-colors duration-300 font-medium px-3 py-2 rounded-md text-sm lg:text-base">Designs</a>
-
-                <div class="relative group mega-menu-container">
-                    <button type="button" id="nav-services-button" aria-haspopup="true" aria-expanded="false" aria-controls="services-mega-menu" class="hover:text-primary-orange-light transition-colors duration-300 font-medium flex items-center px-3 py-2 rounded-md text-sm lg:text-base">
-                        Services <i class="fas fa-chevron-down fa-xs ml-1.5 transform group-hover:rotate-180 transition-transform duration-200" aria-hidden="true"></i>
-                    </button>
-                    <div id="services-mega-menu" class="mega-menu hidden absolute left-0 top-full bg-accent-brown text-bg-cream-light py-4 rounded-md shadow-xl z-20 min-w-[600px] transition-all duration-300 ease-out origin-top-left" aria-labelledby="nav-services-button">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4">
-                            <div>
-                                <h3 class="text-lg font-semibold mb-2 text-primary-orange-light">Home Renovation Services</h3>
-                                <ul class="space-y-1">
-                                    <li><a href="services.html#kitchen" class="block px-2 py-1.5 hover:bg-accent-brown-dark hover:text-primary-orange-light transition-colors rounded-md text-sm">Kitchen Remodeling</a></li>
-                                    <li><a href="services.html#bathroom" class="block px-2 py-1.5 hover:bg-accent-brown-dark hover:text-primary-orange-light transition-colors rounded-md text-sm">Bathroom Renovation</a></li>
-                                    <li><a href="services.html#painting" class="block px-2 py-1.5 hover:bg-accent-brown-dark hover:text-primary-orange-light transition-colors rounded-md text-sm">Interior & Exterior Painting</a></li>
-                                    <li><a href="services.html#flooring" class="block px-2 py-1.5 hover:bg-accent-brown-dark hover:text-primary-orange-light transition-colors rounded-md text-sm">Flooring Installation</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="px-4 pt-4 mt-4 border-t border-accent-brown-dark">
-                            <img src="https://placehold.co/400x200/FF8C00/FFFDD0?text=Home+Design+Studio"
-                                 alt="Home Design Studio Promotion"
-                                 class="rounded-md shadow-md w-full">
-                            <h4 class="text-lg font-semibold text-primary-orange-light mt-2">Home Design Studio</h4>
-
-                            <p class="text-sm text-bg-cream-light mt-2">Visualize your dream home with our design expertise!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="about.html" id="nav-about" class="hover:text-primary-orange-light transition-colors duration-300 font-medium px-3 py-2 rounded-md text-sm lg:text-base">About Us</a>
-                <a href="contact.html" id="nav-contact" class="bg-primary-orange hover:bg-primary-orange-dark text-white px-4 py-2 lg:px-5 lg:py-2.5 rounded-md font-semibold transition-colors duration-300 shadow-sm hover:shadow-md text-sm lg:text-base">Contact Us</a>
-            </nav>
-
-            <button type="button" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu-panel" class="md:hidden text-bg-cream-light hover:text-primary-orange-light focus:outline-none p-2 rounded-md transition-colors" aria-label="Open main menu">
-                <span class="sr-only">Open main menu</span>
-                <i class="fas fa-bars fa-lg" id="icon-menu-open" aria-hidden="true"></i>
-                <i class="fas fa-times fa-lg hidden" id="icon-menu-close" aria-hidden="true"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- NAV MOBILE -->
-    <div id="mobile-menu-panel" class="md:hidden bg-accent-brown-dark/95 backdrop-blur-sm fixed w-full h-full z-40 top-0 left-0 right-0 shadow-xl" aria-labelledby="mobile-menu-button">
-       <nav class="flex flex-col space-y-1.5 px-4 pt-20 pb-24 h-full overflow-y-auto" aria-label="Main mobile navigation">
-            <a href="index.html" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light font-medium transition-colors">Home</a>
-            <a href="projects.html" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light font-medium transition-colors">Projects</a>
-            <a href="design.html" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light font-medium transition-colors">Designs</a>
-            
-            <div>
-                <button type="button" class="mobile-submenu-toggle w-full text-left px-3 py-2.5 rounded-md hover:bg-accent-brown font-semibold text-primary-orange-light flex justify-between items-center transition-colors" aria-expanded="false" aria-controls="mobile-services-submenu-items">
-                    <span>Services</span>
-                    <i class="fas fa-chevron-down fa-xs mobile-submenu-icon transition-transform duration-200" aria-hidden="true"></i>
-                </button>
-                <div id="mobile-services-submenu-items" class="mobile-submenu-content pl-5 pr-3 pb-1 space-y-1 overflow-hidden max-h-0">
-                    <a href="services.html" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light text-sm font-medium transition-colors">Services Overview</a>
-                    <a href="services.html#kitchen" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light text-sm font-medium transition-colors">Kitchen Remodeling</a>
-                    <a href="services.html#bathroom" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light text-sm font-medium transition-colors">Bathroom Renovation</a>
-                    <a href="services.html#painting" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light text-sm font-medium transition-colors">Interior & Exterior Painting</a>
-                    <a href="services.html#flooring" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light text-sm font-medium transition-colors">Flooring Installation</a>
-                </div>
+                <nav class="hidden md:flex space-x-4 lg:space-x-6 items-center">
+                    <a href="index.html" class="nav-link font-medium">Home</a>
+                    <a href="about.html" class="nav-link font-medium">About Us</a>
+                    <a href="services.html" class="nav-link font-medium">Services</a>
+                    <a href="projects.html" class="nav-link font-medium">Projects</a>
+                    <a href="design.html" class="nav-link font-medium">Designs</a>
+                    <a href="contact.html" class="nav-link bg-primary-orange text-white px-4 py-2 lg:px-5 lg:py-2.5 rounded-md font-semibold transition-colors duration-300 shadow-sm hover:bg-primary-orange-dark">Contact Us</a>
+                </nav>
             </div>
-
-            <a href="about.html" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light font-medium transition-colors">About Us</a>
-            <a href="contact.html" class="block px-3 py-2.5 rounded-md bg-primary-orange text-white hover:bg-primary-orange-dark font-semibold text-center transition-colors shadow-sm hover:shadow-md">Contact Us</a>
-       </nav>
-    </div>
-</header>
-
-<div class="bottom-nav md:hidden fixed bottom-0 left-0 w-full bg-accent-brown-dark shadow-t z-50">
-    <div class="flex justify-around items-center h-16">
-        <a href="index.html" class="bottom-nav-item active">
-            <i class="fas fa-home fa-lg"></i>
-            <span class="bottom-nav-label">Home</span>
-        </a>
-        <a href="services.html" class="bottom-nav-item">
-            <i class="fas fa-tools fa-lg"></i>
-            <span class="bottom-nav-label">Services</span>
-        </a>
-        <a href="projects.html" class="bottom-nav-item">
-            <i class="fas fa-hammer fa-lg"></i>
-            <span class="bottom-nav-label">Projects</span>
-        </a>
-        <a href="design.html" class="bottom-nav-item">
-            <i class="fas fa-magic fa-lg"></i>
-            <span class="bottom-nav-label">Designer</span>
-        </a>
-    </div>
-</div>
+        </div>
+    </header>
+</body>
+</html>
