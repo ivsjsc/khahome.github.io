@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .nav-header {
-            background-color: #f1f5f9;
+            background-color: #ffffff;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             position: fixed;
             top: 0;
@@ -17,26 +17,59 @@
         }
         .nav-link {
             transition: color 0.2s ease-in-out;
+            color: #1e293b;
+            font-weight: 500;
         }
         .nav-link:hover {
-            color: #FF8C00;
+            color: #2563eb;
+        }
+        .header-link-group {
+            display: flex;
+            align-items: center;
+        }
+        .header-link-group a {
+            margin-left: 1rem;
+        }
+        .header-link-group a:first-child {
+            margin-left: 0;
+        }
+        .text-dark-contrast {
+            color: #0f172a;
+        }
+        .bg-blue-500 {
+            background-color: #2563eb;
+        }
+        .hover\:bg-blue-600:hover {
+            background-color: #1d4ed8;
+        }
+        .text-orange-500 {
+            color: #f97316;
+        }
+        .hover\:text-orange-600:hover {
+            color: #ea580c;
         }
     </style>
 </head>
 <body>
-    <header class="nav-header text-gray-800">
+    <header class="nav-header">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <a href="index.html" class="flex items-center space-x-3 group" aria-label="Kha Dock & Home Constraction LLC Homepage">
-                    <span class="text-2xl font-bold text-gray-800 group-hover:text-primary-orange transition-colors">Kha Dock & Home Constraction LLC</span>
+                    <span class="text-2xl font-bold text-dark-contrast group-hover:text-blue-500 transition-colors">Kha Dock & Home Constraction LLC</span>
                 </a>
                 <nav class="hidden md:flex space-x-4 lg:space-x-6 items-center">
-                    <a href="index.html" class="nav-link font-medium">Home</a>
-                    <a href="about.html" class="nav-link font-medium">About Us</a>
-                    <a href="services.html" class="nav-link font-medium">Services</a>
-                    <a href="projects.html" class="nav-link font-medium">Projects</a>
-                    <a href="design.html" class="nav-link font-medium">Designs</a>
-                    <a href="contact.html" class="nav-link bg-primary-orange text-white px-4 py-2 lg:px-5 lg:py-2.5 rounded-md font-semibold transition-colors duration-300 shadow-sm hover:bg-primary-orange-dark">Contact Us</a>
+                    <div class="header-link-group">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About Us</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="projects.html" class="nav-link">Projects</a>
+                        <a href="design.html" class="nav-link">Designs</a>
+                    </div>
+                    <div class="header-link-group">
+                        <a href="https://khadock.com" class="nav-link text-orange-500 hover:text-orange-600">KhaDock.com</a>
+                        <a href="https://khahome.com" class="nav-link text-orange-500 hover:text-orange-600">KhaHome.com</a>
+                        <a href="contact.html" class="nav-link bg-blue-500 text-white px-4 py-2 lg:px-5 lg:py-2.5 rounded-md font-semibold transition-colors duration-300 shadow-sm hover:bg-blue-600">Contact Us</a>
+                    </div>
                 </nav>
             </div>
         </div>

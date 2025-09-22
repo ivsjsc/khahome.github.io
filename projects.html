@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#FF8C00">
+    <meta name="theme-color" content="#2563eb">
 
     <title>Our Home Remodeling Projects - Kha Dock & Home Constraction LLC Florida</title>
     <meta name="description" content="Explore a portfolio of completed home renovation designs, new constructions, and remodels by Kha Dock & Home Constraction LLC in Florida.">
 
     <meta property="og:title" content="Kha Dock & Home Constraction LLC Projects - Florida Home Improvement Excellence">
     <meta property="og:description" content="View our gallery of high-quality home renovation projects, showcasing our expertise in remodeling kitchens, bathrooms, and other living spaces across Florida.">
-    <meta property="og:image" content="https://placehold.co/1200x630/FF8C00/FFFDD0?text=Projects">
+    <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Projects">
     <meta property="og:url" content="https://khadock.com/projects.html">
     <meta property="og:type" content="website">
 
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="https://placehold.co/1200x630/FF8C00/FFFDD0?text=Kha+Dock">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="https://placehold.co/1200x630/2563eb/ffffff?text=Kha+Dock">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,10 +26,12 @@
             font-family: 'Inter', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            background-color: #f1f5f9;
+            background-color: #f8fafc;
+            color: #1e293b;
         }
         .project-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #f1f5f9;
         }
         .project-card:hover {
             transform: translateY(-6px);
@@ -94,6 +96,7 @@
             overflow: hidden;
             border-radius: 0.75rem;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            background-color: #f1f5f9;
         }
         .video-container video {
             position: absolute;
@@ -103,30 +106,39 @@
             height: 100%;
             object-fit: cover;
         }
+        .text-dark-contrast {
+            color: #0f172a;
+        }
+        .bg-light-contrast {
+            background-color: #f1f5f9;
+        }
+        .filter-button.active {
+            background-color: #2563eb;
+        }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800 antialiased">
+<body class="bg-blue-50 text-slate-900 antialiased">
 
     <div id="header-placeholder"></div>
 
     <main id="main-content-area" class="pt-20">
         <section class="bg-white py-20 md:py-28 text-center" data-aos="fade-in">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-down" data-aos-delay="200">Our Home Remodeling Portfolio</h1>
-                <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-600" data-aos="fade-up" data-aos-delay="400">
+                <h1 class="text-4xl md:text-5xl font-bold text-dark-contrast mb-4" data-aos="fade-down" data-aos-delay="200">Our Home Remodeling Portfolio</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto text-slate-700" data-aos="fade-up" data-aos-delay="400">
                     Explore a diverse range of completed home renovation projects, showcasing our commitment to quality and innovation.
                 </p>
             </div>
         </section>
 
-        <section class="py-16 md:py-24 bg-gray-100" data-aos="fade-up">
+        <section class="py-16 md:py-24 bg-light-contrast" data-aos="fade-up">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-10">
                 <div class="w-full md:w-2/3" data-aos="zoom-in-right">
                     <div class="video-container rounded-xl shadow-lg">
                         <video
-                            src="https://placehold.co/800x450/FF8C00/FFFDD0?text=Home+Renovation+Video"
+                            src="https://placehold.co/800x450/2563eb/ffffff?text=Home+Renovation+Video"
                             controls
-                            poster="https://placehold.co/800x450/FF8C00/FFFDD0?text=Home+Renovation+Video+Thumbnail"
+                            poster="https://placehold.co/800x450/2563eb/ffffff?text=Home+Renovation+Video+Thumbnail"
                             preload="metadata"
                         >
                             Your browser does not support the video tag.
@@ -134,8 +146,8 @@
                     </div>
                 </div>
                 <div class="w-full md:w-1/3" data-aos="fade-left" data-aos-delay="200">
-                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Project Quality</h2>
-                    <ul class="list-disc pl-5 text-gray-600 space-y-3">
+                    <h2 class="text-2xl md:text-3xl font-bold text-dark-contrast mb-4">Project Quality</h2>
+                    <ul class="list-disc pl-5 text-slate-700 space-y-3">
                         <li>
                             <span class="font-semibold">Our projects are built to last, ensuring enduring beauty and functionality.</span>
                         </li>
@@ -156,86 +168,86 @@
         <section class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Featured Home Remodeling Projects</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark-contrast mb-4">Featured Home Remodeling Projects</h2>
+                    <p class="text-slate-700 max-w-2xl mx-auto">
                         Each project showcases our commitment to excellence, durability, and complete client satisfaction in home renovation.
                     </p>
                 </div>
 
                 <div id="project-filters" class="flex flex-wrap justify-center gap-3 mb-10 md:mb-12" data-aos="fade-up" data-aos-delay="100">
-                    <button class="filter-button active px-5 py-2.5 text-sm font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-orange" data-filter="all">All Projects</button>
-                    <button class="filter-button px-5 py-2.5 text-sm font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-orange" data-filter="dock">Dock Building</button>
-                    <button class="filter-button px-5 py-2.5 text-sm font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-orange" data-filter="remodeling">Home Remodeling</button>
-                    <button class="filter-button px-5 py-2.5 text-sm font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-orange" data-filter="kitchen">Kitchen</button>
-                    <button class="filter-button px-5 py-2.5 text-sm font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-orange" data-filter="bathroom">Bathroom</button>
+                    <button class="filter-button active px-5 py-2.5 text-sm font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 bg-blue-500 text-white" data-filter="all">All Projects</button>
+                    <button class="filter-button px-5 py-2.5 text-sm font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white" data-filter="dock">Dock Building</button>
+                    <button class="filter-button px-5 py-2.5 text-sm font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white" data-filter="remodeling">Home Remodeling</button>
+                    <button class="filter-button px-5 py-2.5 text-sm font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white" data-filter="kitchen">Kitchen</button>
+                    <button class="filter-button px-5 py-2.5 text-sm font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white" data-filter="bathroom">Bathroom</button>
                 </div>
 
                 <div id="project-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="project-card bg-gray-100 rounded-xl shadow-lg overflow-hidden flex flex-col" data-category="dock" data-aos="zoom-in-up" data-aos-delay="100">
-                        <div class="project-image-container">
-                            <img src="https://placehold.co/800x600/FF8C00/FFFDD0?text=Dock+Project+1" alt="Strong dock construction project">
+                    <div class="project-card rounded-xl shadow-lg overflow-hidden flex flex-col" data-category="dock" data-aos="zoom-in-up" data-aos-delay="100">
+                        <div class="project-image-container bg-light-contrast">
+                            <img src="https://placehold.co/800x600/2563eb/ffffff?text=Dock+Project+1" alt="Strong dock construction project">
                         </div>
-                        <div class="p-6 project-card-content flex-grow">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Lakefront Dock - Orlando</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">Custom-designed dock featuring durable wood and a modern deck. A perfect addition for waterfront properties.</p>
-                            <span class="project-tag inline-block bg-primary-orange-light text-white font-semibold px-2.5 py-1 rounded-full mr-2 mb-1">Dock Building</span>
-                        </div>
-                    </div>
-                    <div class="project-card bg-gray-100 rounded-xl shadow-lg overflow-hidden flex flex-col" data-category="remodeling" data-aos="zoom-in-up" data-aos-delay="200">
-                        <div class="project-image-container">
-                            <img src="https://placehold.co/800x600/FF8C00/FFFDD0?text=Home+Remodeling+Project+1" alt="Full home renovation project">
-                        </div>
-                        <div class="p-6 project-card-content flex-grow">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Full Home Makeover - Tampa</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">A complete interior and exterior renovation project, transforming a dated property into a modern, energy-efficient home.</p>
-                            <span class="project-tag inline-block bg-primary-orange-light text-white font-semibold px-2.5 py-1 rounded-full mr-2 mb-1">Home Remodeling</span>
+                        <div class="p-6 project-card-content flex-grow bg-white">
+                            <h3 class="text-xl font-semibold text-dark-contrast mb-2">Lakefront Dock - Orlando</h3>
+                            <p class="text-slate-700 text-sm mb-4 line-clamp-3">Custom-designed dock featuring durable wood and a modern deck. A perfect addition for waterfront properties.</p>
+                            <span class="project-tag inline-block bg-blue-500 text-white font-semibold px-2.5 py-1 rounded-full mr-2 mb-1">Dock Building</span>
                         </div>
                     </div>
-                    <div class="project-card bg-gray-100 rounded-xl shadow-lg overflow-hidden flex flex-col" data-category="kitchen" data-aos="zoom-in-up" data-aos-delay="300">
-                        <div class="project-image-container">
-                            <img src="https://placehold.co/800x600/FF8C00/FFFDD0?text=Kitchen+Project+1" alt="Modern kitchen remodel">
+                    <div class="project-card rounded-xl shadow-lg overflow-hidden flex flex-col" data-category="remodeling" data-aos="zoom-in-up" data-aos-delay="200">
+                        <div class="project-image-container bg-light-contrast">
+                            <img src="https://placehold.co/800x600/2563eb/ffffff?text=Home+Remodeling+Project+1" alt="Full home renovation project">
                         </div>
-                        <div class="p-6 project-card-content flex-grow">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Modern Kitchen - Miami</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">Custom-designed kitchen featuring premium quartz countertops, smart appliance integration, and bespoke cabinetry for a modern, functional space.</p>
-                            <span class="project-tag inline-block bg-primary-orange-light text-white font-semibold px-2.5 py-1 rounded-full mr-2 mb-1">Kitchen</span>
-                        </div>
-                    </div>
-                    <div class="project-card bg-gray-100 rounded-xl shadow-lg overflow-hidden flex flex-col" data-category="bathroom" data-aos="zoom-in-up" data-aos-delay="100">
-                        <div class="project-image-container">
-                            <img src="https://placehold.co/800x600/FF8C00/FFFDD0?text=Bathroom+Project+1" alt="Spa-like bathroom renovation">
-                        </div>
-                        <div class="p-6 project-card-content flex-grow">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Spa Bathroom - Fort Lauderdale</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">Complete transformation of a bathroom into a luxurious spa retreat, including a walk-in shower, freestanding tub, and custom tile work.</p>
-                            <span class="project-tag inline-block bg-primary-orange-light text-white font-semibold px-2.5 py-1 rounded-full mr-2 mb-1">Bathroom</span>
+                        <div class="p-6 project-card-content flex-grow bg-white">
+                            <h3 class="text-xl font-semibold text-dark-contrast mb-2">Full Home Makeover - Tampa</h3>
+                            <p class="text-slate-700 text-sm mb-4 line-clamp-3">A complete interior and exterior renovation project, transforming a dated property into a modern, energy-efficient home.</p>
+                            <span class="project-tag inline-block bg-blue-500 text-white font-semibold px-2.5 py-1 rounded-full mr-2 mb-1">Home Remodeling</span>
                         </div>
                     </div>
-                    <div class="project-card bg-gray-100 rounded-xl shadow-lg overflow-hidden flex flex-col" data-category="remodeling" data-aos="zoom-in-up" data-aos-delay="200">
-                        <div class="project-image-container">
-                            <img src="https://placehold.co/800x600/FF8C00/FFFDD0?text=Home+Renovation+Project+2" alt="Contemporary home renovation project">
+                    <div class="project-card rounded-xl shadow-lg overflow-hidden flex flex-col" data-category="kitchen" data-aos="zoom-in-up" data-aos-delay="300">
+                        <div class="project-image-container bg-light-contrast">
+                            <img src="https://placehold.co/800x600/2563eb/ffffff?text=Kitchen+Project+1" alt="Modern kitchen remodel">
                         </div>
-                        <div class="p-6 project-card-content flex-grow">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Contemporary Update - Naples</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">A modern home update including new custom island, pendant lighting, and refreshed cabinetry for a bright and inviting space.</p>
-                            <span class="project-tag inline-block bg-primary-orange-light text-white font-semibold px-2.5 py-1 rounded-full mr-2 mb-1">Home Remodeling</span>
+                        <div class="p-6 project-card-content flex-grow bg-white">
+                            <h3 class="text-xl font-semibold text-dark-contrast mb-2">Modern Kitchen - Miami</h3>
+                            <p class="text-slate-700 text-sm mb-4 line-clamp-3">Custom-designed kitchen featuring premium quartz countertops, smart appliance integration, and bespoke cabinetry for a modern, functional space.</p>
+                            <span class="project-tag inline-block bg-blue-500 text-white font-semibold px-2.5 py-1 rounded-full mr-2 mb-1">Kitchen</span>
                         </div>
                     </div>
-                    <div class="project-card bg-gray-100 rounded-xl shadow-lg overflow-hidden flex flex-col" data-category="dock" data-aos="zoom-in-up" data-aos-delay="300">
-                        <div class="project-image-container">
-                            <img src="https://placehold.co/800x600/FF8C00/FFFDD0?text=Dock+Project+2" alt="Residential dock construction project">
+                    <div class="project-card rounded-xl shadow-lg overflow-hidden flex flex-col" data-category="bathroom" data-aos="zoom-in-up" data-aos-delay="100">
+                        <div class="project-image-container bg-light-contrast">
+                            <img src="https://placehold.co/800x600/2563eb/ffffff?text=Bathroom+Project+1" alt="Spa-like bathroom renovation">
                         </div>
-                        <div class="p-6 project-card-content flex-grow">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Residential Dock - Orlando</h3>
-                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">A stylish and functional residential dock, featuring new composite decking for a sleek, easy-to-clean surface.</p>
-                            <span class="project-tag inline-block bg-primary-orange-light text-white font-semibold px-2.5 py-1 rounded-full mr-2 mb-1">Dock Building</span>
+                        <div class="p-6 project-card-content flex-grow bg-white">
+                            <h3 class="text-xl font-semibold text-dark-contrast mb-2">Spa Bathroom - Fort Lauderdale</h3>
+                            <p class="text-slate-700 text-sm mb-4 line-clamp-3">Complete transformation of a bathroom into a luxurious spa retreat, including a walk-in shower, freestanding tub, and custom tile work.</p>
+                            <span class="project-tag inline-block bg-blue-500 text-white font-semibold px-2.5 py-1 rounded-full mr-2 mb-1">Bathroom</span>
+                        </div>
+                    </div>
+                    <div class="project-card rounded-xl shadow-lg overflow-hidden flex flex-col" data-category="remodeling" data-aos="zoom-in-up" data-aos-delay="200">
+                        <div class="project-image-container bg-light-contrast">
+                            <img src="https://placehold.co/800x600/2563eb/ffffff?text=Home+Renovation+Project+2" alt="Contemporary home renovation project">
+                        </div>
+                        <div class="p-6 project-card-content flex-grow bg-white">
+                            <h3 class="text-xl font-semibold text-dark-contrast mb-2">Contemporary Update - Naples</h3>
+                            <p class="text-slate-700 text-sm mb-4 line-clamp-3">A modern home update including new custom island, pendant lighting, and refreshed cabinetry for a bright and inviting space.</p>
+                            <span class="project-tag inline-block bg-blue-500 text-white font-semibold px-2.5 py-1 rounded-full mr-2 mb-1">Home Remodeling</span>
+                        </div>
+                    </div>
+                    <div class="project-card rounded-xl shadow-lg overflow-hidden flex flex-col" data-category="dock" data-aos="zoom-in-up" data-aos-delay="300">
+                        <div class="project-image-container bg-light-contrast">
+                            <img src="https://placehold.co/800x600/2563eb/ffffff?text=Dock+Project+2" alt="Residential dock construction project">
+                        </div>
+                        <div class="p-6 project-card-content flex-grow bg-white">
+                            <h3 class="text-xl font-semibold text-dark-contrast mb-2">Residential Dock - Orlando</h3>
+                            <p class="text-slate-700 text-sm mb-4 line-clamp-3">A stylish and functional residential dock, featuring new composite decking for a sleek, easy-to-clean surface.</p>
+                            <span class="project-tag inline-block bg-blue-500 text-white font-semibold px-2.5 py-1 rounded-full mr-2 mb-1">Dock Building</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 md:py-32 bg-primary-orange text-white text-center relative overflow-hidden" data-aos="zoom-in" id="cta">
+        <section class="py-20 md:py-32 cta-bg text-white text-center relative overflow-hidden" data-aos="zoom-in" id="cta">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">
                     Ready to Transform Your Home?
@@ -244,7 +256,7 @@
                     Contact us today for a free consultation and a no-obligation quote.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="contact.html" class="bg-white text-gray-800 font-bold py-4 px-10 sm:py-5 sm:px-12 rounded-xl text-lg sm:text-xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-200 inline-flex items-center">
+                    <a href="contact.html" class="bg-white text-slate-900 font-bold py-4 px-10 sm:py-5 sm:px-12 rounded-xl text-lg sm:text-xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:bg-slate-200 inline-flex items-center">
                         <i class="fas fa-phone-alt mr-3"></i>
                         Request a Free Quote
                     </a>
@@ -255,7 +267,7 @@
 
     <div id="footer-placeholder"></div>
 
-    <button id="scrollToTopBtn" title="Go to top" class="hidden fixed bottom-6 right-6 bg-primary-orange hover:bg-primary-orange-dark text-white w-12 h-12 rounded-full shadow-lg items-center justify-center focus:outline-none transition-opacity duration-300 z-40">
+    <button id="scrollToTopBtn" title="Go to top" class="hidden fixed bottom-6 right-6 bg-orange-500 hover:bg-orange-600 text-white w-12 h-12 rounded-full shadow-lg items-center justify-center focus:outline-none transition-opacity duration-300 z-40">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -303,8 +315,8 @@
 
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
+                    filterButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-500', 'text-white'));
+                    button.classList.add('active', 'bg-blue-500', 'text-white');
 
                     const filterValue = button.dataset.filter;
 
