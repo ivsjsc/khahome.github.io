@@ -1,5 +1,26 @@
 {
+  "name": "khahome-website",
+  "version": "1.0.0",
+  "description": "Kha Dock & Home Construction LLC Website",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind-output.css --minify",
+    "dev": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind-output.css --watch",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "construction",
+    "home-renovation",
+    "dock-building",
+    "florida"
+  ],
+  "author": "Kha Dock & Home Construction LLC",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "@tailwindcss/typography": "^0.5.10"
+  },
   "dependencies": {
-    "firebase": "^11.10.0"
+    "serve": "^14.2.1"
   }
 }
