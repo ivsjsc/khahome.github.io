@@ -8,45 +8,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .nav-header {
-            background-color: #ffffff;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 50;
+            backdrop-filter: blur(10px);
         }
         .nav-link {
-            transition: color 0.2s ease-in-out;
+            transition: all 0.3s ease;
             color: #1e293b;
-            font-weight: 500;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
         }
         .nav-link:hover {
-            color: #2563eb;
+            color: #ff8c00;
+            background-color: rgba(255,140,0,0.1);
         }
-        .header-link-group {
-            display: flex;
-            align-items: center;
+        .brand-name {
+            background: linear-gradient(135deg, #ff8c00 0%, #ff6a00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            font-size: 1.75rem;
         }
-        .header-link-group a {
-            margin-left: 1rem;
+        .contact-btn {
+            background: linear-gradient(135deg, #ff8c00 0%, #ff7b00 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255,140,0,0.3);
+            text-decoration: none;
         }
-        .header-link-group a:first-child {
-            margin-left: 0;
-        }
-        .text-dark-contrast {
-            color: #0f172a;
-        }
-        .bg-blue-500 {
-            background-color: #2563eb;
-        }
-        .hover\:bg-blue-600:hover {
-            background-color: #1d4ed8;
-        }
-        .text-orange-500 {
-            color: #f97316;
-        }
-        .hover\:text-orange-600:hover {
-            color: #ea580c;
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,140,0,0.4);
+            background: linear-gradient(135deg, #ff7b00 0%, #ff6a00 100%);
         }
     </style>
 </head>
@@ -55,26 +57,23 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <a href="index.html" class="flex items-center space-x-3 group" aria-label="KhaHome.com Homepage">
-                    <span class="text-2xl font-bold text-dark-contrast group-hover:text-orange-500 transition-colors" style="color: #1e293b; font-weight: 800;">KhaHome.com</span>
+                    <span class="brand-name">KhaHome.com</span>
                 </a>
-                <nav class="hidden md:flex space-x-4 lg:space-x-6 items-center">
-                    <div class="header-link-group">
-                        <a href="index.html" class="nav-link">Home</a>
-                        <a href="about.html" class="nav-link">About Us</a>
-                        <a href="services.html" class="nav-link">Services</a>
-                        <a href="projects.html" class="nav-link">Projects</a>
-                        <a href="design.html" class="nav-link">Designs</a>
-                    </div>
-                    <div class="header-link-group">
-                        <a href="https://khadock.com" class="nav-link text-orange-500 hover:text-orange-600">KhaDock.com</a>
-                        <a href="https://khahome.com" class="nav-link text-orange-500 hover:text-orange-600">KhaHome.com</a>
-                        <a href="contact.html" class="nav-link bg-blue-500 text-white px-4 py-2 lg:px-5 lg:py-2.5 rounded-md font-semibold transition-colors duration-300 shadow-sm hover:bg-blue-600">Contact Us</a>
-                    </div>
+                
+                <nav class="hidden lg:flex items-center space-x-2">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="design.html" class="nav-link">Designs</a>
+                    <span class="mx-4 h-6 w-px bg-gray-300"></span>
+                    <a href="https://khadock.com" class="nav-link text-orange-500 hover:text-orange-600">KhaDock.com</a>
+                    <a href="contact.html" class="contact-btn">Contact Us</a>
                 </nav>
                 
                 <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors" aria-label="Open mobile menu">
-                    <i class="fas fa-bars text-gray-700"></i>
+                <button id="mobile-menu-button" class="lg:hidden flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 hover:bg-orange-100 transition-colors" aria-label="Open mobile menu">
+                    <i class="fas fa-bars text-gray-700 text-lg"></i>
                 </button>
             </div>
         </div>
