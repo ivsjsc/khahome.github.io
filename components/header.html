@@ -30,31 +30,40 @@
             white-space: nowrap;
         }
 
-        /* Mobile menu button - Force visibility */
+        /* Mobile menu button styling */
         #mobile-menu-button {
             display: flex !important;
-            width: 48px !important;
-            height: 48px !important;
-            border-radius: 12px !important;
-            align-items: center !important;
-            justify-content: center !important;
-            background: #ff8c00 !important;
-            border: none !important;
-            cursor: pointer !important;
-            transition: all 0.3s ease !important;
-            position: relative !important;
-            z-index: 60 !important;
+            text-slate-300 hover:text-orange-400;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 140, 0, 0.1);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 60;
         }
 
         #mobile-menu-button:hover {
-            background: #e67e00 !important;
-            transform: scale(1.05) !important;
+            background: rgba(255, 140, 0, 0.2);
         }
 
         #mobile-menu-button i {
-            font-size: 1.25rem !important;
-            color: white !important;
-            transition: transform 0.3s ease !important;
+            font-size: 1.25rem;
+            color: #ff8c00;
+            transition: all 0.3s ease;
+        }
+
+        #icon-menu-close {
+            display: none;
+        }
+
+        .menu-open #icon-menu-open {
+            display: none;
+        }
+
+        .menu-open #icon-menu-close {
+            display: block;
         }
 
         /* Hide on desktop only */
@@ -172,72 +181,99 @@
                     <a href="contact.html" class="contact-btn">Contact Us</a>
                 </nav>
                 
-                <button id="mobile-menu-button" class="menu-button block lg:hidden" aria-label="Open mobile menu" style="display: flex !important;">
-                    <i class="fas fa-bars"></i>
+                <button id="mobile-menu-button" class="md:hidden text-orange-500 hover:text-orange-600 focus:outline-none p-2 rounded-md transition-colors bg-orange-50" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu-panel">
+                    <span class="sr-only">Open main menu</span>
+                    <i class="fas fa-bars fa-lg" id="icon-menu-open" aria-hidden="true"></i>
+                    <i class="fas fa-times fa-lg hidden" id="icon-menu-close" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
     </header>
 
     <!-- Mobile Menu Panel -->
-    <div id="mobile-menu-panel">
-        <div class="mobile-menu-content">
-            <div class="flex justify-between items-center mb-8">
-                <span class="text-white text-2xl font-bold">Menu</span>
-                <button id="mobile-menu-close" class="menu-button">
-                    <i class="fas fa-times text-white"></i>
-                </button>
-            </div>
-            
-            <nav class="flex-1 space-y-2">
-                <a href="index.html" class="mobile-menu-link">Home</a>
-                <a href="about.html" class="mobile-menu-link">About Us</a>
-                <a href="services.html" class="mobile-menu-link">Services</a>
-                <a href="projects.html" class="mobile-menu-link">Projects</a>
-                <a href="design.html" class="mobile-menu-link">Designs</a>
-                
-                <div class="my-4 border-t border-gray-600"></div>
-                
-                <a href="https://khadock.com" class="mobile-menu-link" style="color: #3b82f6">KhaDock.com</a>
-                <a href="contact.html" class="mobile-menu-link bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl px-4 py-3 text-center mt-4">
-                    Contact Us <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </nav>
-            
-            <div class="mt-auto pt-8">
-                <div class="flex justify-center space-x-6">
-                    <a href="tel:+18139393989" class="text-white hover:text-orange-400 transition-colors">
-                        <i class="fas fa-phone fa-lg"></i>
-                    </a>
-                    <a href="mailto:doduykha007@gmail.com" class="text-white hover:text-orange-400 transition-colors">
-                        <i class="fas fa-envelope fa-lg"></i>
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61575043076973" target="_blank" class="text-white hover:text-orange-400 transition-colors">
-                        <i class="fab fa-facebook fa-lg"></i>
-                    </a>
-                </div>
-            </div>
+    <div id="mobile-menu-panel" class="md:hidden fixed w-full h-full z-40 top-0 left-0 right-0 bg-white shadow-xl transform transition-transform duration-300 ease-in-out translate-x-full">
+        <!-- Header của mobile menu -->
+        <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 bg-gray-50">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-xl font-bold brand-name">KhaHome.com</span>
+            </a>
+            <button type="button" id="mobile-menu-close" class="text-gray-500 hover:text-orange-500 focus:outline-none p-2 rounded-md">
+                <i class="fas fa-times fa-lg"></i>
+            </button>
         </div>
+
+        <nav class="flex flex-col px-4 py-4 h-full overflow-y-auto pb-24" aria-label="Main mobile navigation">
+            <!-- Menu items with icons -->
+            <div class="space-y-2">
+                <a href="index.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-orange-50 transition-colors">
+                    <i class="fas fa-home text-orange-500 w-5 text-center"></i>
+                    <span class="font-medium">Home</span>
+                </a>
+                
+                <a href="about.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-orange-50 transition-colors">
+                    <i class="fas fa-info-circle text-orange-500 w-5 text-center"></i>
+                    <span class="font-medium">About Us</span>
+                </a>
+                
+                <a href="services.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-orange-50 transition-colors">
+                    <i class="fas fa-tools text-orange-500 w-5 text-center"></i>
+                    <span class="font-medium">Services</span>
+                </a>
+
+                <a href="projects.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-orange-50 transition-colors">
+                    <i class="fas fa-hammer text-orange-500 w-5 text-center"></i>
+                    <span class="font-medium">Projects</span>
+                </a>
+                
+                <a href="design.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-orange-50 transition-colors">
+                    <i class="fas fa-magic text-orange-500 w-5 text-center"></i>
+                    <span class="font-medium">Designs</span>
+                </a>
+                
+                <div class="my-4 border-t border-gray-200"></div>
+                
+                <a href="https://khadock.com" class="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-orange-50 transition-colors">
+                    <i class="fas fa-anchor text-blue-500 w-5 text-center"></i>
+                    <span class="font-medium text-blue-500">KhaDock.com</span>
+                </a>
+                
+                <a href="contact.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 transition-colors">
+                    <i class="fas fa-envelope text-white w-5 text-center"></i>
+                    <span class="font-medium text-white">Contact Us</span>
+                </a>
+            </div>
+        </nav>
     </div>
 
     <script>
-        // Mobile menu functionality with debug logging
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Mobile menu script loaded');
-            
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenuPanel = document.getElementById('mobile-menu-panel');
             const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const iconMenuOpen = document.getElementById('icon-menu-open');
+            const iconMenuClose = document.getElementById('icon-menu-close');
             
-            console.log('Button:', mobileMenuButton);
-            console.log('Panel:', mobileMenuPanel);
-            console.log('Close:', mobileMenuClose);
-            
-            // Ensure all elements exist
-            if (!mobileMenuButton || !mobileMenuPanel || !mobileMenuClose) {
-                console.error('Mobile menu elements not found');
-                return;
+            function toggleMenu() {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                
+                if (isExpanded) {
+                    // Closing the menu
+                    mobileMenuPanel.classList.add('translate-x-full');
+                    iconMenuOpen.classList.remove('hidden');
+                    iconMenuClose.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                } else {
+                    // Opening the menu
+                    mobileMenuPanel.classList.remove('translate-x-full');
+                    iconMenuOpen.classList.add('hidden');
+                    iconMenuClose.classList.remove('hidden');
+                    document.body.classList.add('overflow-hidden');
+                }
             }
+
+            mobileMenuButton.addEventListener('click', toggleMenu);
+            mobileMenuClose.addEventListener('click', toggleMenu);
 
             const menuIcon = mobileMenuButton.querySelector('i');
             console.log('Icon:', menuIcon);
