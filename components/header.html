@@ -30,29 +30,38 @@
             white-space: nowrap;
         }
 
-        /* Mobile menu button */
-        .menu-button {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 140, 0, 0.1);
-            border: 2px solid #ff8c00;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        /* Mobile menu button - Force visibility */
+        #mobile-menu-button {
+            display: flex !important;
+            width: 48px !important;
+            height: 48px !important;
+            border-radius: 12px !important;
+            align-items: center !important;
+            justify-content: center !important;
+            background: #ff8c00 !important;
+            border: none !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            z-index: 60 !important;
         }
 
-        .menu-button:hover {
-            background: rgba(255, 140, 0, 0.2);
-            transform: scale(1.05);
+        #mobile-menu-button:hover {
+            background: #e67e00 !important;
+            transform: scale(1.05) !important;
         }
 
-        .menu-button i {
-            font-size: 1.25rem;
-            color: #ff8c00;
-            transition: transform 0.3s ease;
+        #mobile-menu-button i {
+            font-size: 1.25rem !important;
+            color: white !important;
+            transition: transform 0.3s ease !important;
+        }
+
+        /* Hide on desktop only */
+        @media (min-width: 1024px) {
+            #mobile-menu-button {
+                display: none !important;
+            }
         }
 
         /* Mobile menu panel */
@@ -163,7 +172,7 @@
                     <a href="contact.html" class="contact-btn">Contact Us</a>
                 </nav>
                 
-                <button id="mobile-menu-button" class="menu-button lg:hidden" aria-label="Open mobile menu">
+                <button id="mobile-menu-button" class="menu-button block lg:hidden" aria-label="Open mobile menu" style="display: flex !important;">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -212,11 +221,17 @@
     </div>
 
     <script>
-        // Mobile menu functionality with improved error handling
+        // Mobile menu functionality with debug logging
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('Mobile menu script loaded');
+            
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenuPanel = document.getElementById('mobile-menu-panel');
             const mobileMenuClose = document.getElementById('mobile-menu-close');
+            
+            console.log('Button:', mobileMenuButton);
+            console.log('Panel:', mobileMenuPanel);
+            console.log('Close:', mobileMenuClose);
             
             // Ensure all elements exist
             if (!mobileMenuButton || !mobileMenuPanel || !mobileMenuClose) {
@@ -225,9 +240,12 @@
             }
 
             const menuIcon = mobileMenuButton.querySelector('i');
+            console.log('Icon:', menuIcon);
 
             function toggleMenu() {
+                console.log('Toggle menu called');
                 const isOpen = mobileMenuPanel.classList.contains('open');
+                console.log('Is open:', isOpen);
                 
                 // Toggle menu icon
                 if (menuIcon) {
@@ -253,11 +271,13 @@
 
             // Event listeners
             mobileMenuButton.addEventListener('click', function(e) {
+                console.log('Button clicked');
                 e.preventDefault();
                 toggleMenu();
             });
 
             mobileMenuClose.addEventListener('click', function(e) {
+                console.log('Close clicked');
                 e.preventDefault();
                 toggleMenu();
             });
@@ -283,6 +303,8 @@
                     toggleMenu();
                 });
             });
+            
+            console.log('Mobile menu setup complete');
         });
     </script>
 </body>
