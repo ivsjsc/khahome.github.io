@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form - KhaHome.com</title>
+    <link rel="stylesheet" href="css/tailwind-output.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+        }
+        .form-section {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .form-heading {
+            margin-bottom: 25px;
+            color: #1e293b;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #334155;
+        }
+        .form-input, .form-textarea, .form-select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+        }
+        .form-input:focus, .form-textarea:focus, .form-select:focus {
+            outline: none;
+            border-color: #ff8c00;
+            box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+        }
+        .form-button {
+            background: linear-gradient(135deg, #ff8c00 0%, #ff7b00 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(255, 140, 0, 0.25);
+        }
+        .form-button:hover {
+            background: linear-gradient(135deg, #ff7b00 0%, #ff6a00 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(255, 140, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-section">
+        <form name="contact" method="POST" class="form-container" data-netlify="true" netlify-honeypot="bot-field">
+            <p class="hidden">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+            <h2 class="form-heading">Contact Us</h2>
+            
+            <div class="form-group">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" name="name" id="name" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" name="phone" id="phone" class="form-input">
+            </div>
+            
+            <div class="form-group">
+                <label for="service" class="form-label">Service Interested In</label>
+                <select name="service" id="service" class="form-select">
+                    <option value="Home Remodeling">Home Remodeling</option>
+                    <option value="Dock Building">Dock Building</option>
+                    <option value="Kitchen & Bathroom">Kitchen & Bathroom</option>
+                    <option value="General Construction">General Construction</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea name="message" id="message" rows="5" class="form-textarea"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="form-button">Send Message</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
