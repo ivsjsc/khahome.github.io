@@ -31,6 +31,18 @@
             -moz-osx-font-smoothing: grayscale;
             background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
         }
+        /* Ensure mobile menu button is visible on all devices */
+        @media (max-width: 1023px) {
+            .menu-button {
+                display: flex !important;
+                background: #ff8c00 !important;
+                border: none !important;
+            }
+            .menu-button i {
+                color: white !important;
+                font-size: 1.5rem !important;
+            }
+        }
         .hero-banner-container {
             position: relative;
             background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);

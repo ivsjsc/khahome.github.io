@@ -7,48 +7,140 @@
     <link rel="stylesheet" href="css/tailwind-output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        /* Mobile-first base styles */
         .nav-header {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 50;
-            backdrop-filter: blur(10px);
         }
+
+        /* Brand styles */
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff8c00, #ff6a00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            white-space: nowrap;
+        }
+
+        /* Mobile menu button */
+        .menu-button {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 140, 0, 0.1);
+            border: 2px solid #ff8c00;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .menu-button:hover {
+            background: rgba(255, 140, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .menu-button i {
+            font-size: 1.25rem;
+            color: #ff8c00;
+            transition: transform 0.3s ease;
+        }
+
+        /* Mobile menu panel */
+        #mobile-menu-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+            display: none;
+            z-index: 100;
+        }
+
+        #mobile-menu-panel.open {
+            transform: translateX(0);
+        }
+
+        .mobile-menu-content {
+            height: 100%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu-link {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 500;
+            padding: 1rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .mobile-menu-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(10px);
+            color: #ff8c00;
+        }
+
+        /* Desktop menu */
         .nav-link {
             transition: all 0.3s ease;
             color: #1e293b;
-            font-weight: 600;
+            font-weight: 500;
             padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-        }
-        .nav-link:hover {
-            color: #ff8c00;
-            background-color: rgba(255,140,0,0.1);
-        }
-        .brand-name {
-            background: linear-gradient(135deg, #ff8c00 0%, #ff6a00 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800;
-            font-size: 1.75rem;
-        }
-        .contact-btn {
-            background: linear-gradient(135deg, #ff8c00 0%, #ff7b00 100%);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.75rem;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255,140,0,0.3);
+            border-radius: 8px;
             text-decoration: none;
         }
+
+        .nav-link:hover {
+            color: #ff8c00;
+            background: rgba(255, 140, 0, 0.1);
+        }
+
+        /* Desktop contact button */
+        .contact-btn {
+            background: linear-gradient(135deg, #ff8c00, #ff6a00);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+            text-decoration: none;
+        }
+
         .contact-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255,140,0,0.4);
-            background: linear-gradient(135deg, #ff7b00 0%, #ff6a00 100%);
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
+        }
+
+        /* Prevent scroll when menu is open */
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 1024px) {
+            .brand-name {
+                font-size: 1.75rem;
+            }
         }
     </style>
 </head>
@@ -120,19 +212,28 @@
     </div>
 
     <script>
-        // Mobile menu functionality with improved transitions
+        // Mobile menu functionality with improved error handling
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenuPanel = document.getElementById('mobile-menu-panel');
             const mobileMenuClose = document.getElementById('mobile-menu-close');
+            
+            // Ensure all elements exist
+            if (!mobileMenuButton || !mobileMenuPanel || !mobileMenuClose) {
+                console.error('Mobile menu elements not found');
+                return;
+            }
+
             const menuIcon = mobileMenuButton.querySelector('i');
 
             function toggleMenu() {
                 const isOpen = mobileMenuPanel.classList.contains('open');
                 
                 // Toggle menu icon
-                menuIcon.classList.toggle('fa-bars');
-                menuIcon.classList.toggle('fa-times');
+                if (menuIcon) {
+                    menuIcon.classList.toggle('fa-bars');
+                    menuIcon.classList.toggle('fa-times');
+                }
                 
                 // Toggle menu panel
                 if (isOpen) {
@@ -140,7 +241,7 @@
                     document.body.classList.remove('menu-open');
                     setTimeout(() => {
                         mobileMenuPanel.style.display = 'none';
-                    }, 300); // Match transition duration
+                    }, 300);
                 } else {
                     mobileMenuPanel.style.display = 'block';
                     // Force reflow
@@ -150,28 +251,35 @@
                 }
             }
 
-            // Click handlers
-            mobileMenuButton.addEventListener('click', toggleMenu);
-            mobileMenuClose.addEventListener('click', toggleMenu);
+            // Event listeners
+            mobileMenuButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleMenu();
+            });
+
+            mobileMenuClose.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleMenu();
+            });
 
             // Close on escape key
-            document.addEventListener('keydown', (e) => {
+            document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && mobileMenuPanel.classList.contains('open')) {
                     toggleMenu();
                 }
             });
 
-            // Close when clicking outside
-            mobileMenuPanel.addEventListener('click', (e) => {
+            // Close when clicking on backdrop
+            mobileMenuPanel.addEventListener('click', function(e) {
                 if (e.target === mobileMenuPanel) {
                     toggleMenu();
                 }
             });
 
-            // Handle links in mobile menu
-            const mobileMenuLinks = mobileMenuPanel.getElementsByTagName('a');
-            Array.from(mobileMenuLinks).forEach(link => {
-                link.addEventListener('click', () => {
+            // Close menu when clicking menu links
+            const mobileMenuLinks = mobileMenuPanel.querySelectorAll('a');
+            mobileMenuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
                     toggleMenu();
                 });
             });
