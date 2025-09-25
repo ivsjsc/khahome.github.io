@@ -1,104 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer Component</title>
-    <link rel="stylesheet" href="css/tailwind-output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .footer-section {
-            background-color: #0f172a;
-            color: #f1f5f9;
-        }
-        .footer-link {
-            transition: color 0.2s ease-in-out;
-            color: #cbd5e1;
-        }
-        .footer-link:hover {
-            color: #93c5fd;
-        }
-        .text-dark-contrast {
-            color: #f1f5f9;
-        }
-        .text-blue-400 {
-            color: #60a5fa;
-        }
-    </style>
-</head>
-<body>
-    <footer class="footer-section py-12 md:py-16">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8 mb-10 md:mb-12">
-                <div class="space-y-4">
-                    <a href="index.html" class="inline-block">
-                        <h3 class="text-xl font-bold text-dark-contrast" style="color: #f1f5f9; font-weight: 800;">KhaHome.com</h3>
-                    </a>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        Professional Home Remodeling & Construction Services
-                    </p>
-                    <div class="bg-slate-800 p-3 rounded-lg shadow-md max-w-xs">
-                        <div class="flex items-center space-x-3">
-                                <a href="https://www.facebook.com/profile.php?id=61575043076973" target="_blank" rel="noopener noreferrer" aria-label="Visit Kha Dock & Home Construction LLC on Facebook" class="flex-shrink-0">
-                                <svg class="w-10 h-10 text-blue-500 bg-white rounded-full p-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
-                                </svg>
-                            </a>
-                            <div class="flex-1">
-                                <a href="https://www.facebook.com/profile.php?id=61575043076973" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white hover:text-blue-400 transition-colors">Find us on Facebook</a>
-                                <div class="flex items-center space-x-2 mt-0.5">
-                                    <span class="text-slate-400 text-xs">Stay connected!</span>
-                                </div>
+<footer class="bg-accent-brown-dark text-bg-cream-light py-12 md:py-16 footer-section">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8 mb-10 md:mb-12">
+            <div class="space-y-4">
+                <a href="index.html" class="inline-block">
+                    <h3 class="text-xl font-semibold text-primary-orange-light hover:text-primary-orange transition-colors">KhaHome.com</h3>
+                </a>
+                <p class="text-bg-cream-light text-sm leading-relaxed">
+                    KhaHome.com - Design and Remodel Homes in Florida.
+                </p>
+                <div class="bg-accent-brown p-3 rounded-lg shadow-md max-w-xs">
+                    <div class="flex items-center space-x-3">
+                        <a href="https://www.facebook.com/profile.php?id=61575043076973" target="_blank" rel="noopener noreferrer" aria-label="Visit KhaHome on Facebook" class="flex-shrink-0">
+                            <svg class="w-10 h-10 text-primary-orange bg-white rounded-full p-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                            </svg>
+                        </a>
+                        <div class="flex-1">
+                            <a href="https://www.facebook.com/profile.php?id=61575043076973" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary-orange-light hover:text-primary-orange transition-colors">KhaHome.com</a>
+                            <div class="flex items-center space-x-2 mt-0.5">
+                                <span class="text-bg-cream-light text-xs">Follow us on Facebook</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <nav aria-labelledby="quick-links-heading">
-                    <h3 id="quick-links-heading" class="text-lg font-semibold text-dark-contrast mb-5">Quick Links</h3>
-                    <ul class="space-y-2.5 text-sm">
-                        <li><a href="index.html" class="footer-link">Home</a></li>
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
-                        <li><a href="services.html" class="footer-link">Services</a></li>
-                        <li><a href="projects.html" class="footer-link">Projects</a></li>
-                        <li><a href="design.html" class="footer-link">Designs</a></li>
-                    </ul>
-                </nav>
-                <nav aria-labelledby="main-services-heading">
-                    <h3 id="main-services-heading" class="text-lg font-semibold text-dark-contrast mb-5">Main Services</h3>
-                    <ul class="space-y-2.5 text-sm">
-                        <li><a href="services.html#dock" class="footer-link">Dock Building</a></li>
-                        <li><a href="services.html#remodeling" class="footer-link">Home Remodeling</a></li>
-                        <li><a href="services.html#kitchen" class="footer-link">Kitchen & Bathroom</a></li>
-                    </ul>
-                </nav>
-                <div>
-                    <h3 class="text-lg font-semibold text-dark-contrast mb-5">Contact Information</h3>
-                    <address class="not-italic text-sm space-y-3">
-                        <p class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-blue-400 mr-2.5 mt-1"></i>
-                            <a href="https://www.google.com/maps/search/?api=1&query=3850+Rollingsford+Cir,+Lakeland,+FL+33810,+USA" target="_blank" rel="noopener noreferrer" class="footer-link">
-                                <span>3850 Rollinsford Cir, Lakeland, FL 33810, USA</span>
-                            </a>
-                        </p>
-                        <p class="flex items-center">
-                            <i class="fas fa-phone text-blue-400 mr-2.5"></i>
-                            <a href="tel:+18139393989" class="footer-link">+1 813-939-3989</a>
-                        </p>
-                        <p class="flex items-center">
-                            <i class="fas fa-envelope text-blue-400 mr-2.5"></i>
-                            <a href="mailto:doduykha007@gmail.com" class="footer-link">doduykha007@gmail.com</a>
-                        </p>
-                    </address>
+            </div>
+
+            <nav aria-labelledby="quick-links-heading">
+                <h3 id="quick-links-heading" class="text-lg font-semibold text-primary-orange-light mb-5">Quick Links</h3>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="index.html" class="text-bg-cream-light hover:text-primary-orange-light transition-colors">Home</a></li>
+                    <li><a href="about.html" class="text-bg-cream-light hover:text-primary-orange-light transition-colors">About Us</a></li>
+                    <li><a href="services.html" class="text-bg-cream-light hover:text-primary-orange-light transition-colors">Services</a></li>
+                    <li><a href="projects.html" class="text-bg-cream-light hover:text-primary-orange-light transition-colors">Projects</a></li>
+                    <li><a href="design.html" class="text-bg-cream-light hover:text-primary-orange-light transition-colors">Designs</a></li>
+                </ul>
+            </nav>
+
+            <nav aria-labelledby="main-services-heading">
+                <h3 id="main-services-heading" class="text-lg font-semibold text-primary-orange-light mb-5">Main Services</h3>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="services.html#kitchen" class="text-bg-cream-light hover:text-primary-orange-light transition-colors">Kitchen Remodeling</a></li>
+                    <li><a href="services.html#bathroom" class="text-bg-cream-light hover:text-primary-orange-light transition-colors">Bathroom Renovation</a></li>
+                    <li><a href="services.html#painting" class="text-bg-cream-light hover:text-primary-orange-light transition-colors">Interior & Exterior Painting</a></li>
+                    <li><a href="services.html#flooring" class="text-bg-cream-light hover:text-primary-orange-light transition-colors">Flooring Installation</a></li>
+                </ul>
+            </nav>
+
+            <div>
+                <h3 class="text-lg font-semibold text-primary-orange-light mb-5">Contact Information</h3>
+                <address class="not-italic text-sm space-y-3">
+                    <p class="flex items-start">
+                        <svg class="flex-shrink-0 w-5 h-5 text-primary-orange-light mr-2.5 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        <a href="https://www.google.com/maps/search/?api=1&query=3850+Rollingsford+Cir,+Lakeland,+FL+33810,+USA" target="_blank" rel="noopener noreferrer" class="text-bg-cream-light hover:text-primary-orange-light transition-colors">
+                            <span>3850 Rollinsford Cir, Lakeland, FL 33810, USA</span>
+                        </a>
+                    </p>
+                    <p class="flex items-center">
+                        <svg class="flex-shrink-0 w-5 h-5 text-primary-orange-light mr-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        <a href="tel:+18139393989" class="text-bg-cream-light hover:text-primary-orange-light transition-colors">+1 813-939-3989</a>
+                    </p>
+                    <p class="flex items-center">
+                        <svg class="flex-shrink-0 w-5 h-5 text-primary-orange-light mr-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.224 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <a href="mailto:info@khahome.com" class="text-bg-cream-light hover:text-primary-orange-light transition-colors">info@khahome.com</a>
+                    </p>
+                </address>
+                <div class="mt-8">
+                    <h3 class="text-lg font-semibold text-primary-orange-light mb-5">Subscribe to Our Newsletter</h3>
+                    <form id="newsletter-form" action="https://formspree.io/f/xyzwqdoa" method="POST" class="mt-4">
+                        <label for="newsletter-email" class="sr-only">Your Email</label>
+                        <input type="email" id="newsletter-email" name="email" placeholder="Your Email" class="w-full px-4 py-2 bg-accent-brown rounded-md text-bg-cream-light focus:ring-2 focus:ring-primary-orange-light focus:outline-none placeholder-bg-cream" required>
+                        <button type="submit" class="w-full mt-3 py-2 bg-primary-orange hover:bg-primary-orange-dark text-white rounded-md transition-colors">Subscribe</button>
+                    </form>
+                    <div id="newsletter-message" class="mt-2 text-sm text-primary-orange-light"></div>
                 </div>
             </div>
-            <div class="border-t border-slate-700 pt-8 text-center text-sm">
-                <p class="text-slate-400 mb-1">© <span id="current-year">2025</span> KhaHome.com - All rights reserved.</p>
-                <p class="text-slate-400">Professional Home Remodeling & Construction Services | Designed by <a href="https://ivsacademy.edu.vn/Pages/webdesign.html" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline transition-colors">IVS Celestech, IVS JSC.</a></p>
-            </div>
         </div>
-    </footer>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
-</body>
-</html>
+
+        <div class="border-t border-accent-brown pt-8 text-center text-sm">
+            <p class="text-bg-cream-light mb-1">© <span id="current-year">2025</span> KhaHome.com - All rights reserved.</p>
+            <p class="text-bg-cream-light">Designed by <a href="https://ivsacademy.edu.vn/Pages/webdesign.html" target="_blank" rel="noopener noreferrer" class="text-primary-orange-light hover:text-primary-orange underline transition-colors">IVS Celestech, IVS JSC.</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('newsletter-form').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const form = event.target;
+        const email = form.querySelector('#newsletter-email').value;
+        const messageDiv = document.getElementById('newsletter-message');
+
+        // Clear previous messages
+        messageDiv.textContent = '';
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: email })
+            });
+
+            if (response.ok) {
+                messageDiv.textContent = 'Thank you for subscribing! You will receive updates soon.';
+                messageDiv.classList.remove('text-red-400');
+                messageDiv.classList.add('text-primary-orange-light');
+                form.reset(); // Clear the form
+            } else {
+                const errorData = await response.json();
+                messageDiv.textContent = errorData.error || 'Something went wrong. Please try again.';
+                messageDiv.classList.remove('text-primary-orange-light');
+                messageDiv.classList.add('text-red-400');
+            }
+        } catch (error) {
+            messageDiv.textContent = 'An error occurred. Please try again later.';
+            messageDiv.classList.remove('text-primary-orange-light');
+            messageDiv.classList.add('text-red-400');
+        }
+    });
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
