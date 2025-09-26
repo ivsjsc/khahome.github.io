@@ -131,106 +131,51 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Contact CTA Section -->
+        <section class="py-16 md:py-24 bg-primary-orange text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow-lg">
+                    Let's Build Your Dream Home Together
+                </h2>
+                <p class="mt-4 text-xl md:text-2xl font-light max-w-2xl mx-auto drop-shadow-md">
+                    Ready to start your renovation journey? Get in touch with our team today.
+                </p>
+                <a href="contact.html" class="inline-block mt-8 px-8 py-4 bg-white text-accent-brown font-bold rounded-full transition-transform duration-300 hover:scale-105 shadow-lg">
+                    Contact Us Now
+                </a>
+            </div>
+        </section>
+    </main>
 
-        <!-- Our Philosophy Section -->
-        <section class="py-16 md:py-24 bg-slate-50" data-aos="fade-up">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Our Philosophy</h2>
-                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">
-                        The foundation for all of KhaHome Remodeling’s success and sustainable growth.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="value-card bg-white p-8 rounded-xl shadow-xl flex flex-col items-center text-center" data-aos="zoom-in-up" data-aos-delay="100">
-                        <div class="value-icon text-slate-400 mb-6">
-                            <i class="fas fa-bullseye fa-4x"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Our Mission</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            To deliver safe, beautiful, and functional home remodels that enhance daily living and reflect each client’s unique vision. We strive to turn houses into dream homes, one project at a time.
-                        </p>
-                    </div>
-                    <div class="value-card bg-white p-8 rounded-xl shadow-xl flex flex-col items-center text-center" data-aos="zoom-in-up" data-aos-delay="200">
-                        <div class="value-icon text-slate-400 mb-6">
-                            <i class="fas fa-eye fa-4x"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Our Vision</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            To be Florida’s leading home remodeling company, known for creative design, superior craftsmanship, and a client-first approach that builds trust and long-term relationships.
-                        </p>
-                    </div>
-                    <div class="value-card bg-white p-8 rounded-xl shadow-xl flex flex-col items-center text-center" data-aos="zoom-in-up" data-aos-delay="300">
-                        <div class="value-icon text-slate-400 mb-6">
-                            <i class="fas fa-heart-pulse fa-4x"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-slate-800 mb-3">Core Values</h3>
-                        <ul class="text-slate-600 text-sm space-y-2 list-none text-left self-start w-full pl-4 sm:pl-6">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-sky-500 fa-sm mr-3"></i>Quality & Craftsmanship</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-sky-500 fa-sm mr-3"></i>Client Satisfaction</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-sky-500 fa-sm mr-3"></i>Integrity & Transparency</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-sky-500 fa-sm mr-3"></i>Innovation & Creativity</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-sky-500 fa-sm mr-3"></i>Safety & Reliability</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-sky-500 fa-sm mr-3"></i>Community Impact</li>
-                        </ul>
-                    </div>
-                </div>
+    <div id="footer-placeholder"></div>
+    <div id="fab-container-placeholder"></div>
 
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    
+    <!-- App Scripts -->
+    <script type="module" src="js/firebase.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/loadComponents.js" type="module" defer></script>
+    <script src="js/app.js" type="module" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header, footer, etc.
+            if (typeof loadAppComponents === 'function') {
+                loadAppComponents();
+            } else {
+                console.error('Error: loadAppComponents function not found. Please check js/loadComponents.js file.');
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</html></body>    </script>        });            }                console.error('Error: AOS library not loaded. Please check your script tags.');            } else {                });                    once: true,                    easing: 'ease-out-quad',                    duration: 900,                    offset: 120,                AOS.init({            if (typeof AOS !== 'undefined') {            // AOS Initialization            }                console.error('Error: loadAppComponents function not found. Please check js/loadComponents.js file.');            } else {                loadAppComponents();            if (typeof loadAppComponents === 'function') {            // Load header, footer, etc.        document.addEventListener('DOMContentLoaded', function() {    <script>    <script src="js/app.js" type="module" defer></script>    <script src="js/loadComponents.js" type="module" defer></script>    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    <script type="module" src="js/firebase.js" defer></script>    <!-- App Scripts -->        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>    <!-- Firebase SDK -->    <div id="fab-container-placeholder"></div>    <div id="footer-placeholder"></div>    </main>        </section>            </div>                </a>                    Contact Us Now                <a href="contact.html" class="inline-block mt-8 px-8 py-4 bg-white text-accent-brown font-bold rounded-full transition-transform duration-300 hover:scale-105 shadow-lg">                </p>                    Ready to start your renovation journey? Get in touch with our team today.                <p class="mt-4 text-xl md:text-2xl font-light max-w-2xl mx-auto drop-shadow-md">                </h2>                    Let's Build Your Dream Home Together                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow-lg">            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">        <section class="py-16 md:py-24 bg-primary-orange text-white">        <!-- Contact CTA Section -->        </section>            </div>                    once: true,
+            // AOS Initialization
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    offset: 120,
+                    duration: 900,
+                    easing: 'ease-out-quad',
+                    once: true,
                 });
             }
         });
