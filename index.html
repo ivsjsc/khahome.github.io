@@ -47,41 +47,38 @@
         .section-subtitle {
             @apply text-lg sm:text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto;
         }
-        .hero-section {
-            background: url('images/comparings/livingroom-compare.png') no-repeat center center/cover;
-        }
+
     </style>
 </head>
 <body class="bg-bg-cream">
     <div id="header-placeholder"></div>
 
     <main>
-        <!-- Hero Section -->
-        <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden hero-section">
-            <div class="absolute inset-0 bg-accent-brown-dark opacity-60"></div>
-            <div class="relative z-10 p-6 md:p-12" data-aos="fade-up">
+        <!-- Hero Section (split image and text) -->
+        <section class="flex flex-col md:flex-row w-full md:h-[80vh] overflow-hidden bg-bg-cream">
+            <!-- Image Side -->
+            <div class="w-full md:w-1/2 h-72 md:h-full">
+            <img src="images/comparings/livingroom-compare.png" alt="Home remodeling showcase"
+                 class="w-full h-full object-cover">
             </div>
-        </section>
-        
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
-                    Transforming Your House Into a Dream Home
-            </h1>
-            <p class="mt-4 text-xl md:text-2xl font-light max-w-3xl mx-auto drop-shadow-md">
-                    We provide high-end design and renovation solutions, turning your vision into a beautiful reality.
-            </p>
-            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <!-- Text Side -->
+            <div class="w-full md:w-1/2 flex items-center justify-center p-8 md:p-16 bg-accent-brown-dark text-white">
+            <div class="max-w-xl" data-aos="fade-left">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow">
+                Transforming Your House Into a Dream Home
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl font-light">
+                We provide high-end design and renovation solutions, turning your vision into a beautiful reality.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
                 <a href="contact.html" class="btn-primary">Get a Free Quote</a>
                 <a href="#services" class="btn-secondary">View Services</a>
+                </div>
             </div>
-   
-
+            </div>
+        </section>
 
         <section class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="section-title" data-aos="fade-up">Our Commitment</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                KhaHome.com... refreshing, recreating, and revitalizing your living space.
-            </p>
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="w-full md:w-1/2" data-aos="fade-right">
                 <div class="relative aspect-video rounded-xl shadow-2xl overflow-hidden">
@@ -121,33 +118,36 @@
         <!-- Why Choose Us Section -->
         <section class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="section-title" data-aos="fade-up">Why Choose KhaHome?</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    We don't just build and repair; we create living spaces founded on lasting values.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-                    <div class="p-8" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-orange text-white mx-auto mb-4">
-                            <i class="fas fa-gem text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Superior Quality</h3>
-                        <p class="text-gray-600">Using the finest materials and advanced construction techniques to ensure every project is durable and beautiful for years to come.</p>
-                    </div>
-                    <div class="p-8" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-orange text-white mx-auto mb-4">
-                            <i class="fas fa-handshake text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Trusted Partner</h3>
-                        <p class="text-gray-600">Always transparent in our process, respectful of your budget, and committed to on-time project completion.</p>
-                    </div>
-                    <div class="p-8" data-aos="fade-up" data-aos-delay="400">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-orange text-white mx-auto mb-4">
-                            <i class="fas fa-lightbulb text-2xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Creative Innovation</h3>
-                        <p class="text-gray-600">Our design team stays current with the latest trends to deliver unique and perfectly tailored solutions.</p>
-                    </div>
+            <div class="text-center mb-8" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-orange text-white mx-auto mb-4">
+                <i class="fas fa-lightbulb text-2xl"></i>
                 </div>
+                <h3 class="text-3xl font-bold text-accent-brown mb-2">Why Choose KhaHome?</h3>
+                <p class="text-gray-600">We don't just build and repair; we create living spaces founded on lasting values.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <div class="p-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-orange text-white mx-auto mb-4">
+                    <i class="fas fa-gem text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-accent-brown mb-2">Superior Quality</h3>
+                <p class="text-gray-600">Using the finest materials and advanced construction techniques to ensure every project is durable and beautiful for years to come.</p>
+                </div>
+                <div class="p-8" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-orange text-white mx-auto mb-4">
+                    <i class="fas fa-handshake text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-accent-brown mb-2">Trusted Partner</h3>
+                <p class="text-gray-600">Always transparent in our process, respectful of your budget, and committed to on-time project completion.</p>
+                </div>
+                <div class="p-8" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-orange text-white mx-auto mb-4">
+                    <i class="fas fa-lightbulb text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-accent-brown mb-2">Creative Innovation</h3>
+                <p class="text-gray-600">Our design team stays current with the latest trends to deliver unique and perfectly tailored solutions.</p>
+                </div>
+            </div>
             </div>
         </section>
 
@@ -268,12 +268,6 @@
                 </a>
             </div>
         </section>
-
-        <!-- Desktop image -->
-        <img src="images/desktop-image.jpg" alt="Desktop Image" class="hidden md:block w-full h-auto">
-
-        <!-- Mobile image -->
-        <img src="images/mobile-image.jpg" alt="Mobile Image" class="block md:hidden w-full h-auto">
     </main>
 
     <div id="footer-placeholder"></div>
@@ -288,6 +282,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/loadComponents.js" type="module" defer></script>
     <script src="js/app.js" type="module" defer></script>
+    <script src="js/fab-container.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Load header, footer, etc.
@@ -329,4 +324,3 @@
     </script>
 </body>
 </html>
-
