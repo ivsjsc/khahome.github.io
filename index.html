@@ -6,373 +6,279 @@
     <meta name="theme-color" content="#FF8C00" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#8B4513" media="(prefers-color-scheme: dark)">
 
-    <title>KhaHome.com - Professional Home Remodeling & Construction</title>
-    <meta name="description" content="KhaHome.com specializes in professional home remodeling, construction, and renovation services. Get quotes from top contractors in your area.">
-    <meta name="keywords" content="home remodeling, construction, renovation, KhaHome, home improvement, contractors">
+    <title>KhaHome Remodeling - Florida's Premier Home Renovation Solutions</title>
+    <meta name="description" content="KhaHome Remodeling specializes in custom home renovation, robust remodeling, professional interior design, and comprehensive repair services across Florida. Your trusted home improvement partner.">
+    <meta name="keywords" content="home remodeling Florida, home renovation, bathroom remodel, kitchen remodel, interior painting, flooring installation, home repair">
 
-    <meta property="og:title" content="KhaHome.com - Professional Home Remodeling & Construction">
-    <meta property="og:description" content="Professional home remodeling and construction services. Get instant cost estimates and connect with top contractors.">
-    <meta property="og:image" content="https://placehold.co/1200x630/FF8C00/FFFDD0?text=KhaHome">
+    <meta property="og:title" content="KhaHome Remodeling - Florida's Premier Home Renovation Solutions">
+    <meta property="og:description" content="Expert home renovation, remodeling, and maintenance services in Florida by KhaHome Remodeling.">
+    <meta property="og:image" content="images/logo/logoicon_512.png">
     <meta property="og:url" content="https://khahome.com">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="KhaHome.com">
+    <meta property="og:site_name" content="KhaHome Remodeling">
 
-    <link rel="icon" href="https://placehold.co/1200x630/FF8C00/FFFDD0?text=Kha+Dock" type="image/jpeg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo/logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/tailwind-output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f3e9;
         }
-        /* Ensure mobile menu button is visible on all devices */
-        @media (max-width: 1023px) {
-            .menu-button {
-                display: flex !important;
-                background: #ff8c00 !important;
-                border: none !important;
-            }
-            .menu-button i {
-                color: white !important;
-                font-size: 1.5rem !important;
-            }
-        }
-        .hero-banner-container {
-            position: relative;
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        .hero-banner-content {
-            padding: 6rem 1rem;
-            text-align: center;
-        }
-        .text-shadow-strong {
-            text-shadow: 0px 3px 8px rgba(0,0,0,0.3);
-        }
-        .reason-card {
-            transition: all 0.4s ease;
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #e2e8f0;
-        }
-        .reason-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            border-color: #ff8c00;
-        }
-        .reason-icon {
-            transition: all 0.4s ease;
-        }
-        .reason-card:hover .reason-icon {
-            transform: scale(1.2) rotate(5deg);
-            color: #ff8c00;
-        }
-        .service-card {
-            transition: all 0.4s ease;
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #e2e8f0;
-        }
-        .service-card:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 25px 50px rgba(255,140,0,0.2);
-            border-color: #ff8c00;
-        }
+
+        .text-primary-orange { color: #ff8c00; }
+        .bg-primary-orange { background-color: #ff8c00; }
+        .hover\:bg-primary-orange-dark:hover { background-color: #e67e00; }
+        .border-primary-orange { border-color: #ff8c00; }
+        .text-primary-orange-light { color: #ffb86c; }
+
+        .text-accent-brown { color: #8b4513; }
+        .bg-accent-brown-dark { background-color: #3b2b1d; }
+        .border-accent-brown { border-color: #5d432e; }
+
+        .bg-bg-cream { background-color: #fcf5e6; }
+        .text-bg-cream { color: #fcf5e6; }
+        .text-bg-cream-light { color: #f7f3e9; }
+        .placeholder-bg-cream::placeholder { color: #f7f3e9; }
+
         .btn-primary {
-            background: linear-gradient(135deg, #ff8c00 0%, #ff7b00 100%);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 0.75rem;
-            font-weight: 700;
-            font-size: 1.125rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(255,140,0,0.3);
+            @apply px-8 py-4 bg-primary-orange text-white font-bold rounded-full transition-transform duration-300 hover:scale-105 hover:bg-primary-orange-dark shadow-lg;
         }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(255,140,0,0.4);
-            background: linear-gradient(135deg, #ff7b00 0%, #ff6a00 100%);
+        
+        .section-title {
+            @apply text-3xl sm:text-4xl md:text-5xl font-bold text-center text-accent-brown mb-4;
         }
-        .text-dark-contrast {
-            color: #1e293b;
-            font-weight: 700;
-        }
-        .bg-light-contrast {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-        }
-        .bg-primary-orange {
-            background: linear-gradient(135deg, #ff8c00 0%, #ff7b00 100%);
-        }
-        .bg-primary-orange-dark {
-            background: linear-gradient(135deg, #ff7b00 0%, #ff6a00 100%);
+
+        .section-subtitle {
+            @apply text-lg sm:text-xl text-center text-gray-600 mb-12;
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800 antialiased">
-
+<body class="bg-bg-cream">
+    <!-- Header and Footer will be loaded here by loadComponents.js -->
     <div id="header-placeholder"></div>
 
-    <main id="main-content-area">
-        <section class="hero-banner-container" data-aos="fade-in">
-            <div class="hero-banner-content bg-white py-20">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-dark-contrast mb-6 leading-tight" data-aos="fade-up">
-                                    <span style="color:#1e293b;text-shadow:0px 2px 5px rgba(0,0,0,0.15);">Get Quotes from Multiple Home Remodeling Companies</span>
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-800 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                                    <span style="color:#334155;">Fill out one quick form and get quotes from remodelers in your area.</span>
-                    </p>
-                    <a href="#contact" class="btn-primary inline-block" data-aos="fade-up" data-aos-delay="400">
-                        GET QUOTES
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden" style="background: url('images/hero.jpg') no-repeat center center/cover;">
+            <div class="absolute inset-0 bg-accent-brown-dark opacity-60"></div>
+            <div class="relative z-10 p-6 md:p-12" data-aos="fade-up">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
+                    Transforming Your Home Into Your Dream Space
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl font-light max-w-3xl mx-auto drop-shadow-md">
+                    We deliver high-end renovation and design solutions, turning your vision into a beautiful reality.
+                </p>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="contact.html" class="btn-primary">
+                        Get a Free Quote
                     </a>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 md:py-24 bg-white" data-aos="fade-up" id="about-us-overview">
+        <!-- Our Services Section -->
+        <section class="py-16 md:py-24 bg-bg-cream">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <div data-aos="fade-right" data-aos-delay="100">
-                        <img src="https://placehold.co/800x600/FF8C00/FFFDD0?text=Home+Renovation+Project" alt="Home renovation team planning" class="rounded-xl shadow-2xl w-full h-auto object-cover aspect-[4/3]" loading="lazy">
-                    </div>
-                    <div data-aos="fade-left" data-aos-delay="200">
-                        <h2 class="text-3xl md:text-4xl font-extrabold text-dark-contrast mb-6" style="color:#1e293b;">From Tiny Details <br>To Entire Makeovers</h2>
-                        <p class="text-gray-800 leading-relaxed mb-4 text-content">
-                            Whether you're just looking to touch up part of your bathroom or you're aiming for a total do-over of your entire home, we'll connect you with the best home remodelers in your area. Let us know the details of your remodeling plans, your location, and your budget, and we'll find you the best deals for local remodelers.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 md:py-24 bg-light-contrast" data-aos="fade-up" id="services-overview">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-dark-contrast mb-4">Featured Services</h2>
-                    <p class="text-gray-800 max-w-2xl mx-auto">
-                        We offer professional construction and renovation services to meet all your needs.
-                    </p>
-                </div>
+                <h2 class="section-title" data-aos="fade-up">
+                    Our Services
+                </h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    From small updates to complete overhauls, we have you covered.
+                </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="service-card bg-white p-8 rounded-xl shadow-xl flex flex-col items-center text-center">
-                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Dock+Building" alt="Dock building" class="rounded-xl mb-6 object-cover aspect-[4/3]">
-                        <h3 class="text-2xl font-semibold text-dark-contrast mb-3">Dock Building</h3>
-                        <p class="text-gray-800 text-sm leading-relaxed">
-                            Constructing strong, safe, and beautiful docks.
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-kitchen-set text-5xl text-primary-orange mb-4"></i>
+                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Kitchen Remodeling</h3>
+                        <p class="text-gray-600">
+                            Modernize your cooking space with new cabinetry, countertops, and state-of-the-art appliances.
                         </p>
                     </div>
-                    <div class="service-card bg-white p-8 rounded-xl shadow-xl flex flex-col items-center text-center">
-                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Home+Remodeling" alt="Home remodeling" class="rounded-xl mb-6 object-cover aspect-[4/3]">
-                        <h3 class="text-2xl font-semibold text-dark-contrast mb-3">Home Remodeling</h3>
-                        <p class="text-gray-800 text-sm leading-relaxed">
-                            Upgrading, repairing, and renovating your entire home.
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-shower text-5xl text-primary-orange mb-4"></i>
+                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Bathroom Renovation</h3>
+                        <p class="text-gray-600">
+                            Turn your outdated bathroom into a luxurious retreat with new tubs, showers, and tiling.
                         </p>
                     </div>
-                    <div class="service-card bg-white p-8 rounded-xl shadow-xl flex flex-col items-center text-center">
-                        <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Kitchen+Bathroom" alt="Kitchen and bathroom" class="rounded-xl mb-6 object-cover aspect-[4/3]">
-                        <h3 class="text-2xl font-semibold text-dark-contrast mb-3">Kitchen & Bathroom</h3>
-                        <p class="text-gray-800 text-sm leading-relaxed">
-                            Designing and constructing luxurious and convenient kitchen and bathroom interiors.
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-paint-roller text-5xl text-primary-orange mb-4"></i>
+                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Interior & Exterior Painting</h3>
+                        <p class="text-gray-600">
+                            Update your home's appearance with a fresh coat of paint, providing a vibrant and lasting finish.
                         </p>
                     </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-hand-sparkles text-5xl text-primary-orange mb-4"></i>
+                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Repair & Upgrades</h3>
+                        <p class="text-gray-600">
+                            We provide comprehensive repair and maintenance services, from minor fixes to major upgrades.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
+                        <i class="fas fa-ruler-combined text-5xl text-primary-orange mb-4"></i>
+                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Flooring Installation</h3>
+                        <p class="text-gray-600">
+                            Choose from a wide range of high-quality flooring materials to complete your home's look and feel.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-drafting-compass text-5xl text-primary-orange mb-4"></i>
+                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Design & Consultation</h3>
+                        <p class="text-gray-600">
+                            Our team of experts will work with you to conceptualize and design the perfect space.
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="800">
+                    <a href="services.html" class="btn-primary">
+                        View All Services
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 md:py-24 bg-white" data-aos="fade-up">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-dark-contrast mb-4">
-                        Reasons to Rely on Us
-                    </h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="reason-card bg-light-contrast p-6 rounded-xl shadow-md">
-                        <div class="flex items-start">
-                            <i class="fas fa-globe fa-3x text-gray-500 reason-icon flex-shrink-0 mr-4"></i>
-                            <div>
-                                <h3 class="text-xl font-semibold text-dark-contrast mb-2">Country-wide Coverage</h3>
-                                <p class="text-gray-800 text-sm">
-                                    We can connect you with qualified contractors across the United States.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reason-card bg-light-contrast p-6 rounded-xl shadow-md">
-                        <div class="flex items-start">
-                            <i class="fas fa-clock fa-3x text-gray-500 reason-icon flex-shrink-0 mr-4"></i>
-                            <div>
-                                <h3 class="text-xl font-semibold text-dark-contrast mb-2">Save Time and Energy</h3>
-                                <p class="text-gray-800 text-sm">
-                                    Our quick process helps you find the right contractors fast.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reason-card bg-light-contrast p-6 rounded-xl shadow-md">
-                        <div class="flex items-start">
-                            <i class="fas fa-handshake fa-3x text-gray-500 reason-icon flex-shrink-0 mr-4"></i>
-                            <div>
-                                <h3 class="text-xl font-semibold text-dark-contrast mb-2">Reputable Contractors</h3>
-                                <p class="text-gray-800 text-sm">
-                                    We only list top-ranked contractors with reputations for reliable, high-quality work.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reason-card bg-light-contrast p-6 rounded-xl shadow-md">
-                        <div class="flex items-start">
-                            <i class="fas fa-wrench fa-3x text-gray-500 reason-icon flex-shrink-0 mr-4"></i>
-                            <div>
-                                <h3 class="text-xl font-semibold text-dark-contrast mb-2">Any Type of Project</h3>
-                                <p class="text-gray-800 text-sm">
-                                    We can match you with the right contractor for any type of project, big or small.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 md:py-24 bg-gray-100" data-aos="fade-up" id="projects-overview">
+        <!-- Featured Projects Section -->
+        <section class="py-16 md:py-24 bg-accent-brown-dark text-bg-cream-light">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-dark-contrast mb-4">
-                        Our Featured Projects
-                    </h2>
-                    <p class="text-gray-800 max-w-2xl mx-auto">
-                        See how we have transformed living spaces and docks.
-                    </p>
-                </div>
-                <div class="album-scroll-container overflow-x-auto whitespace-nowrap py-4 px-1">
-                    <div class="flex gap-4 md:gap-5">
-                        <div class="album-image-item" data-aos="fade-right" data-aos-delay="100">
-                            <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Dock+Project+1" alt="Dock project" class="album-image-horizontal" loading="lazy"/>
-                        </div>
-                        <div class="album-image-item" data-aos="fade-right" data-aos-delay="150">
-                            <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Home+Renovation+Project+2" alt="Home renovation project" class="album-image-horizontal" loading="lazy"/>
-                        </div>
-                        <div class="album-image-item" data-aos="fade-right" data-aos-delay="200">
-                            <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Kitchen+Project+3" alt="Kitchen project" class="album-image-horizontal" loading="lazy"/>
-                        </div>
-                        <div class="album-image-item" data-aos="fade-right" data-aos-delay="250">
-                            <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Bathroom+Project+4" alt="Bathroom project" class="album-image-horizontal" loading="lazy"/>
-                        </div>
-                        <div class="album-image-item" data-aos="fade-right" data-aos-delay="300">
-                            <img src="https://placehold.co/400x300/FF8C00/FFFDD0?text=Dock+Project+5" alt="Dock project" class="album-image-horizontal" loading="lazy"/>
+                <h2 class="section-title text-white" data-aos="fade-up">
+                    Featured Projects
+                </h2>
+                <p class="section-subtitle text-gray-300" data-aos="fade-up" data-aos-delay="100">
+                    Explore some of our recent projects that showcase our attention to detail and craftsmanship.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-bg-cream rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/projects/project1.jpg" alt="Modern Kitchen Remodel project" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-accent-brown">Modern Kitchen Remodel</h3>
+                            <p class="text-gray-600 mt-2">
+                                A completely new kitchen space, optimized for both functionality and aesthetics.
+                            </p>
+                            <a href="projects.html#project1" class="text-primary-orange font-semibold mt-4 inline-block transition-transform duration-300 hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
                         </div>
                     </div>
+                    <!-- Project 2 -->
+                    <div class="bg-bg-cream rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <img src="images/projects/project2.jpg" alt="Luxurious Bathroom Renovation project" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-accent-brown">Luxurious Bathroom Retreat</h3>
+                            <p class="text-gray-600 mt-2">
+                                We transformed an old bathroom into a luxurious spa-like space with high-end materials and natural light.
+                            </p>
+                            <a href="projects.html#project2" class="text-primary-orange font-semibold mt-4 inline-block transition-transform duration-300 hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="bg-bg-cream rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                        <img src="images/projects/project3.jpg" alt="Natural Wood Flooring Installation project" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-accent-brown">Natural Wood Flooring</h3>
+                            <p class="text-gray-600 mt-2">
+                                Adding warmth and elegance with natural wood flooring meticulously installed.
+                            </p>
+                            <a href="projects.html#project3" class="text-primary-orange font-semibold mt-4 inline-block transition-transform duration-300 hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
+                    <a href="projects.html" class="btn-primary">
+                        View All Projects
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 md:py-32 bg-primary-orange text-white text-center relative overflow-hidden" data-aos="zoom-in" id="cta">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        <!-- Testimonial Section -->
+        <section class="py-16 md:py-24 bg-bg-cream">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title" data-aos="fade-up">
+                    What Our Clients Say
+                </h2>
+                <div class="relative max-w-4xl mx-auto mt-12">
+                    <div id="testimonial-slider" class="overflow-hidden">
+                        <div class="flex transition-transform duration-500 ease-in-out" data-aos="fade-up" data-aos-delay="200">
+                            <!-- Testimonial 1 -->
+                            <div class="w-full flex-shrink-0 p-4">
+                                <div class="bg-white p-8 rounded-lg shadow-lg">
+                                    <p class="text-gray-700 italic mb-4">
+                                        “Fantastic service! KhaHome transformed my old kitchen into a modern and fully functional space.”
+                                    </p>
+                                    <p class="font-bold text-accent-brown">- Sarah M.</p>
+                                    <p class="text-sm text-gray-500">Orlando, FL</p>
+                                </div>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div class="w-full flex-shrink-0 p-4">
+                                <div class="bg-white p-8 rounded-lg shadow-lg">
+                                    <p class="text-gray-700 italic mb-4">
+                                        “The team was professional and dedicated. They helped us renovate our bathroom perfectly, exceeding our expectations.”
+                                    </p>
+                                    <p class="font-bold text-accent-brown">- John D.</p>
+                                    <p class="text-sm text-gray-500">Miami, FL</p>
+                                </div>
+                            </div>
+                            <!-- Testimonial 3 -->
+                            <div class="w-full flex-shrink-0 p-4">
+                                <div class="bg-white p-8 rounded-lg shadow-lg">
+                                    <p class="text-gray-700 italic mb-4">
+                                        “KhaHome is truly the number one choice for home renovation projects. Excellent quality and great customer service.”
+                                    </p>
+                                    <p class="font-bold text-accent-brown">- Michael B.</p>
+                                    <p class="text-sm text-gray-500">Tampa, FL</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slider Navigation -->
+                    <button id="prev-testimonial" class="absolute top-1/2 left-0 transform -translate-y-1/2 -ml-8 bg-white p-3 rounded-full shadow-lg hover:bg-bg-cream transition-colors z-20" aria-label="Previous Testimonial">
+                        <i class="fas fa-chevron-left text-primary-orange"></i>
+                    </button>
+                    <button id="next-testimonial" class="absolute top-1/2 right-0 transform -translate-y-1/2 -mr-8 bg-white p-3 rounded-full shadow-lg hover:bg-bg-cream transition-colors z-20" aria-label="Next Testimonial">
+                        <i class="fas fa-chevron-right text-primary-orange"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="py-16 md:py-24 bg-primary-orange text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow-lg">
                     Ready to Transform Your Home?
                 </h2>
-                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-white leading-relaxed">
-                    Contact us today for a free consultation and a no-obligation quote.
+                <p class="mt-4 text-xl md:text-2xl font-light max-w-2xl mx-auto drop-shadow-md">
+                    Contact us today for a free consultation and quote.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#contact" class="btn-secondary inline-flex items-center text-lg sm:text-xl py-4 px-10 sm:py-5 sm:px-12">
-                        <i class="fas fa-phone-alt mr-3"></i>
-                        Request a Free Quote
-                    </a>
-                </div>
+                <a href="contact.html" class="btn-primary mt-8">
+                    Contact Us
+                </a>
             </div>
         </section>
     </main>
 
     <div id="footer-placeholder"></div>
-        <!-- Remodeling Cost Estimator Section -->
-        <section class="py-16 md:py-24 bg-white" data-aos="fade-up" id="cost-estimator">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-dark-contrast mb-4" style="color:#1e293b;">Remodeling Cost Estimator</h2>
-                    <p class="text-gray-800 mb-6" style="color:#334155;">Estimate your home remodeling costs instantly. Enter your project details below.</p>
-                </div>
-                <form id="costEstimatorForm" class="bg-gray-50 p-8 rounded-xl shadow-lg">
-                    <div class="mb-4">
-                        <label for="projectType" class="block text-lg font-semibold text-dark-contrast mb-2">Project Type</label>
-                        <select id="projectType" class="w-full p-3 rounded border border-gray-300">
-                            <option value="Bathroom">Bathroom Remodel</option>
-                            <option value="Kitchen">Kitchen Remodel</option>
-                            <option value="Dock">Dock Construction</option>
-                            <option value="FullHome">Full Home Renovation</option>
-                        </select>
-                    </div>
-                    <div class="mb-4">
-                        <label for="areaSize" class="block text-lg font-semibold text-dark-contrast mb-2">Area Size (sq ft)</label>
-                        <input type="number" id="areaSize" class="w-full p-3 rounded border border-gray-300" min="10" max="10000" placeholder="e.g. 200" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="quality" class="block text-lg font-semibold text-dark-contrast mb-2">Quality Level</label>
-                        <select id="quality" class="w-full p-3 rounded border border-gray-300">
-                            <option value="Standard">Standard</option>
-                            <option value="Premium">Premium</option>
-                            <option value="Luxury">Luxury</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="bg-primary-orange hover:bg-primary-orange-dark text-white font-bold py-3 px-8 rounded-lg shadow-md transition-colors text-lg">Estimate Cost</button>
-                    <div id="costResult" class="mt-6 text-xl font-bold text-dark-contrast"></div>
-                </form>
-            </div>
-            <script>
-                document.getElementById('costEstimatorForm').addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const type = document.getElementById('projectType').value;
-                    const area = parseInt(document.getElementById('areaSize').value, 10);
-                    const quality = document.getElementById('quality').value;
-                    let baseRate = 0;
-                    if(type === 'Bathroom') baseRate = 150;
-                    else if(type === 'Kitchen') baseRate = 200;
-                    else if(type === 'Dock') baseRate = 120;
-                    else if(type === 'FullHome') baseRate = 100;
-                    if(quality === 'Premium') baseRate *= 1.3;
-                    else if(quality === 'Luxury') baseRate *= 1.6;
-                    const cost = Math.round(baseRate * area);
-                    document.getElementById('costResult').textContent = `Estimated Cost: $${cost.toLocaleString()}`;
-                });
-            </script>
-        </section>
 
-    <button id="scrollToTopBtn" title="Go to top" class="hidden fixed bottom-6 right-6 bg-primary-orange hover:bg-primary-orange-dark text-white w-12 h-12 rounded-full shadow-lg items-center justify-center focus:outline-none transition-opacity duration-300 z-40">
+    <button id="scroll-to-top-btn" class="fixed bottom-8 right-8 z-40 p-4 rounded-full bg-primary-orange text-white shadow-xl opacity-0 scale-0 transition-all duration-300 transform hover:scale-110">
         <i class="fas fa-arrow-up"></i>
     </button>
-
+    
+    <script type="module" src="js/firebase.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/loadComponents.js" type="module" defer></script>
+    <script src="js/app.js" type="module" defer></script>
     <script>
-        document.addEventListener('DOMContentLoaded', async function() {
-            async function loadComponent(placeholderId, filePath) {
-                try {
-                    const response = await fetch(filePath);
-                    if (!response.ok) {
-                        throw new Error(`Failed to load component from ${filePath}: ${response.statusText}`);
-                    }
-                    const html = await response.text();
-                    const placeholder = document.getElementById(placeholderId);
-                    if (placeholder) {
-                        placeholder.innerHTML = html;
-                    } else {
-                        console.error(`Placeholder element with id '${placeholderId}' not found.`);
-                    }
-                } catch (error) {
-                    console.error(`Error loading component from ${filePath}:`, error);
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof loadAppComponents === 'function') {
+                loadAppComponents();
+            } else {
+                console.error('Error: loadAppComponents function not found. Please check js/loadComponents.js file.');
             }
-            
-            await Promise.all([
-                loadComponent('header-placeholder', './components/header.html'),
-                loadComponent('footer-placeholder', './components/footer.html')
-            ]);
-            
+
             if (typeof AOS !== 'undefined') {
                 AOS.init({
                     offset: 120,
@@ -383,17 +289,55 @@
                     anchorPlacement: 'top-bottom',
                 });
             } else {
-                console.error('AOS library not loaded.');
+                console.error('Error: AOS library not loaded.');
             }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('testimonial-slider');
+            const slides = slider.querySelector('div');
+            const prevButton = document.getElementById('prev-testimonial');
+            const nextButton = document.getElementById('next-testimonial');
+            let currentIndex = 0;
+            const totalSlides = slides.children.length;
 
-            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-            window.onscroll = function() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    scrollToTopBtn.style.display = "flex";
-                } else {
-                    scrollToTopBtn.style.display = "none";
-                }
+            const updateSlider = () => {
+                const offset = -currentIndex * 100 / totalSlides;
+                slides.style.transform = `translateX(${offset}%)`;
             };
+
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
+                updateSlider();
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
+                updateSlider();
+            });
+
+            // Auto-slide
+            setInterval(() => {
+                currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
+                updateSlider();
+            }, 7000);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.classList.add('opacity-100', 'scale-100');
+                    scrollToTopBtn.classList.remove('opacity-0', 'scale-0');
+                } else {
+                    scrollToTopBtn.classList.add('opacity-0', 'scale-0');
+                    scrollToTopBtn.classList.remove('opacity-100', 'scale-100');
+                }
+            });
+
             scrollToTopBtn.addEventListener('click', () => {
                 window.scrollTo({
                     top: 0,

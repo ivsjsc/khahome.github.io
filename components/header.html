@@ -1,82 +1,88 @@
-<header class="bg-accent-brown-dark text-bg-cream-light shadow-md fixed w-full top-0 z-50 nav-header">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
-            <a href="index.html" class="flex items-center space-x-3 group" aria-label="KhaHome Homepage">
-                <img src="images/logo/logo-yellow.png" alt="KhaHome Logo" class="h-10 w-10 rounded-full group-hover:opacity-80 transition-opacity" width="40" height="40">
-                <span class="text-2xl font-bold text-primary-orange-light group-hover:text-primary-orange transition-colors">KhaHome.com</span>
-            </a>
+<header id="main-header" class="fixed top-0 left-0 right-0 z-40 bg-primary-orange transition-all duration-300 shadow-lg">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <!-- Logo Section -->
+        <a href="index.html" class="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
+            <img src="images/logo/logo.png" alt="KhaHome Logo" class="h-14 w-auto object-contain">
+        </a>
 
-            <!-- NAV DESKTOP -->
-            <nav class="hidden md:flex space-x-4 lg:space-x-6 items-center" aria-label="Main desktop navigation">
-                <a href="index.html" id="nav-index" class="flex items-center space-x-2 hover:text-primary-orange-light transition-colors duration-300 font-medium px-3 py-2 rounded-md text-sm lg:text-base">
-                    <img src="images/logo/logoicon_512.png" alt="" class="h-5 w-5 lg:h-6 lg:w-6 rounded-sm" width="24" height="24" aria-hidden="true">
-                    <span>Home</span>
-                </a>
-                
-                <a href="projects.html" id="nav-projects" class="hover:text-primary-orange-light transition-colors duration-300 font-medium px-3 py-2 rounded-md text-sm lg:text-base">Projects</a>
-                <a href="design.html" id="nav-design" class="hover:text-primary-orange-light transition-colors duration-300 font-medium px-3 py-2 rounded-md text-sm lg:text-base">Designs</a>
-
-                <div class="relative group mega-menu-container">
-                    <button type="button" id="nav-services-button" aria-haspopup="true" aria-expanded="false" aria-controls="services-mega-menu" class="hover:text-primary-orange-light transition-colors duration-300 font-medium flex items-center px-3 py-2 rounded-md text-sm lg:text-base">
-                        Services <i class="fas fa-chevron-down fa-xs ml-1.5 transform group-hover:rotate-180 transition-transform duration-200" aria-hidden="true"></i>
-                    </button>
-                    <div id="services-mega-menu" class="mega-menu hidden absolute left-0 top-full bg-accent-brown text-bg-cream-light py-4 rounded-md shadow-xl z-20 min-w-[600px] transition-all duration-300 ease-out origin-top-left" aria-labelledby="nav-services-button">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4">
-                            <div>
-                                <h3 class="text-lg font-semibold mb-2 text-primary-orange-light">Home Remodeling Services</h3>
-                                <ul class="space-y-1">
-                                    <li><a href="services.html#kitchen" class="block px-2 py-1.5 hover:bg-accent-brown-dark hover:text-primary-orange-light transition-colors rounded-md text-sm">Kitchen Remodeling</a></li>
-                                    <li><a href="services.html#bathroom" class="block px-2 py-1.5 hover:bg-accent-brown-dark hover:text-primary-orange-light transition-colors rounded-md text-sm">Bathroom Renovation</a></li>
-                                    <li><a href="services.html#painting" class="block px-2 py-1.5 hover:bg-accent-brown-dark hover:text-primary-orange-light transition-colors rounded-md text-sm">Interior & Exterior Painting</a></li>
-                                    <li><a href="services.html#flooring" class="block px-2 py-1.5 hover:bg-accent-brown-dark hover:text-primary-orange-light transition-colors rounded-md text-sm">Flooring Installation</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="px-4 pt-4 mt-4 border-t border-accent-brown-dark">
-                            <img src="https://placehold.co/400x200/FF8C00/FFFDD0?text=Home+Design+Studio"
-                                 alt="Home Design Studio Promotion"
-                                 class="rounded-md shadow-md w-full">
-                            <h4 class="text-lg font-semibold text-primary-orange-light mt-2">Home Design Studio</h4>
-                            <p class="text-sm text-bg-cream-light mt-2">Visualize your dream home with our design expertise!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="about.html" id="nav-about" class="hover:text-primary-orange-light transition-colors duration-300 font-medium px-3 py-2 rounded-md text-sm lg:text-base">About Us</a>
-                <a href="contact.html" id="nav-contact" class="bg-primary-orange hover:bg-primary-orange-dark text-white px-4 py-2 lg:px-5 lg:py-2.5 rounded-md font-semibold transition-colors duration-300 shadow-sm hover:shadow-md text-sm lg:text-base">Contact Us</a>
-            </nav>
-
-            <button type="button" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu-panel" class="md:hidden text-bg-cream-light hover:text-primary-orange-light focus:outline-none p-2 rounded-md transition-colors" aria-label="Open main menu">
-                <span class="sr-only">Open main menu</span>
-                <i class="fas fa-bars fa-lg" id="icon-menu-open" aria-hidden="true"></i>
-                <i class="fas fa-times fa-lg hidden" id="icon-menu-close" aria-hidden="true"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- NAV MOBILE -->
-    <div id="mobile-menu-panel" class="md:hidden bg-accent-brown-dark/95 backdrop-blur-sm fixed w-full h-full z-40 top-0 left-0 right-0 shadow-xl" aria-labelledby="mobile-menu-button">
-       <nav class="flex flex-col space-y-1.5 px-4 pt-20 pb-24 h-full overflow-y-auto" aria-label="Main mobile navigation">
-            <a href="index.html" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light font-medium transition-colors">Home</a>
-            <a href="projects.html" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light font-medium transition-colors">Projects</a>
-            <a href="design.html" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light font-medium transition-colors">Designs</a>
+        <!-- Main Navigation (Desktop) -->
+        <nav class="hidden lg:flex items-center gap-6">
+            <a href="index.html" class="nav-link font-semibold text-white hover:text-primary-orange-light transition-colors">Home</a>
             
-            <div>
-                <button type="button" class="mobile-submenu-toggle w-full text-left px-3 py-2.5 rounded-md hover:bg-accent-brown font-semibold text-primary-orange-light flex justify-between items-center transition-colors" aria-expanded="false" aria-controls="mobile-services-submenu-items">
-                    <span>Services</span>
-                    <i class="fas fa-chevron-down fa-xs mobile-submenu-icon transition-transform duration-200" aria-hidden="true"></i>
+            <!-- Services Dropdown -->
+            <div class="relative group">
+                <button type="button" class="nav-link font-semibold text-white hover:text-primary-orange-light transition-colors flex items-center gap-1">
+                    Services <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
                 </button>
-                <div id="mobile-services-submenu-items" class="mobile-submenu-content pl-5 pr-3 pb-1 space-y-1 overflow-hidden max-h-0">
-                    <a href="services.html" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light text-sm font-medium transition-colors">Services Overview</a>
-                    <a href="services.html#kitchen" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light text-sm font-medium transition-colors">Kitchen Remodeling</a>
-                    <a href="services.html#bathroom" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light text-sm font-medium transition-colors">Bathroom Renovation</a>
-                    <a href="services.html#painting" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light text-sm font-medium transition-colors">Interior & Exterior Painting</a>
-                    <a href="services.html#flooring" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light text-sm font-medium transition-colors">Flooring Installation</a>
+                <div class="absolute left-1/2 -translate-x-1/2 mt-0 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 z-50">
+                    <a href="services.html#kitchen" class="block px-4 py-3 text-sm font-semibold text-accent-brown hover:bg-bg-cream rounded-t-lg transition-colors">Kitchen Remodel</a>
+                    <a href="services.html#bathroom" class="block px-4 py-3 text-sm font-semibold text-accent-brown hover:bg-bg-cream transition-colors">Bathroom Renovation</a>
+                    <a href="services.html#flooring" class="block px-4 py-3 text-sm font-semibold text-accent-brown hover:bg-bg-cream transition-colors">Flooring &amp; Tile</a>
+                    <a href="services.html#painting" class="block px-4 py-3 text-sm font-semibold text-accent-brown hover:bg-bg-cream transition-colors">Interior Painting</a>
+                    <a href="services.html#remodeling" class="block px-4 py-3 text-sm font-semibold text-accent-brown hover:bg-bg-cream transition-colors">Remodeling &amp; Upgrade</a>
+                    <a href="services.html#repair" class="block px-4 py-3 text-sm font-semibold text-accent-brown hover:bg-bg-cream rounded-b-lg transition-colors">Repair &amp; Maintenance</a>
                 </div>
             </div>
+            
+            <a href="projects.html" class="nav-link font-semibold text-white hover:text-primary-orange-light transition-colors">Projects</a>
+            <a href="design.html" class="nav-link font-semibold text-white hover:text-primary-orange-light transition-colors">Design</a>
+            <a href="about.html" class="nav-link font-semibold text-white hover:text-primary-orange-light transition-colors">About Us</a>
+        </nav>
 
-            <a href="about.html" class="block px-3 py-2.5 rounded-md hover:bg-accent-brown hover:text-primary-orange-light font-medium transition-colors">About Us</a>
-            <a href="contact.html" class="block px-3 py-2.5 rounded-md bg-primary-orange text-white hover:bg-primary-orange-dark font-semibold text-center transition-colors shadow-sm hover:shadow-md">Contact Us</a>
-       </nav>
+        <!-- Mobile Menu Button (Hamburger) -->
+        <button id="mobile-menu-button" class="lg:hidden p-2 text-white hover:text-primary-orange-light transition-colors" aria-label="Open Mobile Menu">
+            <i class="fas fa-bars fa-xl"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-20 left-0 w-full lg:hidden bg-primary-orange/95 backdrop-blur-md shadow-lg py-4 transition-all duration-300 ease-in-out -translate-y-full opacity-0 invisible z-30">
+        <div class="container mx-auto px-4 sm:px-6">
+            <nav class="flex flex-col items-center space-y-4">
+                <a href="index.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-primary-orange-light transition-colors w-full text-center py-2 rounded-md">Home</a>
+                <div class="w-full flex flex-col items-center">
+                    <span class="mobile-nav-link text-lg font-semibold text-white py-2">Services</span>
+                    <div class="flex flex-col items-center w-full mt-2 space-y-2">
+                        <a href="services.html#kitchen" class="text-sm font-medium text-white hover:text-primary-orange-light transition-colors w-full text-center">Kitchen Remodel</a>
+                        <a href="services.html#bathroom" class="text-sm font-medium text-white hover:text-primary-orange-light transition-colors w-full text-center">Bathroom Renovation</a>
+                        <a href="services.html#flooring" class="text-sm font-medium text-white hover:text-primary-orange-light transition-colors w-full text-center">Flooring &amp; Tile</a>
+                        <a href="services.html#painting" class="text-sm font-medium text-white hover:text-primary-orange-light transition-colors w-full text-center">Interior Painting</a>
+                        <a href="services.html#remodeling" class="text-sm font-medium text-white hover:text-primary-orange-light transition-colors w-full text-center">Remodeling &amp; Upgrade</a>
+                        <a href="services.html#repair" class="text-sm font-medium text-white hover:text-primary-orange-light transition-colors w-full text-center">Repair &amp; Maintenance</a>
+                    </div>
+                </div>
+                <a href="projects.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-primary-orange-light transition-colors w-full text-center py-2 rounded-md">Projects</a>
+                <a href="design.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-primary-orange-light transition-colors w-full text-center py-2 rounded-md">Design</a>
+                <a href="about.html" class="mobile-nav-link text-lg font-semibold text-white hover:text-primary-orange-light transition-colors w-full text-center py-2 rounded-md">About Us</a>
+            </nav>
+        </div>
     </div>
 </header>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Bật/tắt menu mobile khi nhấp vào nút hamburger
+        mobileMenuButton.addEventListener('click', () => {
+            const isMenuOpen = mobileMenu.classList.contains('visible');
+            if (isMenuOpen) {
+                // Đóng menu
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'visible');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'invisible');
+            } else {
+                // Mở menu
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'invisible');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100', 'visible');
+            }
+        });
+
+        // Tự động đóng menu mobile khi thay đổi kích thước màn hình sang desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'visible');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'invisible');
+            }
+        });
+    });
+</script>
