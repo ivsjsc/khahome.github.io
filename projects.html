@@ -266,12 +266,12 @@
     </main>
 
     <div id="footer-placeholder"></div>
-
-    <button id="scrollToTopBtn" title="Go to top" class="hidden fixed bottom-6 right-6 bg-orange-500 hover:bg-orange-600 text-white w-12 h-12 rounded-full shadow-lg items-center justify-center focus:outline-none transition-opacity duration-300 z-40">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
+    <div id="fab-container-placeholder"></div>
+    
+    <script type="module" src="js/firebase.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/loadComponents.js" type="module" defer></script>
+    <script src="js/app.js" type="module" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', async function() {
             async function loadComponent(placeholderId, filePath) {
