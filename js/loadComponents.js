@@ -27,14 +27,17 @@ async function loadAppComponents(callback) {
     const FOOTER_COMPONENT_URL = 'components/footer.html';
 
     await Promise.all([
-        loadComponent('header-placeholder', HEADER_COMPONENT_URL),
-        loadComponent('footer-placeholder', FOOTER_COMPONENT_URL)
+        loadComponent('header-placeholder', './components/header.html'),
+        loadComponent('footer-placeholder', './components/footer.html'),
+        loadComponent('fab-container-placeholder', './components/fab-container.html'),
     ]);
 
     if (typeof callback === 'function') {
         callback();
     }
     document.dispatchEvent(new CustomEvent('allAppComponentsLoaded'));
+    // Sau khi load xong, emit sự kiện để module khác khởi tạo
+    document.dispatchEvent(new Event('components:loaded'));
 }
 
 function initializeHeaderFeatures() {
