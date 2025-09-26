@@ -6,11 +6,11 @@
     <meta name="theme-color" content="#FF8C00" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#8B4513" media="(prefers-color-scheme: dark)">
 
-    <title>KhaHome Remodeling - Florida's Premier Home Renovation Solutions</title>
-    <meta name="description" content="KhaHome Remodeling specializes in custom home renovation, robust remodeling, professional interior design, and comprehensive repair services across Florida. Your trusted home improvement partner.">
-    <meta name="keywords" content="home remodeling Florida, home renovation, bathroom remodel, kitchen remodel, interior painting, flooring installation, home repair">
+    <title>KhaHome Remodeling - Professional Home Renovation & Construction Solutions in Florida</title>
+    <meta name="description" content="KhaHome Remodeling specializes in custom home renovations, professional remodeling, interior design, and comprehensive repair services throughout Florida. Your trusted partner for home improvement.">
+    <meta name="keywords" content="home remodeling Florida, home renovation, bathroom remodel, kitchen remodel, interior painting, flooring installation, home repair services">
 
-    <meta property="og:title" content="KhaHome Remodeling - Florida's Premier Home Renovation Solutions">
+    <meta property="og:title" content="KhaHome Remodeling - Professional Home Renovation Solutions in Florida">
     <meta property="og:description" content="Expert home renovation, remodeling, and maintenance services in Florida by KhaHome Remodeling.">
     <meta property="og:image" content="images/logo/logo1.png">
     <meta property="og:url" content="https://khahome.com">
@@ -18,177 +18,202 @@
     <meta property="og:site_name" content="KhaHome Remodeling">
 
     <link rel="icon" href="images/logo/logo.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f7f3e9;
+            background-color: #f7f3e9; /* Light Cream */
         }
-
         .text-primary-orange { color: #ff8c00; }
         .bg-primary-orange { background-color: #ff8c00; }
         .hover\:bg-primary-orange-dark:hover { background-color: #e67e00; }
         .border-primary-orange { border-color: #ff8c00; }
-        .text-primary-orange-light { color: #ffb86c; }
-
         .text-accent-brown { color: #8b4513; }
         .bg-accent-brown-dark { background-color: #3b2b1d; }
-        .border-accent-brown { border-color: #5d432e; }
-
         .bg-bg-cream { background-color: #fcf5e6; }
-        .text-bg-cream { color: #fcf5e6; }
-        .text-bg-cream-light { color: #f7f3e9; }
-        .placeholder-bg-cream::placeholder { color: #f7f3e9; }
 
         .btn-primary {
-            @apply px-8 py-4 bg-primary-orange text-white font-bold rounded-full transition-transform duration-300 hover:scale-105 hover:bg-primary-orange-dark shadow-lg;
+            @apply inline-block px-8 py-4 bg-primary-orange text-white font-bold rounded-full transition-transform duration-300 hover:scale-105 hover:bg-primary-orange-dark shadow-lg;
         }
-        
+        .btn-secondary {
+             @apply inline-block px-8 py-4 bg-white text-accent-brown font-bold rounded-full transition-transform duration-300 hover:scale-105 hover:bg-gray-200 shadow-lg;
+        }
         .section-title {
-            @apply text-3xl sm:text-4xl md:text-5xl font-bold text-center text-accent-brown mb-4;
+            @apply text-3xl sm:text-4xl md:text-5xl font-black text-center text-accent-brown mb-4;
         }
-
         .section-subtitle {
-            @apply text-lg sm:text-xl text-center text-gray-600 mb-12;
+            @apply text-lg sm:text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto;
+        }
+        .hero-section {
+            background: url('images/comparings/livingroom-compare.png') no-repeat center center/cover;
         }
     </style>
 </head>
 <body class="bg-bg-cream">
-    <!-- Header and Footer will be loaded here by loadComponents.js -->
     <div id="header-placeholder"></div>
 
     <main>
         <!-- Hero Section -->
-        <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden" style="background: url('images/comparings/livingroom-compare.png') no-repeat center center/cover;">
+        <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden hero-section">
             <div class="absolute inset-0 bg-accent-brown-dark opacity-60"></div>
             <div class="relative z-10 p-6 md:p-12" data-aos="fade-up">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
-                    Transforming Your Home Into Your Dream Space
+                    Transforming Your House Into a Dream Home
                 </h1>
                 <p class="mt-4 text-xl md:text-2xl font-light max-w-3xl mx-auto drop-shadow-md">
-                    We deliver high-end renovation and design solutions, turning your vision into a beautiful reality.
+                    We provide high-end design and renovation solutions, turning your vision into a beautiful reality.
                 </p>
-                <div class="mt-8 flex justify-center space-x-4">
-                    <a href="contact.html" class="btn-primary">
-                        Get a Free Quote
-                    </a>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+                    <a href="#services" class="btn-secondary">View Services</a>
                 </div>
             </div>
         </section>
 
-        <!-- Our Services Section (Enhanced UI/UX) -->
-        <section id="services" class="relative py-16 md:py-24 bg-bg-cream overflow-hidden" aria-labelledby="services-heading">
-            <!-- Decorative gradient blobs -->
-            <div class
-                    Our Services
-                </h2>
+        <!-- Why Choose Us Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title" data-aos="fade-up">Why Choose KhaHome?</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    From small updates to complete overhauls, we have you covered.
+                    We don't just build and repair; we create living spaces founded on lasting values.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                    <div class="p-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-orange text-white mx-auto mb-4">
+                            <i class="fas fa-gem text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Superior Quality</h3>
+                        <p class="text-gray-600">Using the finest materials and advanced construction techniques to ensure every project is durable and beautiful for years to come.</p>
+                    </div>
+                    <div class="p-8" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-orange text-white mx-auto mb-4">
+                            <i class="fas fa-handshake text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Trusted Partner</h3>
+                        <p class="text-gray-600">Always transparent in our process, respectful of your budget, and committed to on-time project completion.</p>
+                    </div>
+                    <div class="p-8" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-primary-orange text-white mx-auto mb-4">
+                            <i class="fas fa-lightbulb text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Creative Innovation</h3>
+                        <p class="text-gray-600">Our design team stays current with the latest trends to deliver unique and perfectly tailored solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="services" class="py-16 md:py-24 bg-bg-cream">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    From minor updates to complete transformations, we have you covered.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-kitchen-set text-5xl text-primary-orange mb-4"></i>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Kitchen Remodeling</h3>
-                        <p class="text-gray-600">
-                            Modernize your cooking space with new cabinetry, countertops, and state-of-the-art appliances.
-                        </p>
+                        <i class="fas fa-home text-5xl text-primary-orange mb-4"></i>
+                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Full-Scale Renovations</h3>
+                        <p class="text-gray-600">Completely refresh your living space, inside and out.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                        <i class="fas fa-shower text-5xl text-primary-orange mb-4"></i>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Bathroom Renovation</h3>
-                        <p class="text-gray-600">
-                            Turn your outdated bathroom into a luxurious retreat with new tubs, showers, and tiling.
-                        </p>
+                        <i class="fas fa-kitchen-set text-5xl text-primary-orange mb-4"></i>
+                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Kitchen & Bath Remodeling</h3>
+                        <p class="text-gray-600">Transform functional spaces into areas of comfort and luxury.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fas fa-paint-roller text-5xl text-primary-orange mb-4"></i>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Interior & Exterior Painting</h3>
-                        <p class="text-gray-600">
-                            Update your home's appearance with a fresh coat of paint, providing a vibrant and lasting finish.
-                        </p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
-                        <i class="fas fa-hand-sparkles text-5xl text-primary-orange mb-4"></i>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Repair & Upgrades</h3>
-                        <p class="text-gray-600">
-                            We provide comprehensive repair and maintenance services, from minor fixes to major upgrades.
-                        </p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
-                        <i class="fas fa-ruler-combined text-5xl text-primary-orange mb-4"></i>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Flooring Installation</h3>
-                        <p class="text-gray-600">
-                            Choose from a wide range of high-quality flooring materials to complete your home's look and feel.
-                        </p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="700">
                         <i class="fas fa-drafting-compass text-5xl text-primary-orange mb-4"></i>
                         <h3 class="text-2xl font-bold text-accent-brown mb-2">Design & Consultation</h3>
-                        <p class="text-gray-600">
-                            Our team of experts will work with you to conceptualize and design the perfect space.
-                        </p>
+                        <p class="text-gray-600">Our team of experts will work with you to conceptualize and bring your space to life.</p>
                     </div>
                 </div>
-                <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="800">
-                    <a href="services.html" class="btn-primary">
-                        View All Services
-                    </a>
+                <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
+                    <a href="services.html" class="btn-primary">View All Services</a>
                 </div>
             </div>
         </section>
 
         <!-- Featured Projects Section -->
-        <section class="py-16 md:py-24 bg-accent-brown-dark text-bg-cream-light">
+        <section class="py-16 md:py-24 bg-accent-brown-dark text-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="section-title text-white" data-aos="fade-up">
-                    Featured Projects
-                </h2>
+                <h2 class="section-title text-white" data-aos="fade-up">Featured Projects</h2>
                 <p class="section-subtitle text-gray-300" data-aos="fade-up" data-aos-delay="100">
-                    Explore some of our recent projects that showcase our attention to detail and craftsmanship.
+                    Discover some of our recent work that showcases our meticulous craftsmanship.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
                     <div class="bg-bg-cream rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/projects/kitchenremodel.png" alt="Modern Kitchen Remodel project" class="w-full h-64 object-cover">
+                        <img src="images/projects/kitchenremodel.png" alt="Modern Kitchen Remodel Project" class="w-full h-64 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-accent-brown">Modern Kitchen Remodel</h3>
-                            <p class="text-gray-600 mt-2">
-                                A completely new kitchen space, optimized for both functionality and aesthetics.
-                            </p>
-                            <a href="projects.html#project1" class="text-primary-orange font-semibold mt-4 inline-block transition-transform duration-300 hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                            <h3 class="text-2xl font-bold text-accent-brown">Modern Kitchen</h3>
+                            <p class="text-gray-600 mt-2">Optimizing the space for both functionality and aesthetics.</p>
+                            <a href="projects.html" class="text-primary-orange font-semibold mt-4 inline-block transition-transform duration-300 hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
                         </div>
                     </div>
-                    <!-- Project 2 -->
                     <div class="bg-bg-cream rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-                        <img src="images/projects/lux-bathroom.png" alt="Luxurious Bathroom Renovation project" class="w-full h-64 object-cover">
+                        <img src="images/projects/lux-bathroom.png" alt="Luxury Bathroom Renovation Project" class="w-full h-64 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-accent-brown">Luxurious Bathroom Retreat</h3>
-                            <p class="text-gray-600 mt-2">
-                                We transformed an old bathroom into a luxurious spa-like space with high-end materials and natural light.
-                            </p>
-                            <a href="projects.html#project2" class="text-primary-orange font-semibold mt-4 inline-block transition-transform duration-300 hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                            <h3 class="text-2xl font-bold text-accent-brown">Luxury Bath Retreat</h3>
+                            <p class="text-gray-600 mt-2">Turning an old bathroom into a high-end, spa-like space.</p>
+                            <a href="projects.html" class="text-primary-orange font-semibold mt-4 inline-block transition-transform duration-300 hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
                         </div>
                     </div>
-                    <!-- Project 3 -->
                     <div class="bg-bg-cream rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-                        <img src="images/projects/wood-floor.png" alt="Natural Wood Flooring Installation project" class="w-full h-64 object-cover">
+                        <img src="images/projects/wood-floor.png" alt="Natural Wood Flooring Installation Project" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-accent-brown">Natural Wood Flooring</h3>
-                            <p class="text-gray-600 mt-2">
-                                Adding warmth and elegance with natural wood flooring meticulously installed.
-                            </p>
-                            <a href="projects.html#project3" class="text-primary-orange font-semibold mt-4 inline-block transition-transform duration-300 hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                            <p class="text-gray-600 mt-2">Bringing warmth and elegance to the home.</p>
+                            <a href="projects.html" class="text-primary-orange font-semibold mt-4 inline-block transition-transform duration-300 hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
-                    <a href="projects.html" class="btn-primary">
-                        View All Projects
-                    </a>
+                    <a href="projects.html" class="btn-primary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Process Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                 <h2 class="section-title" data-aos="fade-up">Our Design Process</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    We turn your ideas into detailed plans and bring them to life perfectly.
+                </p>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="w-full md:w-1/2" data-aos="fade-right">
+                         <div class="relative aspect-video rounded-xl shadow-2xl overflow-hidden">
+                            <video controls poster="https://placehold.co/800x450/FF8C00/FFFFFF?text=Our+Design+Process" class="w-full h-full object-cover">
+                                <source src="videos/design_process.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-6" data-aos="fade-left" data-aos-delay="200">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-orange text-white font-bold text-xl">1</div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-accent-brown">Consultation & Ideation</h4>
+                                <p class="text-gray-600">We listen to your desires and propose the most optimal solutions.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-orange text-white font-bold text-xl">2</div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-accent-brown">Design & Visualization</h4>
+                                <p class="text-gray-600">Creating detailed 2D and 3D drawings to give you the clearest view of your future space.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-orange text-white font-bold text-xl">3</div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-accent-brown">Construction & Completion</h4>
+                                <p class="text-gray-600">Executing the project with strict supervision to ensure quality and timeliness.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -196,51 +221,32 @@
         <!-- Testimonial Section -->
         <section class="py-16 md:py-24 bg-bg-cream">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="section-title" data-aos="fade-up">
-                    What Our Clients Say
-                </h2>
-                <div class="relative max-w-4xl mx-auto mt-12">
+                <h2 class="section-title" data-aos="fade-up">What Our Clients Say</h2>
+                <div class="relative max-w-2xl mx-auto mt-12 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 -left-4 text-6xl text-primary-orange opacity-20">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
                     <div id="testimonial-slider" class="overflow-hidden">
-                        <div class="flex transition-transform duration-500 ease-in-out" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex transition-transform duration-500 ease-in-out">
                             <!-- Testimonial 1 -->
                             <div class="w-full flex-shrink-0 p-4">
-                                <div class="bg-white p-8 rounded-lg shadow-lg">
-                                    <p class="text-gray-700 italic mb-4">
-                                        “Fantastic service! KhaHome transformed my old kitchen into a modern and fully functional space.”
-                                    </p>
-                                    <p class="font-bold text-accent-brown">- Sarah M.</p>
-                                    <p class="text-sm text-gray-500">Orlando, FL</p>
-                                </div>
+                                <p class="text-gray-700 italic text-xl mb-4">
+                                    “Fantastic service! KhaHome transformed my old kitchen into a modern and fully functional space.”
+                                </p>
+                                <p class="font-bold text-accent-brown text-lg">- Sarah M., Orlando, FL</p>
                             </div>
                             <!-- Testimonial 2 -->
                             <div class="w-full flex-shrink-0 p-4">
-                                <div class="bg-white p-8 rounded-lg shadow-lg">
-                                    <p class="text-gray-700 italic mb-4">
-                                        “The team was professional and dedicated. They helped us renovate our bathroom perfectly, exceeding our expectations.”
-                                    </p>
-                                    <p class="font-bold text-accent-brown">- John D.</p>
-                                    <p class="text-sm text-gray-500">Miami, FL</p>
-                                </div>
-                            </div>
-                            <!-- Testimonial 3 -->
-                            <div class="w-full flex-shrink-0 p-4">
-                                <div class="bg-white p-8 rounded-lg shadow-lg">
-                                    <p class="text-gray-700 italic mb-4">
-                                        “KhaHome is truly the number one choice for home renovation projects. Excellent quality and great customer service.”
-                                    </p>
-                                    <p class="font-bold text-accent-brown">- Michael B.</p>
-                                    <p class="text-sm text-gray-500">Tampa, FL</p>
-                                </div>
+                                <p class="text-gray-700 italic text-xl mb-4">
+                                    “The team was professional and dedicated. They helped us renovate our bathroom perfectly, exceeding our expectations.”
+                                </p>
+                                <p class="font-bold text-accent-brown text-lg">- John D., Miami, FL</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Slider Navigation -->
-                    <button id="prev-testimonial" class="absolute top-1/2 left-0 transform -translate-y-1/2 -ml-8 bg-white p-3 rounded-full shadow-lg hover:bg-bg-cream transition-colors z-20" aria-label="Previous Testimonial">
-                        <i class="fas fa-chevron-left text-primary-orange"></i>
-                    </button>
-                    <button id="next-testimonial" class="absolute top-1/2 right-0 transform -translate-y-1/2 -mr-8 bg-white p-3 rounded-full shadow-lg hover:bg-bg-cream transition-colors z-20" aria-label="Next Testimonial">
-                        <i class="fas fa-chevron-right text-primary-orange"></i>
-                    </button>
+                     <div class="absolute -bottom-4 -right-4 text-6xl text-primary-orange opacity-20">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
                 </div>
             </div>
         </section>
@@ -254,8 +260,8 @@
                 <p class="mt-4 text-xl md:text-2xl font-light max-w-2xl mx-auto drop-shadow-md">
                     Contact us today for a free consultation and quote.
                 </p>
-                <a href="contact.html" class="btn-primary mt-8">
-                    Contact Us
+                <a href="contact.html" class="btn-primary mt-8 bg-white !text-accent-brown">
+                    Contact Us Now
                 </a>
             </div>
         </section>
@@ -263,85 +269,55 @@
 
     <div id="footer-placeholder"></div>
     <div id="fab-container-placeholder"></div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     
+    <!-- App Scripts -->
     <script type="module" src="js/firebase.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/loadComponents.js" type="module" defer></script>
     <script src="js/app.js" type="module" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Load header, footer, etc.
             if (typeof loadAppComponents === 'function') {
                 loadAppComponents();
             } else {
                 console.error('Error: loadAppComponents function not found. Please check js/loadComponents.js file.');
             }
 
+            // Testimonial Slider Logic
+            const slider = document.getElementById('testimonial-slider');
+            if (slider) {
+                const slides = slider.querySelector('div');
+                let currentIndex = 0;
+                const totalSlides = slides.children.length;
+
+                const updateSlider = () => {
+                    if (slides) {
+                        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    }
+                };
+
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateSlider();
+                }, 7000);
+            }
+
+            // AOS Initialization
             if (typeof AOS !== 'undefined') {
                 AOS.init({
                     offset: 120,
                     duration: 900,
                     easing: 'ease-out-quad',
                     once: true,
-                    mirror: false,
-                    anchorPlacement: 'top-bottom',
                 });
-            } else {
-                console.error('Error: AOS library not loaded.');
             }
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.getElementById('testimonial-slider');
-            const slides = slider.querySelector('div');
-            const prevButton = document.getElementById('prev-testimonial');
-            const nextButton = document.getElementById('next-testimonial');
-            let currentIndex = 0;
-            const totalSlides = slides.children.length;
-
-            const updateSlider = () => {
-                const offset = -currentIndex * 100 / totalSlides;
-                slides.style.transform = `translateX(${offset}%)`;
-            };
-
-            prevButton.addEventListener('click', () => {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
-                updateSlider();
-            });
-
-            nextButton.addEventListener('click', () => {
-                currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
-                updateSlider();
-            });
-
-            // Auto-slide
-            setInterval(() => {
-                currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
-                updateSlider();
-            }, 7000);
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    scrollToTopBtn.classList.add('opacity-100', 'scale-100');
-                    scrollToTopBtn.classList.remove('opacity-0', 'scale-0');
-                } else {
-                    scrollToTopBtn.classList.add('opacity-0', 'scale-0');
-                    scrollToTopBtn.classList.remove('opacity-100', 'scale-100');
-                }
-            });
-
-            scrollToTopBtn.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
         });
     </script>
 </body>
 </html>
+

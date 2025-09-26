@@ -3,204 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1e3a8a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#FF8C00" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#8B4513" media="(prefers-color-scheme: dark)">
 
-    <title>Kha Dock & Home Construction LLC - Home Design & Video Showcase | Florida</title>
-    <meta name="description" content="Explore Kha Dock & Home Construction LLC's innovative home design concepts and watch our design showcase video to visualize your dream home in Florida.">
-    <meta name="keywords" content="home remodeling design Florida, custom home designs, home concepts, interior design, home design video">
+    <title>Design & Visualization | KhaHome Remodeling Florida</title>
+    <meta name="description" content="Explore KhaHome Remodeling's innovative home design concepts and watch our design showcase video to visualize your dream home in Florida.">
+    <meta name="keywords" content="home remodeling design Florida, custom home designs, 3D visualization, interior design, home design video">
 
-    <meta property="og:title" content="Kha Dock & Home Construction LLC - Innovative Home Design & Video Showcase">
-    <meta property="og:description" content="Watch our design showcase and visualize your perfect Florida home with Kha Dock & Home Construction LLC's design expertise.">
-    <meta property="og:image" content="https://placehold.co/1200x630/2563eb/ffffff?text=Home+Design+Studio">
-    <meta property="og:url" content="https://khadock.com/design.html">
+    <meta property="og:title" content="KhaHome Remodeling - Innovative Home Design & Video Showcase">
+    <meta property="og:description" content="Watch our design showcase and visualize your perfect Florida home with KhaHome Remodeling's design expertise.">
+    <meta property="og:image" content="images/logo/logo1.png">
+    <meta property="og:url" content="https://khahome.com/design.html">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Kha Dock & Home Constraction LLC">
+    <meta property="og:site_name" content="KhaHome Remodeling">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/tailwind-output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            background-color: #f8fafc;
-            color: #1e293b;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f3e9; /* Light Cream */
         }
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            aspect-ratio: 16 / 9;
-            border-radius: 0.75rem;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            background-color: #f1f5f9;
-        }
-        .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .guide-step {
-            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-        }
-        .guide-step:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 8px 16px rgba(255, 140, 0, 0.15);
-        }
-        .text-dark-contrast {
-            color: #0f172a;
-        }
-        .bg-light-contrast {
-            background-color: #f1f5f9;
-        }
-        .cta-bg {
-            background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+        .text-primary-orange { color: #ff8c00; }
+        .bg-primary-orange { background-color: #ff8c00; }
+        .hover\:bg-primary-orange-dark:hover { background-color: #e67e00; }
+        .border-primary-orange { border-color: #ff8c00; }
+        .text-accent-brown { color: #8b4513; }
+        .bg-accent-brown-dark { background-color: #3b2b1d; }
+        .bg-bg-cream { background-color: #fcf5e6; }
+        .hero-section-design {
+            background: linear-gradient(rgba(43, 29, 14, 0.6), rgba(43, 29, 14, 0.6)), url('https://placehold.co/1920x1080/8B4513/FFFFFF?text=Design+Studio') no-repeat center center/cover;
         }
     </style>
 </head>
-<body class="bg-blue-50 text-slate-900 antialiased">
+<body class="bg-bg-cream">
+
     <div id="header-placeholder"></div>
 
-    <main id="main-content-area" class="pt-20">
-        <section class="bg-white py-20 md:py-28 text-center" data-aos="fade-in">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 class="text-4xl md:text-5xl font-bold text-dark-contrast mb-4" data-aos="fade-down" data-aos-delay="200">Innovative Home Design & Showcase</h1>
-                <p class="text-lg md:text-xl max-w-2xl mx-auto text-slate-700" data-aos="fade-up" data-aos-delay="400">
-                    Explore our gallery of modern home designs and get inspired for your next renovation project.
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] flex items-center justify-center text-center text-white overflow-hidden hero-section-design">
+            <div class="relative z-10 p-6 md:p-12" data-aos="fade-up">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
+                    Design & Visualization
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl font-light max-w-3xl mx-auto drop-shadow-md">
+                    Where your vision takes shape. Explore our process from concept to creation.
                 </p>
             </div>
         </section>
 
-        <section class="py-16 md:py-24 bg-light-contrast">
+        <!-- Design Process Section -->
+        <section class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-10 md:mb-12" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold text-dark-contrast mb-3">Our Home Designs</h2>
-                    <p class="text-slate-700 max-w-3xl mx-auto">
-                        Explore some impressive home designs to spark creativity for your renovation project.
-                    </p>
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-accent-brown mb-4" data-aos="fade-up">Our Design Process</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">We turn your ideas into detailed plans and bring them to life perfectly.</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-                    <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="https://placehold.co/400x300/2563eb/ffffff?text=Kitchen+Design+5" alt="Modern Kitchen Design Inspiration" class="design-album-image rounded-xl shadow-md" loading="lazy">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="w-full md:w-1/2" data-aos="fade-right">
+                         <div class="relative aspect-video rounded-xl shadow-2xl overflow-hidden">
+                            <video controls poster="https://placehold.co/800x450/FF8C00/FFFFFF?text=Our+Design+Process" class="w-full h-full object-cover">
+                                <source src="videos/design_process.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
-                    <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="350">
-                        <img src="https://placehold.co/400x300/2563eb/ffffff?text=Bathroom+Design+6" alt="Luxury Bathroom Design Inspiration" class="design-album-image rounded-xl shadow-md" loading="lazy">
+                    <div class="w-full md:w-1/2 space-y-6" data-aos="fade-left" data-aos-delay="200">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-orange text-white font-bold text-xl">1</div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-accent-brown">Consultation & Ideation</h4>
+                                <p class="text-gray-600">We start by listening. Our initial consultation is all about understanding your vision, needs, and budget for your Florida home.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-orange text-white font-bold text-xl">2</div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-accent-brown">3D Visualization</h4>
+                                <p class="text-gray-600">Using cutting-edge software, we create detailed 3D renderings of your project. This allows you to see and refine your new space before construction begins.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary-orange text-white font-bold text-xl">3</div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-accent-brown">Material Selection</h4>
+                                <p class="text-gray-600">We guide you through selecting the perfect materials, fixtures, and finishes that match your style and ensure durability.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="400">
-                        <img src="https://placehold.co/400x300/2563eb/ffffff?text=Living+Room+Design+7" alt="Cozy Living Room Design Inspiration" class="design-album-image rounded-xl shadow-md" loading="lazy">
-                    </div>
-                    <div class="design-album-image-wrapper" data-aos="zoom-in" data-aos-delay="450">
-                        <img src="https://placehold.co/400x300/2563eb/ffffff?text=Bedroom+Design+8" alt="Elegant Bedroom Design Inspiration" class="design-album-image rounded-xl shadow-md" loading="lazy">
-                    </div>
-                </div>
-                 <div class="text-center mt-10 md:mt-12">
-                    <a href="projects.html" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 text-base sm:text-lg">
-                        View More Projects
-                    </a>
                 </div>
             </div>
         </section>
-        
-        <section class="py-12 md:py-16 bg-white">
+
+        <!-- Inspiration Gallery -->
+        <section class="py-16 md:py-24 bg-bg-cream">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-10 md:mb-12" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold text-dark-contrast mb-3">Discover Our Home Design Process</h2>
-                    <p class="text-slate-700 max-w-2xl mx-auto">Watch our introductory video on how Kha Dock & Home Construction LLC creates unique and high-quality home designs.</p>
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-accent-brown mb-4" data-aos="fade-up">Inspiration Gallery</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Get inspired by some of our custom design concepts.</p>
                 </div>
-                <div class="video-container">
-                    <video controls poster="https://placehold.co/800x450/2563eb/ffffff?text=Home+Design+Process+Video" preload="metadata">
-                        <source src="https://placehold.co/800x450/2563eb/ffffff?text=Home+Design+Process+Video" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in">
+                        <img src="https://placehold.co/800x600/8B4513/FFFFFF?text=Coastal+Kitchen" alt="Coastal Kitchen Design" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="https://placehold.co/800x600/8B4513/FFFFFF?text=Modern+Bathroom" alt="Modern Bathroom Design" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="rounded-xl shadow-lg overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="https://placehold.co/800x600/8B4513/FFFFFF?text=Open-Concept+Living" alt="Open-Concept Living Room" class="w-full h-64 object-cover">
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <section class="py-20 md:py-32 cta-bg text-white text-center relative overflow-hidden" data-aos="zoom-in">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                    Ready to Design Your Dream Home?
-                </h2>
-                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-white leading-relaxed">
-                    Our experts are ready to assist. Contact us today for a personalized design consultation.
-                </p>
-                <a href="contact.html" class="bg-white text-slate-900 font-bold py-4 px-10 sm:py-5 sm:px-12 rounded-xl text-lg sm:text-xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:bg-slate-200 inline-flex items-center">
-                    <i class="fas fa-drafting-compass mr-3"></i>
-                    Start Designing
-                </a>
-            </div>
-        </section>
+
     </main>
-
+    
     <div id="footer-placeholder"></div>
     <div id="fab-container-placeholder"></div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     
+    <!-- App Scripts -->
     <script type="module" src="js/firebase.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/loadComponents.js" type="module" defer></script>
     <script src="js/app.js" type="module" defer></script>
     <script>
-        document.addEventListener('DOMContentLoaded', async function() {
-            async function loadComponent(placeholderId, filePath) {
-                try {
-                    const response = await fetch(filePath);
-                    if (!response.ok) {
-                        throw new Error(`Failed to load component from ${filePath}: ${response.statusText}`);
-                    }
-                    const html = await response.text();
-                    const placeholder = document.getElementById(placeholderId);
-                    if (placeholder) {
-                        placeholder.innerHTML = html;
-                    } else {
-                        console.error(`Placeholder element with id '${placeholderId}' not found.`);
-                    }
-                } catch (error) {
-                    console.error(`Error loading component from ${filePath}:`, error);
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header, footer, etc.
+            if (typeof loadAppComponents === 'function') {
+                loadAppComponents();
+            } else {
+                console.error('Error: loadAppComponents function not found. Please check js/loadComponents.js file.');
             }
-            
-            await Promise.all([
-                loadComponent('header-placeholder', './components/header.html'),
-                loadComponent('footer-placeholder', './components/footer.html')
-            ]);
-            
+
+            // AOS Initialization
             if (typeof AOS !== 'undefined') {
                 AOS.init({
                     offset: 120,
                     duration: 900,
                     easing: 'ease-out-quad',
                     once: true,
-                    mirror: false,
-                    anchorPlacement: 'top-bottom',
                 });
-            } else {
-                console.error('AOS library not loaded.');
             }
-
-            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-            window.onscroll = function() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    scrollToTopBtn.style.display = "flex";
-                } else {
-                    scrollToTopBtn.style.display = "none";
-                }
-            };
-            scrollToTopBtn.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
         });
     </script>
 </body>
