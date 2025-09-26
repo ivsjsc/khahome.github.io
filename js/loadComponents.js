@@ -36,7 +36,7 @@ async function loadAppComponents(callback) {
         callback();
     }
     document.dispatchEvent(new CustomEvent('allAppComponentsLoaded'));
-    // Sau khi load xong, emit sự kiện để module khác khởi tạo
+    // notify other modules that components were loaded
     document.dispatchEvent(new Event('components:loaded'));
 }
 

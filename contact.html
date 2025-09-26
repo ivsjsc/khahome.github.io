@@ -145,7 +145,7 @@
       if (!form) return;
 
       form.addEventListener('submit', async (e) => {
-        if (!window.fetch) return; // let default HTML submit occur (Netlify redirect)
+        if (!window.fetch) return; // allow normal HTML submit & Netlify redirect
         e.preventDefault();
         result.textContent = '';
         submitBtn.disabled = true;
