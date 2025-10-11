@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điều Khiển Digital Marketing - KHA DOCK & HOME</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .task-card-header {
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .task-card-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        }
+        .task-card.open .task-card-details {
+            max-height: 1500px; /* Large enough to fit content */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .task-card.open .chevron-icon {
+            transform: rotate(180deg);
+        }
+        .sub-task-checkbox:checked + .sub-task-label {
+            text-decoration: line-through;
+            color: #6b7280;
+        }
+        .progress-bar-fill {
+            transition: width 0.5s ease-in-out;
+        }
+        .tip-box {
+            background-color: #fefce8; /* yellow-50 */
+            border-left: 4px solid #facc15; /* yellow-400 */
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-6 max-w-4xl">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900">Bảng Điều Khiển Digital Marketing</h1>
+            <p class="text-lg text-gray-600 mt-2">Lộ trình chi tiết cho KHA DOCK & HOME</p>
+        </header>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8 sticky top-4 z-10">
+            <h2 class="text-xl font-bold mb-2 text-center">Tổng Quan Tiến Độ</h2>
+            <div class="w-full bg-gray-200 rounded-full h-4">
+                <div id="overall-progress" class="bg-gradient-to-r from-blue-500 to-teal-400 h-4 rounded-full progress-bar-fill" style="width: 0%"></div>
+            </div>
+            <p id="overall-progress-text" class="text-center text-sm mt-2 font-semibold text-gray-700">0% Hoàn thành</p>
+        </div>
+
+        <!-- Phase 1: Nền Tảng -->
+        <section class="mb-8">
+            <div class="border-l-4 border-blue-600 pl-4 mb-4">
+                <h2 class="text-2xl font-bold">Giai Đoạn 1: Nền Tảng Vững Chắc</h2>
+                <p class="text-gray-600">Mục tiêu: Thiết lập hình ảnh chuyên nghiệp, tối đa hóa sự hiện diện và tin cậy ban đầu.</p>
+            </div>
+
+            <!-- Task 1.1: Google Business -->
+            <div class="task-card bg-white rounded-lg shadow-md mb-4">
+                <div class="task-card-header flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                         <span class="font-bold text-lg">1. Tối ưu Google Business Profile (Maps)</span>
+                    </div>
+                    <svg class="chevron-icon w-6 h-6 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="task-card-details px-4 border-t border-gray-100">
+                    <p class="mb-3 text-sm text-gray-600"><strong>Mục tiêu chiến lược:</strong> Trở thành lựa chọn số 1 trên bản đồ địa phương, thu hút khách hàng có nhu cầu cao ngay tại khu vực.</p>
+                    <h4 class="font-semibold mb-2">Checklist chi tiết:</h4>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Xác minh địa chỉ và chọn đúng danh mục (Dock Builder, General Contractor, Home Remodeler).</label></li>
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Upload tối thiểu 30 ảnh/video chất lượng cao: dự án (trước/sau), đội ngũ, quy trình làm việc.</label></li>
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Liệt kê tất cả dịch vụ kèm mô tả chi tiết và từ khóa liên quan (vd: "custom boat dock", "seawall repair", "kitchen remodeling in Florida").</label></li>
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Bật tính năng Nhắn tin (Messaging) và cam kết trả lời trong vòng 1 giờ.</label></li>
+                    </ul>
+                    <div class="tip-box">
+                        <h4 class="font-bold">💡 Mẹo Tối Ưu & Chiến Lược Nâng Cao</h4>
+                        <p class="text-sm text-yellow-900">- <strong>Geo-tag ảnh:</strong> Dùng công cụ online để gắn thẻ vị trí địa lý cho ảnh trước khi upload để tăng cường SEO local.<br>- <strong>Tận dụng Google Posts:</strong> Đăng bài "Cập nhật" hàng tuần (dự án mới, ưu đãi, bài viết blog) để giữ hồ sơ luôn mới và nổi bật.<br>- <strong>Xây dựng mục Q&A:</strong> Tự đặt và trả lời các câu hỏi khách hàng thường gặp (vd: "Chi phí xây cầu cảng?", "Thời gian thi công?").</p>
+                    </div>
+                    <div class="mt-4 flex flex-wrap justify-between text-sm gap-2">
+                        <span class="font-semibold">💰 Chi phí: <span class="text-green-600 font-bold">Miễn phí</span></span>
+                        <span class="font-semibold">🔗 Tích hợp: <span class="text-gray-700">Nhúng bản đồ & reviews vào Website</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 1.2: Facebook Fanpage -->
+            <div class="task-card bg-white rounded-lg shadow-md mb-4">
+                 <div class="task-card-header flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <span class="font-bold text-lg">2. Xây dựng "Pháo Đài" Fanpage Facebook</span>
+                    </div>
+                    <svg class="chevron-icon w-6 h-6 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="task-card-details px-4 border-t border-gray-100">
+                    <p class="mb-3 text-sm text-gray-600"><strong>Mục tiêu chiến lược:</strong> Là trung tâm trưng bày năng lực, tương tác, xây dựng cộng đồng và là cỗ máy thu thập khách hàng tiềm năng.</p>
+                    <h4 class="font-semibold mb-2">Checklist chi tiết:</h4>
+                     <ul class="space-y-2 mb-4">
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Thiết lập ảnh bìa dạng video (cover video) ngắn giới thiệu các dự án ấn tượng nhất.</label></li>
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Tạo các album ảnh/video khoa học cho từng loại hình dự án (Docks, Remodeling, Seawalls).</label></li>
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Thiết lập trả lời tự động trong Messenger để chào khách và thu thập thông tin cơ bản.</label></li>
+                    </ul>
+                    <div class="tip-box">
+                        <h4 class="font-bold">💡 Mẹo Tối Ưu & Chiến Lược Nâng Cao</h4>
+                        <p class="text-sm text-yellow-900">- <strong>Ghim bài viết chiến lược:</strong> Tạo một bài viết tổng hợp (video + text) giới thiệu toàn diện về dịch vụ, quy trình, cam kết chất lượng và ghim lên đầu trang.<br>- <strong>Tận dụng Reels:</strong> Quay video timelapse quá trình thi công, video "walkthrough" dự án hoàn thành, hoặc video ngắn chia sẻ mẹo vặt. Âm nhạc thịnh hành là chìa khóa.<br>- <strong>Tạo Event online:</strong> Tổ chức các buổi Q&A trực tiếp (livestream) về các chủ đề như "Chuẩn bị nhà cửa cho mùa bão".</p>
+                    </div>
+                     <div class="mt-4 flex flex-wrap justify-between text-sm gap-2">
+                        <span class="font-semibold">💰 Chi phí: <span class="text-green-600 font-bold">Miễn phí (Setup)</span> | <span class="text-red-600 font-bold">Cần ngân sách quảng cáo</span></span>
+                        <span class="font-semibold">🔗 Tích hợp: <span class="text-gray-700">Messenger Chatbox vào Website, liên kết Instagram</span></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Task 1.3: Website Optimization -->
+            <div class="task-card bg-white rounded-lg shadow-md mb-4">
+                <div class="task-card-header flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <span class="font-bold text-lg">3. Tối ưu Website thành "Điểm Chuyển Đổi"</span>
+                    </div>
+                    <svg class="chevron-icon w-6 h-6 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="task-card-details px-4 border-t border-gray-100">
+                    <p class="mb-3 text-sm text-gray-600"><strong>Mục tiêu chiến lược:</strong> Biến mỗi lượt truy cập thành một cơ hội kinh doanh, thu thập thông tin khách hàng tiềm năng hiệu quả.</p>
+                     <h4 class="font-semibold mb-2">Checklist chi tiết:</h4>
+                     <ul class="space-y-2 mb-4">
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Đảm bảo nút "Yêu Cầu Báo Giá" và số điện thoại luôn nổi bật trên mọi trang (đặc biệt trên mobile).</label></li>
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Tạo trang Portfolio/Dự án chi tiết với nhiều hình ảnh, video và mô tả câu chuyện đằng sau mỗi công trình.</label></li>
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Cài đặt Facebook Pixel và Google Analytics để theo dõi hành vi người dùng và đo lường hiệu quả quảng cáo.</label></li>
+                     </ul>
+                    <div class="tip-box">
+                        <h4 class="font-bold">💡 Mẹo Tối Ưu & Chiến Lược Nâng Cao</h4>
+                        <p class="text-sm text-yellow-900">- <strong>Tối ưu tốc độ tải trang:</strong> Sử dụng công cụ Google PageSpeed Insights để kiểm tra và cải thiện tốc độ, đặc biệt trên mobile.<br>- <strong>Thêm "Social Proof":</strong> Hiển thị logo các đối tác (nếu có), các chứng chỉ và đặc biệt là các testimonial/đánh giá từ khách hàng ngay trên trang chủ.</p>
+                    </div>
+                     <div class="mt-4 flex flex-wrap justify-between text-sm gap-2">
+                        <span class="font-semibold">💰 Chi phí: <span class="text-gray-700">Phí duy trì hosting/domain</span></span>
+                        <span class="font-semibold">🔗 Tích hợp: <span class="text-red-600 font-bold">Facebook Pixel, Google Analytics, CRM</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 2: Uy Tín -->
+        <section class="mb-8">
+            <div class="border-l-4 border-green-600 pl-4 mb-4">
+                <h2 class="text-2xl font-bold">Giai Đoạn 2: Xây Dựng Uy Tín & Thu Hút</h2>
+                <p class="text-gray-600">Mục tiêu: Chứng minh năng lực bằng kết quả thực tế và mở rộng mạng lưới đối tác chiến lược.</p>
+            </div>
+            
+            <!-- Task 2.1: Social Proof -->
+            <div class="task-card bg-white rounded-lg shadow-md mb-4">
+                <div class="task-card-header flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <span class="font-bold text-lg">4. Triển khai chiến dịch "Social Proof"</span>
+                    </div>
+                    <svg class="chevron-icon w-6 h-6 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="task-card-details px-4 border-t border-gray-100">
+                    <p class="mb-3 text-sm text-gray-600"><strong>Mục tiêu chiến lược:</strong> Xây dựng lòng tin tuyệt đối bằng những phản hồi thực tế, biến khách hàng thành người quảng bá thương hiệu.</p>
+                    <h4 class="font-semibold mb-2">Checklist chi tiết:</h4>
+                     <ul class="space-y-2 mb-4">
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Xây dựng quy trình xin review Google/Facebook ngay sau khi bàn giao dự án.</label></li>
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Thực hiện các video phỏng vấn testimonial ngắn với những khách hàng tâm đắc nhất.</label></li>
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Tạo các case study chi tiết (bài viết trên website) cho các dự án phức tạp và thành công.</label></li>
+                    </ul>
+                    <div class="tip-box">
+                        <h4 class="font-bold">💡 Mẹo Tối Ưu & Chiến Lược Nâng Cao</h4>
+                        <p class="text-sm text-yellow-900">- <strong>Tạo bộ "Review Kit":</strong> Chuẩn bị sẵn email mẫu kèm link trực tiếp và hướng dẫn ngắn gọn để khách hàng dễ dàng để lại đánh giá.<br>- <strong>Chương trình giới thiệu:</strong> Tặng một khoản hoa hồng hoặc ưu đãi dịch vụ cho khách hàng cũ khi họ giới thiệu thành công một khách hàng mới.</p>
+                    </div>
+                     <div class="mt-4 flex flex-wrap justify-between text-sm gap-2">
+                        <span class="font-semibold">💰 Chi phí: <span class="text-green-600 font-bold">Miễn phí</span></span>
+                        <span class="font-semibold">🔗 Tích hợp: <span class="text-gray-700">Nhúng widget reviews vào Website</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 3: Tăng trưởng -->
+        <section class="mb-8">
+            <div class="border-l-4 border-purple-600 pl-4 mb-4">
+                <h2 class="text-2xl font-bold">Giai Đoạn 3: Tăng Trưởng Bùng Nổ</h2>
+                <p class="text-gray-600">Mục tiêu: Chủ động tiếp cận thị trường, tạo ra dòng khách hàng tiềm năng ổn định và có thể dự đoán.</p>
+            </div>
+            
+            <!-- Task 3.1: Facebook Ads -->
+            <div class="task-card bg-white rounded-lg shadow-md mb-4">
+                <div class="task-card-header flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <span class="font-bold text-lg">5. Khởi chạy Quảng cáo Facebook & Instagram</span>
+                    </div>
+                    <svg class="chevron-icon w-6 h-6 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="task-card-details px-4 border-t border-gray-100">
+                    <p class="mb-3 text-sm text-gray-600"><strong>Mục tiêu chiến lược:</strong> Tiếp cận chính xác tệp khách hàng có nhu cầu cao, thu thập thông tin liên hệ (leads) một cách tự động và hiệu quả.</p>
+                    <h4 class="font-semibold mb-2">Checklist chi tiết:</h4>
+                     <ul class="space-y-2 mb-4">
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Thiết lập chiến dịch "Lead Generation" để thu thập form ngay trên Facebook.</label></li>
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">A/B testing các mẫu quảng cáo (video vs. carousel ảnh, các tiêu đề khác nhau) để tìm ra mẫu hiệu quả nhất.</label></li>
+                        <li class="flex items-start"><input type="checkbox" class="sub-task-checkbox mt-1 mr-2 flex-shrink-0"><label class="sub-task-label">Tạo chiến dịch Retargeting để quảng cáo lại cho những người đã truy cập website nhưng chưa liên hệ.</label></li>
+                    </ul>
+                    <div class="tip-box">
+                        <h4 class="font-bold">💡 Mẹo Tối Ưu & Chiến Lược Nâng Cao</h4>
+                        <p class="text-sm text-yellow-900">- <strong>Lookalike Audience:</strong> Sau khi có tệp khách hàng chất lượng, hãy tạo "Tệp đối tượng tương tự" để Facebook tìm những người có hành vi và sở thích giống hệt khách hàng của bạn.<br>- <strong>Sử dụng Lead Magnet:</strong> Thay vì chỉ quảng cáo dịch vụ, hãy tặng một tài liệu hữu ích (vd: "Checklist 10 điểm cần lưu ý khi cải tạo nhà bếp") để đổi lấy thông tin liên hệ.</p>
+                    </div>
+                     <div class="mt-4 flex flex-wrap justify-between text-sm gap-2">
+                        <span class="font-semibold">💰 Chi phí: <span class="text-red-600 font-bold">Yêu cầu ngân sách quảng cáo</span></span>
+                        <span class="font-semibold">🔗 Tích hợp: <span class="text-red-600 font-bold">Hệ thống CRM để quản lý leads</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const taskCards = document.querySelectorAll('.task-card');
+            const allCheckboxes = document.querySelectorAll('.sub-task-checkbox');
+            const overallProgressBar = document.getElementById('overall-progress');
+            const overallProgressText = document.getElementById('overall-progress-text');
+            const totalSubTasks = allCheckboxes.length;
+
+            taskCards.forEach(card => {
+                const header = card.querySelector('.task-card-header');
+                header.addEventListener('click', () => {
+                    card.classList.toggle('open');
+                });
+            });
+
+            const updateOverallProgress = () => {
+                const checkedSubTasks = document.querySelectorAll('.sub-task-checkbox:checked').length;
+                const percentage = totalSubTasks > 0 ? Math.round((checkedSubTasks / totalSubTasks) * 100) : 0;
+                
+                overallProgressBar.style.width = `${percentage}%`;
+                overallProgressText.textContent = `${percentage}% Hoàn thành (${checkedSubTasks}/${totalSubTasks} công việc)`;
+            };
+
+            allCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateOverallProgress);
+            });
+            
+            updateOverallProgress();
+        });
+    </script>
+
+</body>
+</html>
+

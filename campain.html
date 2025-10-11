@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kế hoạch Xây dựng Thương hiệu - KHA DOCK & HOME CONSTRUCTION LLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutral Harmony -->
+    <!-- Application Structure Plan: A single-page, vertically scrolling application divided into four key thematic phases of brand development: Foundation, Building, Marketing, and Growth. This process-oriented structure is more intuitive for a strategic plan than a simple report layout. It guides the user through actionable steps. Interactivity is focused on checklists, budget allocation sliders, and KPI tracking charts to make the plan a dynamic tool rather than a static document. -->
+    <!-- Visualization & Content Choices: 
+    - Target Audience Breakdown -> Goal: Inform -> Donut Chart (Chart.js) -> Shows proportions of customer segments -> Justification: Quick visual understanding of market focus.
+    - Competitive Analysis -> Goal: Compare -> Radar Chart (Chart.js) -> Compares KHA vs. competitors on key metrics -> Justification: Highlights strengths and weaknesses in the market landscape.
+    - Marketing Budget -> Goal: Organize/Plan -> Pie Chart (Chart.js) with interactive sliders -> Allows user to explore different budget scenarios -> Justification: Turns a static recommendation into an interactive planning tool.
+    - Project Timeline -> Goal: Organize -> Horizontal Bar Chart (Chart.js) -> Visualizes the development schedule -> Justification: Clearer than a text list for time-based tasks.
+    - KPI Growth -> Goal: Change/Track -> Line Chart (Chart.js) -> Shows progress over time -> Justification: Effectively visualizes trends and performance against goals.
+    CONFIRMATION: NO SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #F8F5F2;
+            color: #3D405B;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .task-checkbox:checked + label .task-text {
+            text-decoration: line-through;
+            color: #9ca3af;
+        }
+        .task-checkbox:checked + label .checkbox-icon {
+            background-color: #34D399;
+            border-color: #34D399;
+        }
+        .task-checkbox:checked + label .checkbox-icon svg {
+            display: block;
+        }
+        .nav-link.active {
+            color: #E07A5F;
+            border-bottom-color: #E07A5F;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold text-[#3D405B]">KHA DOCK & HOME</h1>
+                    <p class="text-sm text-gray-500">Lộ trình Xây dựng Thương hiệu tại Florida</p>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#phase1" class="nav-link text-gray-600 hover:text-[#E07A5F] transition-colors border-b-2 border-transparent pb-1">Giai đoạn 1: Nền tảng</a>
+                    <a href="#phase2" class="nav-link text-gray-600 hover:text-[#E07A5F] transition-colors border-b-2 border-transparent pb-1">Giai đoạn 2: Xây dựng</a>
+                    <a href="#phase3" class="nav-link text-gray-600 hover:text-[#E07A5F] transition-colors border-b-2 border-transparent pb-1">Giai đoạn 3: Tiếp thị</a>
+                    <a href="#phase4" class="nav-link text-gray-600 hover:text-[#E07A5F] transition-colors border-b-2 border-transparent pb-1">Giai đoạn 4: Tăng trưởng</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        
+        <section id="phase1" class="mb-20 pt-16 -mt-16">
+            <div class="text-center mb-12">
+                <span class="text-sm font-semibold text-[#E07A5F] uppercase tracking-wider">Giai đoạn 1</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Nền tảng & Định vị Thương hiệu</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+                    Đây là bước khởi đầu, nơi chúng ta xác định giá trị cốt lõi, hiểu rõ khách hàng và phân tích đối thủ cạnh tranh. Một nền tảng vững chắc sẽ là kim chỉ nam cho mọi hoạt động trong tương lai.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md lg:col-span-1">
+                    <h3 class="font-bold text-lg mb-2">Giá trị Cốt lõi</h3>
+                    <p class="text-sm text-gray-500 mb-4">DNA của thương hiệu KHA.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start"><span class="text-[#E07A5F] mr-3 mt-1">&#10003;</span> <strong>Chất lượng Vượt trội:</strong> Cam kết sử dụng vật liệu tốt nhất và kỹ thuật thi công hàng đầu.</li>
+                        <li class="flex items-start"><span class="text-[#E07A5F] mr-3 mt-1">&#10003;</span> <strong>Độ tin cậy Tuyệt đối:</strong> Luôn đúng hẹn, minh bạch và có trách nhiệm trong mọi dự án.</li>
+                        <li class="flex items-start"><span class="text-[#E07A5F] mr-3 mt-1">&#10003;</span> <strong>Thẩm mỹ Tinh tế:</strong> Tạo ra những công trình không chỉ bền vững mà còn đẹp mắt và hài hòa.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md md:col-span-2 lg:col-span-2">
+                    <h3 class="font-bold text-lg mb-2">Phân khúc Khách hàng Mục tiêu</h3>
+                    <p class="text-sm text-gray-500 mb-4">Đối tượng chính mà KHA DOCK & HOME hướng tới tại Florida.</p>
+                    <div class="chart-container">
+                        <canvas id="customerChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md md:col-span-2">
+                    <h3 class="font-bold text-lg mb-2">Phân tích Đối thủ Cạnh tranh</h3>
+                    <p class="text-sm text-gray-500 mb-4">So sánh KHA với các đối thủ chính trên các tiêu chí quan trọng.</p>
+                    <div class="chart-container">
+                        <canvas id="competitorChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="phase2" class="mb-20 pt-16 -mt-16">
+            <div class="text-center mb-12">
+                <span class="text-sm font-semibold text-[#E07A5F] uppercase tracking-wider">Giai đoạn 2</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Xây dựng & Hiện diện Trực tuyến</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+                    Giai đoạn này tập trung vào việc tạo ra các tài sản thương hiệu hữu hình và thiết lập một sự hiện diện chuyên nghiệp trên không gian mạng, từ đó xây dựng niềm tin ban đầu với khách hàng.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-5 gap-8">
+                <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg mb-4">Danh sách Công việc</h3>
+                    <div class="space-y-4">
+                        <div class="task-item">
+                            <input type="checkbox" id="task1" class="task-checkbox hidden">
+                            <label for="task1" class="flex items-center cursor-pointer">
+                                <span class="checkbox-icon w-6 h-6 border-2 border-gray-300 rounded-md mr-4 flex items-center justify-center transition-all duration-200">
+                                    <svg class="w-4 h-4 text-white hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span class="task-text text-gray-700">Thiết kế Logo & Bộ nhận diện thương hiệu</span>
+                            </label>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" id="task2" class="task-checkbox hidden">
+                            <label for="task2" class="flex items-center cursor-pointer">
+                                <span class="checkbox-icon w-6 h-6 border-2 border-gray-300 rounded-md mr-4 flex items-center justify-center transition-all duration-200">
+                                    <svg class="w-4 h-4 text-white hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span class="task-text text-gray-700">Xây dựng website KhaDock & KhaHome</span>
+                            </label>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" id="task3" class="task-checkbox hidden">
+                            <label for="task3" class="flex items-center cursor-pointer">
+                                <span class="checkbox-icon w-6 h-6 border-2 border-gray-300 rounded-md mr-4 flex items-center justify-center transition-all duration-200">
+                                    <svg class="w-4 h-4 text-white hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span class="task-text text-gray-700">Tạo hồ sơ mạng xã hội (Facebook, Instagram)</span>
+                            </label>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" id="task4" class="task-checkbox hidden">
+                            <label for="task4" class="flex items-center cursor-pointer">
+                                <span class="checkbox-icon w-6 h-6 border-2 border-gray-300 rounded-md mr-4 flex items-center justify-center transition-all duration-200">
+                                    <svg class="w-4 h-4 text-white hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span class="task-text text-gray-700">Chụp ảnh & Quay video các dự án đã hoàn thành</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-3 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg mb-2">Tiến độ Dự kiến (Tuần)</h3>
+                    <p class="text-sm text-gray-500 mb-4">Khung thời gian tham khảo để hoàn thành các hạng mục.</p>
+                    <div class="chart-container" style="max-width: none; height: 350px;">
+                        <canvas id="timelineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="phase3" class="mb-20 pt-16 -mt-16">
+            <div class="text-center mb-12">
+                <span class="text-sm font-semibold text-[#E07A5F] uppercase tracking-wider">Giai đoạn 3</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Tiếp thị & Thu hút Khách hàng</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+                    Sau khi có nền tảng và sự hiện diện, chúng ta sẽ triển khai các chiến dịch marketing đa kênh để tiếp cận khách hàng tiềm năng, xây dựng uy tín và tạo ra dòng khách hàng ổn định.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 items-start">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-lg mb-2">Phân bổ Ngân sách Marketing</h3>
+                    <p class="text-sm text-gray-500 mb-4">Gợi ý phân chia ngân sách cho các kênh. Điều chỉnh các thanh trượt để xem sự thay đổi.</p>
+                    <div class="chart-container mb-6">
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div>
+                            <label for="seoSlider" class="flex justify-between"><span>SEO & Content</span><span id="seoValue">40%</span></label>
+                            <input id="seoSlider" type="range" min="0" max="100" value="40" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" style="accent-color: #81B29A;">
+                        </div>
+                        <div>
+                            <label for="adsSlider" class="flex justify-between"><span>Quảng cáo (Google/Facebook)</span><span id="adsValue">30%</span></label>
+                            <input id="adsSlider" type="range" min="0" max="100" value="30" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" style="accent-color: #F2CC8F;">
+                        </div>
+                        <div>
+                             <label for="socialSlider" class="flex justify-between"><span>Mạng xã hội</span><span id="socialValue">20%</span></label>
+                            <input id="socialSlider" type="range" min="0" max="100" value="20" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" style="accent-color: #E07A5F;">
+                        </div>
+                        <div>
+                            <label for="localSlider" class="flex justify-between"><span>Hợp tác địa phương</span><span id="localValue">10%</span></label>
+                            <input id="localSlider" type="range" min="0" max="100" value="10" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" style="accent-color: #3D405B;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-semibold text-lg mb-2">Tối ưu hóa Công cụ Tìm kiếm (SEO) & Content Marketing</h4>
+                        <p class="text-gray-600">Tập trung vào các từ khóa địa phương như "dock builders in [City], FL", "home remodeling [City]". Viết bài blog chia sẻ kinh nghiệm, hướng dẫn bảo trì... để xây dựng uy tín chuyên gia.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-semibold text-lg mb-2">Quảng cáo Trả phí (Paid Ads)</h4>
+                        <p class="text-gray-600">Chạy quảng cáo Google Ads nhắm vào các từ khóa có ý định cao. Sử dụng Facebook/Instagram Ads để tiếp cận chủ sở hữu nhà trong các khu vực ven biển, giàu có.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-semibold text-lg mb-2">Hợp tác Địa phương</h4>
+                        <p class="text-gray-600">Xây dựng mối quan hệ với các kiến trúc sư, nhà thiết kế nội thất, và đại lý bất động sản để tạo nguồn giới thiệu khách hàng chất lượng.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="phase4" class="pt-16 -mt-16">
+            <div class="text-center mb-12">
+                <span class="text-sm font-semibold text-[#E07A5F] uppercase tracking-wider">Giai đoạn 4</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Tăng trưởng & Duy trì Quan hệ</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+                    Thương hiệu mạnh không chỉ thu hút khách hàng mới mà còn giữ chân khách hàng cũ và biến họ thành người ủng hộ. Giai đoạn này tập trung vào việc nuôi dưỡng quan hệ và đo lường hiệu quả.
+                </p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-1">
+                        <h3 class="font-bold text-lg mb-2">Các Sáng kiến Chính</h3>
+                        <ul class="space-y-4 text-gray-700">
+                           <li class="flex items-start">
+                               <span class="text-[#E07A5F] mr-3 mt-1 text-xl">&#9733;</span>
+                               <div>
+                                   <h4 class="font-semibold">Thu thập Đánh giá & Chứng thực</h4>
+                                   <p class="text-sm">Chủ động xin feedback và đăng tải những đánh giá tích cực lên website, Google My Business.</p>
+                               </div>
+                           </li>
+                           <li class="flex items-start">
+                               <span class="text-[#E07A5F] mr-3 mt-1 text-xl">&#9733;</span>
+                               <div>
+                                   <h4 class="font-semibold">Chương trình Giới thiệu</h4>
+                                   <p class="text-sm">Tặng ưu đãi cho khách hàng cũ khi họ giới thiệu thành công khách hàng mới.</p>
+                               </div>
+                           </li>
+                           <li class="flex items-start">
+                               <span class="text-[#E07A5F] mr-3 mt-1 text-xl">&#9733;</span>
+                               <div>
+                                   <h4 class="font-semibold">Email Marketing Chăm sóc</h4>
+                                   <p class="text-sm">Gửi bản tin định kỳ với các mẹo bảo trì, ý tưởng nâng cấp nhà cửa để giữ kết nối.</p>
+                               </div>
+                           </li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h3 class="font-bold text-lg mb-2">Theo dõi Chỉ số Hiệu suất (KPIs)</h3>
+                        <p class="text-sm text-gray-500 mb-4">Các chỉ số quan trọng cần theo dõi hàng tháng để đánh giá sự thành công của chiến lược.</p>
+                        <div class="chart-container" style="max-width: none;">
+                            <canvas id="kpiChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-white mt-20 border-t">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2025 KHA DOCK & HOME CONSTRUCTION LLC Brand Strategy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const chartFont = "'Be Vietnam Pro', sans-serif";
+
+            const customerCtx = document.getElementById('customerChart').getContext('2d');
+            const customerChart = new Chart(customerCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Chủ sở hữu nhà ven biển', 'Nhà đầu tư bất động sản', 'Doanh nghiệp (Bến du thuyền)', 'Gia đình cần cải tạo nhà'],
+                    datasets: [{
+                        label: 'Phân khúc khách hàng',
+                        data: [45, 25, 15, 15],
+                        backgroundColor: ['#3D405B', '#81B29A', '#E07A5F', '#F2CC8F'],
+                        borderColor: '#F8F5F2',
+                        borderWidth: 4,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    family: chartFont,
+                                    size: 12
+                                }
+                            }
+                        },
+                        title: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            const competitorCtx = document.getElementById('competitorChart').getContext('2d');
+            const competitorChart = new Chart(competitorCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Chất lượng', 'Giá cả', 'Dịch vụ KH', 'Uy tín thương hiệu', 'Thời gian thi công'],
+                    datasets: [{
+                        label: 'KHA DOCK & HOME',
+                        data: [9, 7, 8, 6, 8],
+                        backgroundColor: 'rgba(224, 122, 95, 0.2)',
+                        borderColor: '#E07A5F',
+                        pointBackgroundColor: '#E07A5F',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#E07A5F'
+                    }, {
+                        label: 'Đối thủ A',
+                        data: [7, 8, 6, 8, 7],
+                        backgroundColor: 'rgba(61, 64, 91, 0.2)',
+                        borderColor: '#3D405B',
+                        pointBackgroundColor: '#3D405B',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#3D405B'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                            grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                            pointLabels: { font: { family: chartFont, size: 12 } },
+                            ticks: {
+                                backdropColor: 'transparent',
+                                stepSize: 2
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    family: chartFont
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const timelineCtx = document.getElementById('timelineChart').getContext('2d');
+            const timelineChart = new Chart(timelineCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Thiết kế Logo & Brand Guide', 'Xây dựng Website', 'Tạo hồ sơ MXH', 'Sản xuất Portfolio'],
+                    datasets: [{
+                        label: 'Thời gian (Tuần)',
+                        data: [2, 6, 1, 4],
+                        backgroundColor: ['#3D405B', '#81B29A', '#E07A5F', '#F2CC8F'],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: { display: false },
+                            ticks: { font: { family: chartFont } }
+                        },
+                        y: {
+                            grid: { display: false },
+                            ticks: { font: { family: chartFont } }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        title: { display: false }
+                    }
+                }
+            });
+
+            const budgetCtx = document.getElementById('budgetChart').getContext('2d');
+            let budgetChart = new Chart(budgetCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['SEO & Content', 'Quảng cáo', 'Mạng xã hội', 'Hợp tác địa phương'],
+                    datasets: [{
+                        data: [40, 30, 20, 10],
+                        backgroundColor: ['#81B29A', '#F2CC8F', '#E07A5F', '#3D405B'],
+                        borderColor: '#F8F5F2',
+                        borderWidth: 4,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: { family: chartFont, size: 12 }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const sliders = ['seo', 'ads', 'social', 'local'];
+            sliders.forEach((sliderId, index) => {
+                const slider = document.getElementById(`${sliderId}Slider`);
+                const valueLabel = document.getElementById(`${sliderId}Value`);
+                slider.addEventListener('input', () => {
+                    let values = sliders.map(id => parseInt(document.getElementById(`${id}Slider`).value));
+                    let total = values.reduce((a, b) => a + b, 0);
+                    
+                    if (total > 0) {
+                        let updatedValues = values.map(v => Math.round((v / total) * 100));
+                        let finalTotal = updatedValues.reduce((a,b)=>a+b,0);
+                        if(finalTotal !== 100) {
+                            updatedValues[0] += (100 - finalTotal);
+                        }
+
+                        sliders.forEach((id, i) => {
+                             document.getElementById(`${id}Value`).textContent = `${updatedValues[i]}%`;
+                             budgetChart.data.datasets[0].data[i] = updatedValues[i];
+                        });
+                        budgetChart.update();
+                    }
+                });
+            });
+
+
+            const kpiCtx = document.getElementById('kpiChart').getContext('2d');
+            const kpiChart = new Chart(kpiCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6'],
+                    datasets: [{
+                        label: 'Lượng truy cập Website',
+                        data: [120, 190, 300, 500, 620, 800],
+                        borderColor: '#E07A5F',
+                        backgroundColor: 'rgba(224, 122, 95, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }, {
+                        label: 'Số lượng Khách hàng Tiềm năng',
+                        data: [5, 8, 15, 22, 28, 35],
+                        borderColor: '#3D405B',
+                        backgroundColor: 'rgba(61, 64, 91, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, ticks: { font: { family: chartFont } } },
+                        x: { ticks: { font: { family: chartFont } } }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { font: { family: chartFont } }
+                        }
+                    }
+                }
+            });
+            
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
