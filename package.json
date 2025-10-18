@@ -1,5 +1,5 @@
 {
-  "name": "khahome-website",
+  "name": "Kha Dock & Homes Construction LLC-website",
   "version": "1.0.0",
   "description": "Kha Dock & Home Construction LLC Website",
   "main": "index.html",
@@ -24,3 +24,6 @@
     "serve": "^14.2.1"
   }
 }
+
+
+
