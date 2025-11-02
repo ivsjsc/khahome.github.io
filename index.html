@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -66,11 +67,24 @@
                 <source src="videos/hero-banner.mp4" type="video/mp4" media="all and (min-width: 768px)">
                 <!-- Video cho màn hình nhỏ (mobile) - khổ 9:16 -->
                 <source src="videos/hero-banner-mo.mp4" type="video/mp4" media="(max-width: 767px)">
+=======
+        <!-- Hero Video Banner Section -->
+        <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden bg-black">
+            <!-- Video Background for Desktop -->
+            <video autoplay muted loop playsinline class="absolute z-0 w-full h-full object-cover hidden md:block">
+                <source src="videos/hero-banner.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video Background for Mobile -->
+            <video autoplay muted loop playsinline class="absolute z-0 w-full h-full object-cover block md:hidden">
+                <source src="videos/hero-banner-mo.mp4" type="video/mp4">
+>>>>>>> 8fcb157c5cee32c0f3adc4e299fd253f0188c90d
                 Your browser does not support the video tag.
             </video>
             
             <!-- Overlay -->
             <div class="absolute inset-0 bg-black/60 z-10"></div>
+<<<<<<< HEAD
 
             <!-- Content -->
             <div class="relative z-20 p-8 max-w-3xl" data-aos="fade-up" data-aos-duration="1200">
@@ -118,6 +132,23 @@
                             <h4 class="text-xl font-bold text-primary-charcoal">Construction & Completion</h4>
                             <p class="text-zinc-600 mt-1">We supervise and implement the project closely, ensuring quality and timely delivery.</p>
                         </div>
+=======
+        </section>
+
+        <!-- Hero Content Section -->
+        <section class="relative py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 flex items-center justify-center text-center">
+                <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="1200">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight text-primary-charcoal">
+                        Transforming Your House Into a <span class="text-accent-gold">Dream Home</span>
+                    </h1>
+                    <p class="mt-6 text-lg md:text-xl text-zinc-600">
+                        We provide high-end design and renovation solutions, turning your vision into a beautiful, tangible reality with unmatched quality and craftsmanship.
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+                        <a href="#services" class="btn-secondary">View Services</a>
+>>>>>>> 8fcb157c5cee32c0f3adc4e299fd253f0188c90d
                     </div>
                 </div>
             </div>
