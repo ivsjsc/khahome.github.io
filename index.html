@@ -6,43 +6,84 @@
     <meta name="theme-color" content="#FF8C00" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#8B4513" media="(prefers-color-scheme: dark)">
 
-    <title>Kha Dock & Homes Construction LLC Remodeling - Professional Home Renovation & Construction Solutions in Florida</title>
-    <meta name="description" content="Kha Dock & Homes Construction LLC Remodeling specializes in custom home renovations, professional remodeling, interior design, and comprehensive repair services throughout Florida. Your trusted partner for home improvement.">
-    <meta name="keywords" content="home remodeling Florida, home renovation, bathroom remodel, kitchen remodel, interior painting, flooring installation, home repair services">
+    <title>Kha Dock & Homes Construction LLC - Professional Home Renovation & Construction in Florida</title>
+    <meta name="description" content="Expert home renovation, remodeling, and construction services in Florida. Specializing in kitchen remodels, bathroom renovations, flooring, and custom home improvements.">
+    <meta name="keywords" content="home remodeling Florida, home renovation, kitchen remodel, bathroom remodel, flooring installation, home construction, Tampa renovation">
 
-    <meta property="og:title" content="Kha Dock & Homes Construction LLC Remodeling - Professional Home Renovation Solutions in Florida">
-    <meta property="og:description" content="Expert home renovation, remodeling, and maintenance services in Florida by Kha Dock & Homes Construction LLC Remodeling.">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="videos/hero-banner.mp4" as="video" type="video/mp4" media="(min-width: 768px)">
+    <link rel="preload" href="videos/hero-banner-mo.mp4" as="video" type="video/mp4" media="(max-width: 767px)">
+    <link rel="preload" href="images/logo/logo.png" as="image">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kha Dock & Homes Construction LLC - Professional Home Renovation in Florida">
+    <meta property="og:description" content="Transform your home with expert renovation and construction services in Florida. Kitchen, bathroom, and full home remodels.">
     <meta property="og:image" content="images/logo/logo1.png">
-    <meta property="og:url" content="https://Kha Dock & Homes Construction LLC.com">
+    <meta property="og:url" content="https://khahome.github.io">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Kha Dock & Homes Construction LLC Remodeling">
+    <meta property="og:site_name" content="Kha Dock & Homes Construction LLC">
 
-    <link rel="icon" href="images/logo/logo.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kha Dock & Homes Construction LLC - Home Renovation Experts">
+    <meta name="twitter:description" content="Professional home renovation and construction services in Florida.">
+    <meta name="twitter:image" content="images/logo/logo1.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Kha Dock & Homes Construction LLC",
+        "description": "Professional home renovation and construction services in Florida",
+        "url": "https://khahome.github.io",
+        "telephone": "+1-813-939-3989",
+        "email": "kha39llc@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2055 W Bearss Ave",
+            "addressLocality": "Tampa",
+            "addressRegion": "FL",
+            "postalCode": "33618",
+            "addressCountry": "US"
+        },
+        "serviceType": ["Home Renovation", "Kitchen Remodeling", "Bathroom Remodeling", "Flooring Installation"],
+        "areaServed": "Florida"
+    }
+    </script>
+
+    <link rel="icon" href="images/logo/logo.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/logo/logo.png">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f4f4f5; /* Zinc-100 - Ash Gray */
-            color: #3f3f46; /* Zinc-700 */
+            background-color: #f4f4f5;
+            color: #3f3f46;
         }
-        /* Refined Color & Component Palette */
-        .text-primary-charcoal { color: #27272a; } /* Zinc-800 */
+        /* Custom color palette */
+        .text-primary-charcoal { color: #27272a; }
         .bg-primary-charcoal { background-color: #27272a; }
-        .hover\:bg-primary-charcoal-dark:hover { background-color: #18181b; } /* Zinc-900 */
-        
+        .hover\:bg-primary-charcoal-dark:hover { background-color: #18181b; }
         .text-accent-gold { color: #b48c56; }
         .bg-accent-gold { background-color: #b48c56; }
         .hover\:bg-accent-gold-dark:hover { background-color: #a17b49; }
 
+        /* Button styles */
         .btn-primary {
-            @apply inline-block px-8 py-3 bg-accent-gold text-white font-bold rounded-lg shadow-md transition-all duration-300 hover:bg-accent-gold-dark hover:shadow-xl transform hover:-translate-y-1;
+            @apply inline-block px-8 py-3 bg-accent-gold text-white font-bold rounded-lg shadow-md transition-all duration-300 hover:bg-accent-gold-dark hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-accent-gold/50;
         }
         .btn-secondary {
-             @apply inline-block px-8 py-3 bg-zinc-200 text-primary-charcoal font-bold rounded-lg shadow-md transition-all duration-300 hover:bg-zinc-300 hover:shadow-xl transform hover:-translate-y-1;
+            @apply inline-block px-8 py-3 bg-zinc-200 text-primary-charcoal font-bold rounded-lg shadow-md transition-all duration-300 hover:bg-zinc-300 hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-zinc-300/50;
         }
+
+        /* Section styles */
         .section-title {
             @apply text-3xl sm:text-4xl font-black text-center text-primary-charcoal mb-4;
         }
@@ -50,72 +91,89 @@
             @apply text-lg text-center text-zinc-600 mb-12 max-w-3xl mx-auto;
         }
 
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        .skip-link:focus {
+            top: 6px;
+        }
     </style>
 </head>
 <body class="antialiased">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <div id="header-placeholder"></div>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Video Banner Section -->
-        <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden bg-black">
+        <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden bg-black" aria-label="Hero banner with background video">
             <!-- Video Background for Desktop -->
-            <video autoplay muted loop playsinline class="absolute z-0 w-full h-full object-cover hidden md:block">
+            <video autoplay muted loop playsinline preload="metadata" class="absolute z-0 w-full h-full object-cover hidden md:block" aria-hidden="true">
                 <source src="videos/hero-banner.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <!-- Video Background for Mobile -->
-            <video autoplay muted loop playsinline class="absolute z-0 w-full h-full object-cover block md:hidden">
+            <video autoplay muted loop playsinline preload="metadata" class="absolute z-0 w-full h-full object-cover block md:hidden" aria-hidden="true">
                 <source src="videos/hero-banner-mo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            
+
             <!-- Overlay -->
             <div class="absolute inset-0 bg-black/60 z-10"></div>
         </section>
 
         <!-- Hero Content Section -->
-        <section class="relative py-20 md:py-32 bg-white">
+        <section class="relative py-20 md:py-32 bg-white" aria-labelledby="hero-heading">
             <div class="container mx-auto px-6 flex items-center justify-center text-center">
-                <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="1200">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight text-primary-charcoal">
+                <div class="max-w-3xl">
+                    <h1 id="hero-heading" class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight text-primary-charcoal">
                         Transforming Your House Into a <span class="text-accent-gold">Dream Home</span>
                     </h1>
                     <p class="mt-6 text-lg md:text-xl text-zinc-600">
                         We provide high-end design and renovation solutions, turning your vision into a beautiful, tangible reality with unmatched quality and craftsmanship.
                     </p>
                     <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="contact.html" class="btn-primary">Get a Free Quote</a>
-                        <a href="#services" class="btn-secondary">View Services</a>
+                        <a href="contact.html" class="btn-primary" aria-label="Get a free quote for home renovation">Get a Free Quote</a>
+                        <a href="#services" class="btn-secondary" aria-label="View our services">View Services</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Why Choose Us Section -->
-        <section class="py-20 md:py-32 bg-zinc-100">
+        <section class="py-20 md:py-32 bg-zinc-100" aria-labelledby="why-choose-heading">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <h2 class="section-title">Why Choose Kha Dock & Homes?</h2>
-                    <p class="section-subtitle">We don't just build and repair; we create living spaces founded on lasting values.</p>
+                <div class="text-center mb-12">
+                    <h2 id="why-choose-heading" class="section-title" data-aos="fade-up">Why Choose Kha Dock & Homes?</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">We don't just build and repair; we create living spaces founded on lasting values.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-5xl mx-auto">
                     <div class="p-8 bg-white rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-accent-gold text-white mx-auto mb-6 text-2xl">
-                            <i class="fas fa-gem"></i>
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-accent-gold text-white mx-auto mb-6 text-2xl" aria-hidden="true">
+                            <i class="fas fa-gem" aria-hidden="true"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Superior Quality</h3>
                         <p class="text-zinc-600">Using the finest materials and advanced construction techniques to ensure every project is durable and beautiful for years to come.</p>
                     </div>
                     <div class="p-8 bg-white rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-accent-gold text-white mx-auto mb-6 text-2xl">
-                            <i class="fas fa-handshake"></i>
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-accent-gold text-white mx-auto mb-6 text-2xl" aria-hidden="true">
+                            <i class="fas fa-handshake" aria-hidden="true"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Trusted Partner</h3>
                         <p class="text-zinc-600">Always transparent in our process, respectful of your budget, and committed to on-time project completion.</p>
                     </div>
                     <div class="p-8 bg-white rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="400">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-accent-gold text-white mx-auto mb-6 text-2xl">
-                            <i class="fas fa-lightbulb"></i>
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-accent-gold text-white mx-auto mb-6 text-2xl" aria-hidden="true">
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Creative Innovation</h3>
                         <p class="text-zinc-600">Our design team stays current with the latest trends to deliver unique and perfectly tailored solutions.</p>
@@ -124,85 +182,84 @@
             </div>
         </section>
 
-
         <!-- Featured Projects Section -->
-        <section class="py-20 md:py-32 bg-primary-charcoal text-white">
+        <section class="py-20 md:py-32 bg-primary-charcoal text-white" aria-labelledby="projects-heading">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="section-title !text-white" data-aos="fade-up">Our Masterpieces</h2>
+                <h2 id="projects-heading" class="section-title !text-white" data-aos="fade-up">Our Masterpieces</h2>
                 <p class="section-subtitle !text-zinc-300" data-aos="fade-up" data-aos-delay="100">
                     Discover some of our recent work that showcases our meticulous craftsmanship.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/projects/kitchenremodel.png" alt="Modern Kitchen Remodel Project" class="w-full h-64 object-cover">
+                        <img src="images/projects/kitchenremodel.png" alt="Modern Kitchen Remodel Project showcasing granite countertops and stainless steel appliances" class="w-full h-64 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-primary-charcoal">Modern Kitchen</h3>
                             <p class="text-zinc-600 mt-2">Optimizing the space for both functionality and aesthetics.</p>
-                            <a href="projects.html" class="text-accent-gold font-semibold mt-4 inline-block transition-transform duration-300 group-hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                            <a href="projects.html" class="text-accent-gold font-semibold mt-4 inline-block transition-transform duration-300 group-hover:translate-x-1" aria-label="View details of Modern Kitchen project">View Details <i class="fas fa-arrow-right ml-1 text-sm" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
-                        <img src="images/projects/lux-bathroom.png" alt="Luxury Bathroom Renovation Project" class="w-full h-64 object-cover">
+                        <img src="images/projects/lux-bathroom.png" alt="Luxury Bathroom Renovation with marble tiles and modern fixtures" class="w-full h-64 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-primary-charcoal">Luxury Bath Retreat</h3>
                             <p class="text-zinc-600 mt-2">Turning an old bathroom into a high-end, spa-like space.</p>
-                            <a href="projects.html" class="text-accent-gold font-semibold mt-4 inline-block transition-transform duration-300 group-hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                            <a href="projects.html" class="text-accent-gold font-semibold mt-4 inline-block transition-transform duration-300 group-hover:translate-x-1" aria-label="View details of Luxury Bath Retreat project">View Details <i class="fas fa-arrow-right ml-1 text-sm" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="400">
-                        <img src="images/projects/wood-floor.png" alt="Natural Wood Flooring Installation Project" class="w-full h-64 object-cover">
+                        <img src="images/projects/wood-floor.png" alt="Natural Wood Flooring Installation in living room" class="w-full h-64 object-cover" loading="lazy">
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-primary-charcoal">Natural Wood Flooring</h3>
                             <p class="text-zinc-600 mt-2">Bringing warmth and elegance to the home.</p>
-                            <a href="projects.html" class="text-accent-gold font-semibold mt-4 inline-block transition-transform duration-300 group-hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                            <a href="projects.html" class="text-accent-gold font-semibold mt-4 inline-block transition-transform duration-300 group-hover:translate-x-1" aria-label="View details of Natural Wood Flooring project">View Details <i class="fas fa-arrow-right ml-1 text-sm" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
-                    <a href="projects.html" class="btn-primary !bg-white !text-primary-charcoal hover:!bg-zinc-200">View All Projects</a>
+                    <a href="projects.html" class="btn-primary !bg-white !text-primary-charcoal hover:!bg-zinc-200" aria-label="View all our projects">View All Projects</a>
                 </div>
             </div>
         </section>
 
         <!-- Our Services Section -->
-        <section id="services" class="py-20 md:py-32 bg-zinc-100">
+        <section id="services" class="py-20 md:py-32 bg-zinc-100" aria-labelledby="services-heading">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+                <h2 id="services-heading" class="section-title" data-aos="fade-up">Our Services</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                     From minor updates to complete transformations, we have you covered.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-home text-5xl text-accent-gold mb-4"></i>
+                        <i class="fas fa-home text-5xl text-accent-gold mb-4" aria-hidden="true"></i>
                         <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Full-Scale Renovations</h3>
                         <p class="text-zinc-600">Completely refresh your living space, inside and out.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                        <i class="fas fa-sink text-5xl text-accent-gold mb-4"></i>
+                        <i class="fas fa-sink text-5xl text-accent-gold mb-4" aria-hidden="true"></i>
                         <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Kitchen & Bath Remodeling</h3>
                         <p class="text-zinc-600">Transform functional spaces into areas of comfort and luxury.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fas fa-drafting-compass text-5xl text-accent-gold mb-4"></i>
+                        <i class="fas fa-drafting-compass text-5xl text-accent-gold mb-4" aria-hidden="true"></i>
                         <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Design & Consultation</h3>
                         <p class="text-zinc-600">Our team of experts will work with you to conceptualize and bring your space to life.</p>
                     </div>
                 </div>
                 <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
-                    <a href="services.html" class="btn-primary">View All Services</a>
+                    <a href="services.html" class="btn-primary" aria-label="View all our services">View All Services</a>
                 </div>
             </div>
         </section>
 
         <!-- Testimonial Section -->
-        <section class="py-20 md:py-32 bg-white">
+        <section class="py-20 md:py-32 bg-white" aria-labelledby="testimonials-heading">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="section-title" data-aos="fade-up">What Our Clients Say</h2>
-                <div class="relative max-w-2xl mx-auto mt-12 text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="absolute -top-4 -left-4 text-6xl text-accent-gold opacity-10">
+                <h2 id="testimonials-heading" class="section-title" data-aos="fade-up">What Our Clients Say</h2>
+                <div class="relative max-w-2xl mx-auto mt-12 text-center" data-aos="fade-up" data-aos-delay="200" role="region" aria-labelledby="testimonials-heading">
+                    <div class="absolute -top-4 -left-4 text-6xl text-accent-gold opacity-10" aria-hidden="true">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <div id="testimonial-slider" class="overflow-hidden">
+                    <div id="testimonial-slider" class="overflow-hidden" role="region" aria-live="polite" aria-label="Customer testimonials">
                         <div class="flex transition-transform duration-500 ease-in-out">
                             <!-- Testimonial 1 -->
                             <div class="w-full flex-shrink-0 p-4">
@@ -220,25 +277,23 @@
                             </div>
                         </div>
                     </div>
-                     <div class="absolute -bottom-4 -right-4 text-6xl text-accent-gold opacity-10">
+                    <div class="absolute -bottom-4 -right-4 text-6xl text-accent-gold opacity-10" aria-hidden="true">
                         <i class="fas fa-quote-right"></i>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact CTA Section --> 
-        <section class="py-20 md:py-32 bg-accent-gold">
+        <!-- Contact CTA Section -->
+        <section class="py-20 md:py-32 bg-accent-gold" aria-labelledby="contact-cta-heading">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight text-white">
+                <h2 id="contact-cta-heading" class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight text-white">
                     Ready to Transform Your Home?
                 </h2>
                 <p class="mt-4 text-xl text-white/80 max-w-2xl mx-auto">
                     Contact us today for a free consultation and quote.
                 </p>
-                <a href="contact.html" class="btn-primary mt-8 !bg-primary-charcoal !text-white hover:!bg-primary-charcoal-dark">
-                    Contact Us Now
-                </a>
+                <a href="contact.html" class="btn-primary mt-8 !bg-primary-charcoal !text-white hover:!bg-primary-charcoal-dark" aria-label="Contact us for a free consultation">Contact Us Now</a>
             </div>
         </section>
     </main>
@@ -247,15 +302,16 @@
     <div id="fab-container-placeholder"></div>
 
     <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js" defer></script>
+
     <!-- App Scripts -->
     <script type="module" src="js/firebase.js" defer></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="js/loadComponents.js" type="module" defer></script>
     <script src="js/fab-container.js" defer></script>
     <script>
+        // Performance optimization: Defer non-critical scripts
         document.addEventListener('DOMContentLoaded', function() {
             // Load header, footer, etc.
             if (typeof loadAppComponents === 'function') {
@@ -264,7 +320,7 @@
                 console.error('Error: loadAppComponents function not found. Please check js/loadComponents.js file.');
             }
 
-            // Testimonial Slider Logic
+            // Testimonial Slider Logic with accessibility
             const slider = document.getElementById('testimonial-slider');
             if (slider) {
                 const slides = slider.querySelector('div');
@@ -277,19 +333,21 @@
                     }
                 };
 
+                // Auto-slide every 7 seconds
                 setInterval(() => {
                     currentIndex = (currentIndex + 1) % totalSlides;
                     updateSlider();
                 }, 7000);
             }
 
-            // AOS Initialization
+            // AOS Initialization with reduced motion support
             if (typeof AOS !== 'undefined') {
                 AOS.init({
                     offset: 120,
                     duration: 900,
                     easing: 'ease-out-quad',
                     once: true,
+                    disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
                 });
             }
         });
