@@ -1,12 +1,6 @@
 /* Mobile menu button z-index */
 #mobile-menu-button {
     z-index: 80 !important; /* Higher than menu panel for proper interaction */
-    position: relative;
-}
-
-/* Hero section adjustments */
-.hero-section-main {
-    z-index: 1; /* Lower than header and menu */
 }
 
 /* Ensure hero content doesn't overlap with header */
@@ -62,13 +56,6 @@
 @media (min-width: 641px) and (max-width: 768px) {
     /* Header maintains h-20 from Tailwind */
     
-}
-
-/* Tablet Landscape - 769px to 1024px */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .mega-menu {
-        min-width: 500px;
-    }
 }
 
 /* Desktop - 1025px and up */

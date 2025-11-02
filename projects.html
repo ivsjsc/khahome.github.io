@@ -22,20 +22,23 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* slate-50 */
-            color: #334155; /* slate-700 */
+            background-color: #f4f4f5; /* Zinc-100 - Ash Gray */
+            color: #3f3f46; /* Zinc-700 */
         }
-        /* New Color Palette */
-        .text-primary-navy { color: #1e3a8a; }
-        .bg-primary-navy { background-color: #1e3a8a; }
-        .text-accent-amber { color: #f59e0b; }
-        .bg-accent-amber { background-color: #f59e0b; }
+        /* Refined Color Palette */
+        .text-primary-charcoal { color: #27272a; } /* Zinc-800 */
+        .bg-primary-charcoal { background-color: #27272a; }
+        .hover\:bg-primary-charcoal-dark:hover { background-color: #18181b; } /* Zinc-900 */
+        
+        .text-accent-gold { color: #b48c56; }
+        .bg-accent-gold { background-color: #b48c56; }
+        .hover\:bg-accent-gold-dark:hover { background-color: #a17b49; }
 
         .hero-section-projects {
-            background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.7)), url('images/banners/project.png') no-repeat center center/cover;
+            background: linear-gradient(rgba(39, 39, 42, 0.7), rgba(39, 39, 42, 0.7)), url('images/banners/project.png') no-repeat center center/cover;
         }
         .project-card img {
             transition: transform 0.3s ease;
@@ -66,39 +69,39 @@
         <section class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary-navy mb-4" data-aos="fade-up">Featured Home Remodeling Projects</h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Each project showcases our commitment to excellence, durability, and complete client satisfaction in home renovation.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-charcoal mb-4" data-aos="fade-up">Featured Home Remodeling Projects</h2>
+                    <p class="text-zinc-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Each project showcases our commitment to excellence, durability, and complete client satisfaction in home renovation.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1 -->
-                    <div class="bg-slate-50 rounded-xl shadow-lg overflow-hidden group project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-zinc-50 rounded-xl shadow-lg overflow-hidden group project-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="overflow-hidden">
                            <img src="images/projects/kitchenremodel.png" alt="Modern Kitchen Remodel project" class="w-full h-64 object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-primary-navy">Modern Kitchen Remodel</h3>
-                            <p class="text-slate-600 mt-2">A completely new kitchen space, optimized for both functionality and aesthetics.</p>
+                            <h3 class="text-2xl font-bold text-primary-charcoal">Modern Kitchen Remodel</h3>
+                            <p class="text-zinc-600 mt-2">A completely new kitchen space, optimized for both functionality and aesthetics.</p>
                         </div>
                     </div>
                     <!-- Project 2 -->
-                    <div class="bg-slate-50 rounded-xl shadow-lg overflow-hidden group project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-zinc-50 rounded-xl shadow-lg overflow-hidden group project-card" data-aos="fade-up" data-aos-delay="300">
                          <div class="overflow-hidden">
                            <img src="images/projects/lux-bathroom.png" alt="Luxurious Bathroom Renovation project" class="w-full h-64 object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-primary-navy">Luxurious Bathroom Retreat</h3>
-                            <p class="text-slate-600 mt-2">We transformed an old bathroom into a luxurious spa-like space with high-end materials.</p>
+                            <h3 class="text-2xl font-bold text-primary-charcoal">Luxurious Bathroom Retreat</h3>
+                            <p class="text-zinc-600 mt-2">We transformed an old bathroom into a luxurious spa-like space with high-end materials.</p>
                         </div>
                     </div>
                     <!-- Project 3 -->
-                    <div class="bg-slate-50 rounded-xl shadow-lg overflow-hidden group project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-zinc-50 rounded-xl shadow-lg overflow-hidden group project-card" data-aos="fade-up" data-aos-delay="400">
                          <div class="overflow-hidden">
                            <img src="images/projects/wood-floor.png" alt="Natural Wood Flooring Installation project" class="w-full h-64 object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-primary-navy">Natural Wood Flooring</h3>
-                            <p class="text-slate-600 mt-2">Adding warmth and elegance with natural wood flooring meticulously installed.</p>
+                            <h3 class="text-2xl font-bold text-primary-charcoal">Natural Wood Flooring</h3>
+                            <p class="text-zinc-600 mt-2">Adding warmth and elegance with natural wood flooring meticulously installed.</p>
                         </div>
                     </div>
                     <!-- Add more projects as needed -->
@@ -120,7 +123,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/loadComponents.js" type="module" defer></script>
     <script src="js/app.js" type="module" defer></script>
-    <script src="js/fab-container.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Load header, footer, etc.

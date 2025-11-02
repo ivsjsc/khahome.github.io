@@ -20,26 +20,29 @@
     <link rel="icon" href="images/logo/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/tailwind-output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f7f3e9; /* Light Cream */
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f5; /* Zinc-100 - Ash Gray */
+            color: #3f3f46; /* Zinc-700 */
         }
-        .text-primary-orange { color: #ff8c00; }
-        .bg-primary-orange { background-color: #ff8c00; }
-        .hover\:bg-primary-orange-dark:hover { background-color: #e67e00; }
-        .border-primary-orange { border-color: #ff8c00; }
-        .text-accent-brown { color: #8b4513; }
-        .bg-accent-brown-dark { background-color: #3b2b1d; }
-        .bg-bg-cream { background-color: #fcf5e6; }
+        /* Refined Color Palette */
+        .text-primary-charcoal { color: #27272a; } /* Zinc-800 */
+        .bg-primary-charcoal { background-color: #27272a; }
+        .hover\:bg-primary-charcoal-dark:hover { background-color: #18181b; } /* Zinc-900 */
+        
+        .text-accent-gold { color: #b48c56; }
+        .bg-accent-gold { background-color: #b48c56; }
+        .hover\:bg-accent-gold-dark:hover { background-color: #a17b49; }
+
         .hero-section-services {
-            background: linear-gradient(rgba(43, 29, 14, 0.6), rgba(43, 29, 14, 0.6)), url('images/banners/services.png') no-repeat center center/cover;
+            background: linear-gradient(rgba(39, 39, 42, 0.7), rgba(39, 39, 42, 0.7)), url('images/banners/services.png') no-repeat center center/cover;
         }
     </style>
 </head>
-<body class="bg-bg-cream">
+<body class="antialiased">
 
     <div id="header-placeholder"></div>
 
@@ -60,41 +63,41 @@
         <section class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-accent-brown mb-4" data-aos="fade-up">What We Offer</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-charcoal mb-4" data-aos="fade-up">What We Offer</h2>
+                    <p class="text-zinc-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                         From initial concept to completion and maintenance, Kha Dock & Homes Construction LLC is with you every step of the way.
                     </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-bg-cream p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-kitchen-set text-5xl text-primary-orange mb-4"></i>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Kitchen Remodeling</h3>
-                        <p class="text-gray-600">Modernize your cooking space with new cabinetry, countertops, and state-of-the-art appliances.</p>
+                    <div class="bg-zinc-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-sink text-5xl text-accent-gold mb-4"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Kitchen Remodeling</h3>
+                        <p class="text-zinc-600">Modernize your cooking space with new cabinetry, countertops, and state-of-the-art appliances.</p>
                     </div>
-                    <div class="bg-bg-cream p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                        <i class="fas fa-shower text-5xl text-primary-orange mb-4"></i>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Bathroom Renovation</h3>
-                        <p class="text-gray-600">Turn your outdated bathroom into a luxurious retreat with new tubs, showers, and tiling.</p>
+                    <div class="bg-zinc-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-shower text-5xl text-accent-gold mb-4"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Bathroom Renovation</h3>
+                        <p class="text-zinc-600">Turn your outdated bathroom into a luxurious retreat with new tubs, showers, and tiling.</p>
                     </div>
-                    <div class="bg-bg-cream p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fas fa-paint-roller text-5xl text-primary-orange mb-4"></i>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Interior & Exterior Painting</h3>
-                        <p class="text-gray-600">Update your home's appearance with a fresh coat of paint, providing a vibrant and lasting finish.</p>
+                    <div class="bg-zinc-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-paint-roller text-5xl text-accent-gold mb-4"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Interior & Exterior Painting</h3>
+                        <p class="text-zinc-600">Update your home's appearance with a fresh coat of paint, providing a vibrant and lasting finish.</p>
                     </div>
-                    <div class="bg-bg-cream p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
-                        <i class="fas fa-hand-sparkles text-5xl text-primary-orange mb-4"></i>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Repair & Upgrades</h3>
-                        <p class="text-gray-600">We provide comprehensive repair and maintenance services, from minor fixes to major upgrades.</p>
+                    <div class="bg-zinc-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-tools text-5xl text-accent-gold mb-4"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Repair & Upgrades</h3>
+                        <p class="text-zinc-600">We provide comprehensive repair and maintenance services, from minor fixes to major upgrades.</p>
                     </div>
-                    <div class="bg-bg-cream p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
-                        <i class="fas fa-ruler-combined text-5xl text-primary-orange mb-4"></i>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Flooring Installation</h3>
-                        <p class="text-gray-600">Choose from a wide range of high-quality flooring materials to complete your home's look and feel.</p>
+                    <div class="bg-zinc-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
+                        <i class="fas fa-layer-group text-5xl text-accent-gold mb-4"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Flooring Installation</h3>
+                        <p class="text-zinc-600">Choose from a wide range of high-quality flooring materials to complete your home's look and feel.</p>
                     </div>
-                    <div class="bg-bg-cream p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="700">
-                        <i class="fas fa-drafting-compass text-5xl text-primary-orange mb-4"></i>
-                        <h3 class="text-2xl font-bold text-accent-brown mb-2">Design & Consultation</h3>
-                        <p class="text-gray-600">Our team of experts will work with you to conceptualize and design the perfect space.</p>
+                    <div class="bg-zinc-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-drafting-compass text-5xl text-accent-gold mb-4"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Design & Consultation</h3>
+                        <p class="text-zinc-600">Our team of experts will work with you to conceptualize and design the perfect space.</p>
                     </div>
                 </div>
             </div>
@@ -114,7 +117,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/loadComponents.js" type="module" defer></script>
     <script src="js/app.js" type="module" defer></script>
-    <script src="js/fab-container.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Load header, footer, etc.
