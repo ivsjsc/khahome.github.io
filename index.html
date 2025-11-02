@@ -56,28 +56,31 @@
     <div id="header-placeholder"></div>
 
     <main>
-        <!-- Hero Section (split image and text) -->
-        <section class="flex flex-col lg:flex-row w-full lg:min-h-[calc(100vh-4rem)] bg-white">
-            <!-- Image Side -->
-            <div class="w-full lg:w-1/2 h-80 lg:h-auto">
-            <img src="images/comparings/livingroom-compare.png" alt="Home remodeling showcase"
-                 class="w-full h-full object-cover" data-aos="fade-in" data-aos-duration="1500">
+        <!-- Hero Video Banner Section -->
+        <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+            <!-- Video Background -->
+            <video autoplay muted loop playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none">
+                <source src="videos/hero-banner.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+        </section>
+
+        <!-- Hero Content Section -->
+        <section class="relative z-20 p-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1200">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight drop-shadow-lg">
+            Transforming Your House Into a <span class="text-accent-gold">Dream Home</span>
+            </h1>
+            <p class="mt-6 text-lg md:text-xl font-light text-zinc-200 drop-shadow-md">
+            We provide high-end design and renovation solutions, turning your vision into a beautiful, tangible reality with unmatched quality and craftsmanship.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+            <a href="#services" class="btn-secondary !bg-white/20 !text-white hover:!bg-white/30">View Services</a>
             </div>
-            <!-- Text Side -->
-            <div class="w-full lg:w-1/2 flex items-center justify-center p-8 md:p-16 bg-zinc-50">
-            <div class="max-w-xl text-left" data-aos="fade-left">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight text-primary-charcoal">
-                    Transforming Your House Into a <span class="text-accent-gold">Dream Home</span>
-                </h1>
-                <p class="mt-6 text-lg md:text-xl text-zinc-600">
-                    We provide high-end design and renovation solutions, turning your vision into a beautiful, tangible reality with unmatched quality and craftsmanship.
-                </p>
-                <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                    <a href="contact.html" class="btn-primary">Get a Free Quote</a>
-                    <a href="#services" class="btn-secondary">View Services</a>
-                </div>
-            </div>
-            </div>
+        </section>
         </section>
 
         <section class="py-20 md:py-32 bg-white">
