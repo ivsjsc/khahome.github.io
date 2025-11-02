@@ -125,36 +125,6 @@ a:hover, a:focus {
     to { opacity: 1; transform: translateY(0) translateX(-50%); }
 }
 
-#mobile-menu-panel {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%; /* Panel takes full height */
-    transform: translateX(-100%); /* Initial hidden state */
-    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none; /* Disable interaction when hidden */
-    z-index: 51; /* Ensure it's above the header */
-    /* width: 80%; Removed to allow Tailwind w-full to take effect */
-}
-
-#mobile-menu-panel.open {
-    transform: translateX(0); /* Visible state */
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto; /* Enable interaction when open */
-}
-
-/* The <nav> inside #mobile-menu-panel will handle scrolling */
-/* #mobile-menu-panel nav {
-    padding-top: 5rem; /* Space for the header */
-/* padding-bottom: 5rem; /* Space for the bottom nav and some buffer */
-/* height: 100%;
-    overflow-y: auto;
-}
-*/
-
 .mobile-submenu-content {
     overflow: hidden;
     max-height: 0;

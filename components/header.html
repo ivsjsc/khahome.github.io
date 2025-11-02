@@ -1,17 +1,28 @@
 <header class="nav-header fixed inset-x-0 top-0 z-40 border-b border-orange-700/50 bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 backdrop-blur-md shadow-sm">
     <style>
+        /* Self-contained styles for mobile menu */
         #mobile-menu-panel {
             visibility: hidden;
             opacity: 0;
             pointer-events: none;
-            transition: visibility 0.3s, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-            transform: scale(0.95);
+            transition: visibility 0.3s, opacity 0.3s ease-in-out;
         }
         #mobile-menu-panel.open {
             visibility: visible;
             opacity: 1;
             pointer-events: auto;
-            transform: scale(1);
+        }
+        #mobile-menu-panel .mobile-menu-nav {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        #mobile-menu-panel.open .mobile-menu-nav {
+            transform: translateX(0);
+        }
+        .mobile-submenu-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease-in-out;
         }
     </style>
     <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
@@ -64,21 +75,13 @@
     </div>
 
     <!-- Mobile Menu Panel -->
-    <div id="mobile-menu-panel" class="fixed inset-0 z-50 flex items-start justify-center pt-20 bg-slate-900/60 backdrop-blur-sm lg:hidden">
-        <nav class="w-11/12 max-w-sm rounded-2xl bg-white p-6 shadow-xl relative">
-            <!-- Logo and close button -->
-            <div class="flex items-center justify-between mb-6">
-                <div class="flex items-center gap-2">
-                    <img src="images/logo/logo.png" alt="Kha Dock & Homes Construction LLC logo" class="h-8 w-8 rounded-lg shadow-sm">
-                    <div class="leading-tight">
-                        <span class="text-lg font-bold text-orange-600">Kha Dock & Homes Construction LLC</span>
-                        <span class="block text-xs text-orange-500 font-medium">Remodeling</span>
-                    </div>
-                </div>
-                <button id="mobile-menu-close-btn" class="rounded-full bg-orange-100 text-orange-600 w-8 h-8 flex items-center justify-center text-lg font-bold hover:bg-orange-200 transition-colors" aria-label="Close menu">
-                    ×
-                </button>
-            </div>
+    <div id="mobile-menu-panel" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm lg:hidden">
+        <nav class="mobile-menu-nav h-full w-11/12 max-w-sm bg-white p-6 shadow-xl">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 mb-6">
+                <img src="images/logo/logo.png" alt="Kha Dock & Homes Construction LLC logo" class="h-10 w-10 rounded-lg shadow-sm">
+                <span class="text-lg font-bold text-orange-600">Kha Dock & Homes</span>
+            </a>
             
             <!-- Divider -->
             <div class="border-b border-orange-200 mb-4"></div>
@@ -145,8 +148,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Self-contained script to control mobile menu
     const menuButton = document.getElementById('mobile-menu-button');
-    const menuPanel = document.getElementById('mobile-menu-panel');
-    const closeButton = document.getElementById('mobile-menu-close-btn');
+    const menuPanel = document.getElementById('mobile-menu-panel');    
     const openIcon = document.getElementById('icon-menu-open');
     const closeIcon = document.getElementById('icon-menu-close');
     
@@ -172,13 +174,9 @@ document.addEventListener('DOMContentLoaded', function() {
             isExpanded ? closeMenu() : openMenu();
         });
     }
-
-    if (closeButton) {
-        closeButton.addEventListener('click', closeMenu);
-    }
     
     if (menuPanel) {
-        menuPanel.addEventListener('click', (e) => {
+        menuPanel.addEventListener('click', (e) => { // Close when clicking on the overlay
             if (e.target === menuPanel) {
                 closeMenu();
             }
@@ -195,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             toggle.setAttribute('aria-expanded', !isExpanded);
             if (content) {
-                content.style.maxHeight = isExpanded ? null : content.scrollHeight + 'px';
+                content.style.maxHeight = isExpanded ? '0' : content.scrollHeight + 'px';
             }
             if (icon) {
                 icon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
@@ -213,8 +211,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-
-
-
-
-
