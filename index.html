@@ -1,8 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF8C00" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#8B4513" media="(prefers-color-scheme: dark)">
+
+    <title>Kha Dock & Homes Construction LLC Remodeling - Professional Home Renovation & Construction Solutions in Florida</title>
+    <meta name="description" content="Kha Dock & Homes Construction LLC Remodeling specializes in custom home renovations, professional remodeling, interior design, and comprehensive repair services throughout Florida. Your trusted partner for home improvement.">
+    <meta name="keywords" content="home remodeling Florida, home renovation, bathroom remodel, kitchen remodel, interior painting, flooring installation, home repair services">
+
+    <meta property="og:title" content="Kha Dock & Homes Construction LLC Remodeling - Professional Home Renovation Solutions in Florida">
+    <meta property="og:description" content="Expert home renovation, remodeling, and maintenance services in Florida by Kha Dock & Homes Construction LLC Remodeling.">
+    <meta property="og:image" content="images/logo/logo1.png">
+    <meta property="og:url" content="https://Kha Dock & Homes Construction LLC.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kha Dock & Homes Construction LLC Remodeling">
+
+    <link rel="icon" href="images/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f5; /* Zinc-100 - Ash Gray */
+            color: #3f3f46; /* Zinc-700 */
+        }
+        /* Refined Color & Component Palette */
+        .text-primary-charcoal { color: #27272a; } /* Zinc-800 */
+        .bg-primary-charcoal { background-color: #27272a; }
+        .hover\:bg-primary-charcoal-dark:hover { background-color: #18181b; } /* Zinc-900 */
+        
+        .text-accent-gold { color: #b48c56; }
+        .bg-accent-gold { background-color: #b48c56; }
+        .hover\:bg-accent-gold-dark:hover { background-color: #a17b49; }
+
+        .btn-primary {
+            @apply inline-block px-8 py-3 bg-accent-gold text-white font-bold rounded-lg shadow-md transition-all duration-300 hover:bg-accent-gold-dark hover:shadow-xl transform hover:-translate-y-1;
+        }
+        .btn-secondary {
+             @apply inline-block px-8 py-3 bg-zinc-200 text-primary-charcoal font-bold rounded-lg shadow-md transition-all duration-300 hover:bg-zinc-300 hover:shadow-xl transform hover:-translate-y-1;
+        }
+        .section-title {
+            @apply text-3xl sm:text-4xl font-black text-center text-primary-charcoal mb-4;
+        }
+        .section-subtitle {
+            @apply text-lg text-center text-zinc-600 mb-12 max-w-3xl mx-auto;
+        }
+
+    </style>
+</head>
+<body class="antialiased">
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Hero Video Banner Section -->
+        <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden bg-black">
+            <!-- Video Background -->
+            <video autoplay muted loop playsinline class="absolute z-0 w-full h-auto md:w-auto md:min-w-full md:min-h-full md:max-w-none">
+                <source src="videos/hero-banner.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline class="absolute z-0 w-full h-full object-cover">
+                <!-- Video cho màn hình lớn (desktop) -->
+                <source src="videos/hero-banner.mp4" type="video/mp4" media="all and (min-width: 768px)">
+                <!-- Video cho màn hình nhỏ (mobile) - khổ 9:16 -->
+                <source src="videos/hero-banner-mo.mp4" type="video/mp4" media="(max-width: 767px)">
+                Your browser does not support the video tag.
+            </video>
+            
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+
+            <!-- Content -->
+            <div class="relative z-20 p-8 max-w-3xl" data-aos="fade-up" data-aos-duration="1200">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight drop-shadow-lg">
+                    Transforming Your House Into a <span class="text-accent-gold">Dream Home</span>
+                </h1>
+                <p class="mt-6 text-lg md:text-xl font-light text-zinc-200 drop-shadow-md">
+                    We provide high-end design and renovation solutions, turning your vision into a beautiful, tangible reality with unmatched quality and craftsmanship.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+                    <a href="#services" class="btn-secondary !bg-white/20 !text-white hover:!bg-white/30">View Services</a>
+                </div>
+            </div>
+        </section>
+
         <section class="py-20 md:py-32 bg-white">
             <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 <div class="w-full lg:w-1/2" data-aos="fade-right">
-                    <div class="relative w-full h-0 pb-[56.25%] lg:pb-0 lg:h-auto lg:aspect-video rounded-xl shadow-2xl overflow-hidden">
-                        <video controls poster="https://placehold.co/800x450/b48c56/27272a?text=Our+Process" class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop>
+                    <div class="relative aspect-video rounded-xl shadow-2xl overflow-hidden">
+                        <video controls poster="https://placehold.co/800x450/b48c56/27272a?text=Our+Process" class="w-full h-full object-cover" autoplay muted loop>
                             <source src="videos/khahome.com.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -33,3 +122,209 @@
                 </div>
             </div>
         </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="py-20 md:py-32 bg-zinc-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="section-title">Why Choose Kha Dock & Homes?</h2>
+                    <p class="section-subtitle">We don't just build and repair; we create living spaces founded on lasting values.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-5xl mx-auto">
+                    <div class="p-8 bg-white rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-accent-gold text-white mx-auto mb-6 text-2xl">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Superior Quality</h3>
+                        <p class="text-zinc-600">Using the finest materials and advanced construction techniques to ensure every project is durable and beautiful for years to come.</p>
+                    </div>
+                    <div class="p-8 bg-white rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-accent-gold text-white mx-auto mb-6 text-2xl">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Trusted Partner</h3>
+                        <p class="text-zinc-600">Always transparent in our process, respectful of your budget, and committed to on-time project completion.</p>
+                    </div>
+                    <div class="p-8 bg-white rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-accent-gold text-white mx-auto mb-6 text-2xl">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Creative Innovation</h3>
+                        <p class="text-zinc-600">Our design team stays current with the latest trends to deliver unique and perfectly tailored solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Featured Projects Section -->
+        <section class="py-20 md:py-32 bg-primary-charcoal text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title !text-white" data-aos="fade-up">Our Masterpieces</h2>
+                <p class="section-subtitle !text-zinc-300" data-aos="fade-up" data-aos-delay="100">
+                    Discover some of our recent work that showcases our meticulous craftsmanship.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/projects/kitchenremodel.png" alt="Modern Kitchen Remodel Project" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-primary-charcoal">Modern Kitchen</h3>
+                            <p class="text-zinc-600 mt-2">Optimizing the space for both functionality and aesthetics.</p>
+                            <a href="projects.html" class="text-accent-gold font-semibold mt-4 inline-block transition-transform duration-300 group-hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+                        <img src="images/projects/lux-bathroom.png" alt="Luxury Bathroom Renovation Project" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-primary-charcoal">Luxury Bath Retreat</h3>
+                            <p class="text-zinc-600 mt-2">Turning an old bathroom into a high-end, spa-like space.</p>
+                            <a href="projects.html" class="text-accent-gold font-semibold mt-4 inline-block transition-transform duration-300 group-hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="400">
+                        <img src="images/projects/wood-floor.png" alt="Natural Wood Flooring Installation Project" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-primary-charcoal">Natural Wood Flooring</h3>
+                            <p class="text-zinc-600 mt-2">Bringing warmth and elegance to the home.</p>
+                            <a href="projects.html" class="text-accent-gold font-semibold mt-4 inline-block transition-transform duration-300 group-hover:translate-x-1">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
+                    <a href="projects.html" class="btn-primary !bg-white !text-primary-charcoal hover:!bg-zinc-200">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="services" class="py-20 md:py-32 bg-zinc-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    From minor updates to complete transformations, we have you covered.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-home text-5xl text-accent-gold mb-4"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Full-Scale Renovations</h3>
+                        <p class="text-zinc-600">Completely refresh your living space, inside and out.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-sink text-5xl text-accent-gold mb-4"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Kitchen & Bath Remodeling</h3>
+                        <p class="text-zinc-600">Transform functional spaces into areas of comfort and luxury.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-drafting-compass text-5xl text-accent-gold mb-4"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Design & Consultation</h3>
+                        <p class="text-zinc-600">Our team of experts will work with you to conceptualize and bring your space to life.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
+                    <a href="services.html" class="btn-primary">View All Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="section-title" data-aos="fade-up">What Our Clients Say</h2>
+                <div class="relative max-w-2xl mx-auto mt-12 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 -left-4 text-6xl text-accent-gold opacity-10">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div id="testimonial-slider" class="overflow-hidden">
+                        <div class="flex transition-transform duration-500 ease-in-out">
+                            <!-- Testimonial 1 -->
+                            <div class="w-full flex-shrink-0 p-4">
+                                <p class="text-zinc-700 italic text-xl mb-4">
+                                    “Fantastic service! Kha Dock & Homes Construction LLC transformed my old kitchen into a modern and fully functional space.”
+                                </p>
+                                <p class="font-bold text-primary-charcoal text-lg">- Sarah M., Orlando, FL</p>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div class="w-full flex-shrink-0 p-4">
+                                <p class="text-zinc-700 italic text-xl mb-4">
+                                    “The team was professional and dedicated. They helped us renovate our bathroom perfectly, exceeding our expectations.”
+                                </p>
+                                <p class="font-bold text-primary-charcoal text-lg">- John D., Miami, FL</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="absolute -bottom-4 -right-4 text-6xl text-accent-gold opacity-10">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section --> 
+        <section class="py-20 md:py-32 bg-accent-gold">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight text-white">
+                    Ready to Transform Your Home?
+                </h2>
+                <p class="mt-4 text-xl text-white/80 max-w-2xl mx-auto">
+                    Contact us today for a free consultation and quote.
+                </p>
+                <a href="contact.html" class="btn-primary mt-8 !bg-primary-charcoal !text-white hover:!bg-primary-charcoal-dark">
+                    Contact Us Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <div id="fab-container-placeholder"></div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    
+    <!-- App Scripts -->
+    <script type="module" src="js/firebase.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/loadComponents.js" type="module" defer></script>
+    <script src="js/fab-container.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header, footer, etc.
+            if (typeof loadAppComponents === 'function') {
+                loadAppComponents();
+            } else {
+                console.error('Error: loadAppComponents function not found. Please check js/loadComponents.js file.');
+            }
+
+            // Testimonial Slider Logic
+            const slider = document.getElementById('testimonial-slider');
+            if (slider) {
+                const slides = slider.querySelector('div');
+                let currentIndex = 0;
+                const totalSlides = slides.children.length;
+
+                const updateSlider = () => {
+                    if (slides) {
+                        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    }
+                };
+
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateSlider();
+                }, 7000);
+            }
+
+            // AOS Initialization
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    offset: 120,
+                    duration: 900,
+                    easing: 'ease-out-quad',
+                    once: true,
+                });
+            }
+        });
+    </script>
+</body>
+</html>
