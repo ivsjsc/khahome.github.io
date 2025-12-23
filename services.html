@@ -25,20 +25,109 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f4f4f5; /* Zinc-100 - Ash Gray */
-            color: #3f3f46; /* Zinc-700 */
+            background-color: #ffffff; /* Updated to use modern white background */
+            color: #374151; /* Zinc-700 */
         }
         /* Refined Color Palette */
         .text-primary-charcoal { color: #27272a; } /* Zinc-800 */
         .bg-primary-charcoal { background-color: #27272a; }
         .hover\:bg-primary-charcoal-dark:hover { background-color: #18181b; } /* Zinc-900 */
-        
+
         .text-accent-gold { color: #b48c56; }
         .bg-accent-gold { background-color: #b48c56; }
         .hover\:bg-accent-gold-dark:hover { background-color: #a17b49; }
 
         .hero-section-services {
             background: linear-gradient(rgba(39, 39, 42, 0.7), rgba(39, 39, 42, 0.7)), url('images/banners/services.png') no-repeat center center/cover;
+        }
+
+        /* Custom styles for enhanced UI */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #27272a;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #F97316 0%, #ea580c 100%);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #6b7280;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, #F97316 0%, #ea580c 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .btn-primary {
+            background-color: #b48c56;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(180, 140, 86, 0.25);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-primary:hover {
+            background-color: #a17b49;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(180, 140, 86, 0.3);
+            color: white;
         }
     </style>
 </head>
@@ -60,43 +149,43 @@
         </section>
 
         <!-- Services Section -->
-        <section class="py-16 md:py-24 bg-white">
+        <section class="py-20 md:py-32 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary-charcoal mb-4" data-aos="fade-up">What We Offer</h2>
-                    <p class="text-zinc-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-center mb-16">
+                    <h2 class="section-title" data-aos="fade-up">What We Offer</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                         From initial concept to completion and maintenance, Kha Dock & Homes Construction LLC is with you every step of the way.
                     </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-zinc-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-sink text-5xl text-accent-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Kitchen Remodeling</h3>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-sink text-5xl text-accent-gold mb-6"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-3">Kitchen Remodeling</h3>
                         <p class="text-zinc-600">Modernize your cooking space with new cabinetry, countertops, and state-of-the-art appliances.</p>
                     </div>
-                    <div class="bg-zinc-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                        <i class="fas fa-shower text-5xl text-accent-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Bathroom Renovation</h3>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-shower text-5xl text-accent-gold mb-6"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-3">Bathroom Renovation</h3>
                         <p class="text-zinc-600">Turn your outdated bathroom into a luxurious retreat with new tubs, showers, and tiling.</p>
                     </div>
-                    <div class="bg-zinc-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fas fa-paint-roller text-5xl text-accent-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Interior & Exterior Painting</h3>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-paint-roller text-5xl text-accent-gold mb-6"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-3">Interior & Exterior Painting</h3>
                         <p class="text-zinc-600">Update your home's appearance with a fresh coat of paint, providing a vibrant and lasting finish.</p>
                     </div>
-                    <div class="bg-zinc-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
-                        <i class="fas fa-tools text-5xl text-accent-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Repair & Upgrades</h3>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-tools text-5xl text-accent-gold mb-6"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-3">Repair & Upgrades</h3>
                         <p class="text-zinc-600">We provide comprehensive repair and maintenance services, from minor fixes to major upgrades.</p>
                     </div>
-                    <div class="bg-zinc-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
-                        <i class="fas fa-layer-group text-5xl text-accent-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Flooring Installation</h3>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                        <i class="fas fa-layer-group text-5xl text-accent-gold mb-6"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-3">Flooring Installation</h3>
                         <p class="text-zinc-600">Choose from a wide range of high-quality flooring materials to complete your home's look and feel.</p>
                     </div>
-                    <div class="bg-zinc-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="700">
-                        <i class="fas fa-drafting-compass text-5xl text-accent-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Design & Consultation</h3>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-drafting-compass text-5xl text-accent-gold mb-6"></i>
+                        <h3 class="text-2xl font-bold text-primary-charcoal mb-3">Design & Consultation</h3>
                         <p class="text-zinc-600">Our team of experts will work with you to conceptualize and design the perfect space.</p>
                     </div>
                 </div>
