@@ -2083,3 +2083,106 @@ p {
     color: #dc2626;
     border-left: 4px solid #ef4444;
 }
+
+/* FAB Button Styles */
+.fab-item {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 50;
+    background-color: var(--primary-orange);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: var(--transition-ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fab-item:hover {
+    background-color: var(--primary-orange-dark);
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.fab-item:active {
+    transform: scale(0.95);
+}
+
+@media (min-width: 768px) {
+    .fab-item {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+/* Contact Popup Styles */
+#contact-popup {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    z-index: 50;
+    min-width: 20rem;
+    max-width: 24rem;
+}
+
+#contact-popup h3 {
+    color: var(--ivs-gray-900);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+#contact-popup a {
+    color: var(--ivs-gray-700);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#contact-popup a:hover {
+    color: var(--primary-orange);
+}
+
+#contact-popup .fas {
+    color: var(--primary-orange);
+}
+
+#contact-popup .hover\:bg-gray-50:hover {
+    background-color: #f9fafb;
+}
+
+#close-contact-popup {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease;
+}
+
+#close-contact-popup:hover {
+    background-color: #f3f4f6;
+}
+
+/* Responsive adjustments for FAB */
+@media (max-width: 768px) {
+    .fab-item {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    #contact-popup {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        left: 1.5rem;
+        min-width: auto;
+        max-width: calc(100% - 3rem);
+    }
+}

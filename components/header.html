@@ -238,19 +238,49 @@
         </nav>
     </div>
 </header>
+
+<!-- Contact FAB Button -->
 <button id="contact-fab-btn" title="Liên hệ ngay" aria-label="Liên hệ ngay"
-        class="fab-item flex items-center justify-center w-12 h-12 md:w-14 md:h-14"
+        class="fab-item fixed bottom-6 right-6 z-50 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-primary-orange text-white rounded-full shadow-lg cursor-pointer transition-transform duration-300 hover:scale-110 hover:shadow-xl"
         tabindex="0" role="button">
     <i class="fas fa-phone text-lg"></i>
 </button>
+
+<!-- Contact Info Popup -->
+<div id="contact-popup" class="fixed bottom-20 right-6 z-50 hidden w-64 bg-white rounded-lg shadow-xl p-4 border border-gray-200">
+    <div class="flex justify-between items-center mb-3">
+        <h3 class="font-bold text-primary-charcoal">Liên hệ với chúng tôi</h3>
+        <button id="close-contact-popup" class="text-gray-500 hover:text-gray-700">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="space-y-2">
+        <div class="flex items-center p-2 hover:bg-gray-50 rounded">
+            <i class="fas fa-phone text-primary-orange mr-3"></i>
+            <a href="tel:+18139393989" class="text-primary-charcoal hover:text-primary-orange">+1 813-939-3989</a>
+        </div>
+        <div class="flex items-center p-2 hover:bg-gray-50 rounded">
+            <i class="fas fa-envelope text-primary-orange mr-3"></i>
+            <a href="mailto:khallc3989@gmail.com" class="text-primary-charcoal hover:text-primary-orange">khallc3989@gmail.com</a>
+        </div>
+        <div class="flex items-center p-2 hover:bg-gray-50 rounded">
+            <i class="fas fa-map-marker-alt text-primary-orange mr-3"></i>
+            <span class="text-primary-charcoal">2055 W Bearss Ave, Tampa, FL 33618</span>
+        </div>
+        <a href="contact.html" class="block w-full mt-3 text-center px-4 py-2 bg-primary-orange text-white rounded-lg hover:bg-primary-orange-dark transition-colors">
+            Gửi tin nhắn
+        </a>
+    </div>
+</div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Self-contained script to control mobile menu
     const menuButton = document.getElementById('mobile-menu-button');
-    const menuPanel = document.getElementById('mobile-menu-panel');    
+    const menuPanel = document.getElementById('mobile-menu-panel');
     const openIcon = document.getElementById('icon-menu-open');
     const closeIcon = document.getElementById('icon-menu-close');
-    
+
     const openMenu = () => {
         if (menuPanel) menuPanel.classList.add('open');
         if (menuButton) menuButton.setAttribute('aria-expanded', 'true');
@@ -273,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
             isExpanded ? closeMenu() : openMenu();
         });
     }
-    
+
     if (menuPanel) {
         menuPanel.addEventListener('click', (e) => { // Close when clicking on the overlay
             if (e.target === menuPanel) {
@@ -307,6 +337,33 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add a small delay to allow navigation to start before closing
             setTimeout(closeMenu, 100);
         });
+    });
+
+    // Contact FAB Button functionality
+    const contactFabBtn = document.getElementById('contact-fab-btn');
+    const contactPopup = document.getElementById('contact-popup');
+    const closeContactPopup = document.getElementById('close-contact-popup');
+
+    if (contactFabBtn) {
+        contactFabBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            contactPopup.classList.toggle('hidden');
+        });
+    }
+
+    if (closeContactPopup) {
+        closeContactPopup.addEventListener('click', function() {
+            contactPopup.classList.add('hidden');
+        });
+    }
+
+    // Close popup when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!contactPopup.contains(event.target) &&
+            !contactFabBtn.contains(event.target) &&
+            !contactPopup.classList.contains('hidden')) {
+            contactPopup.classList.add('hidden');
+        }
     });
 });
 </script>
