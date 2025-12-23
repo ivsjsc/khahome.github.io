@@ -1,60 +1,89 @@
-document.addEventListener('DOMContentLoaded', initFab);
-document.addEventListener('fab:loaded', initFab);
-document.addEventListener('components:loaded', initFab);
+document.addEventListener('allAppComponentsLoaded', () => {
+    console.log('FAB script: allAppComponentsLoaded event received');
+    const fabContainer = document.getElementById('fab-container');
+    const contactButton = document.getElementById('contact-fab-btn');
+    const contactCard = document.getElementById('contact-info-card');
+    const contactWrapper = document.getElementById('contact-fab-wrapper');
+    const scrollTopButton = document.getElementById('scroll-to-top-btn');
 
-function initFab() {
-  const container = document.getElementById('fab-container');
-  if (!container) return;
+    console.log('FAB elements found:', { fabContainer, contactButton, contactCard, contactWrapper, scrollTopButton });
 
-  const wrapper = document.getElementById('contact-fab-wrapper');
-  const infoCard = document.getElementById('contact-info-card');
-  let contactBtn = document.getElementById('contact-fab-btn');
-
-  // If button not present, create minimal phone FAB (so UI always has control)
-  if (!contactBtn) {
-    contactBtn = document.createElement('button');
-    contactBtn.id = 'contact-fab-btn';
-    contactBtn.title = 'Liên hệ ngay';
-    contactBtn.setAttribute('aria-label', 'Liên hệ ngay');
-    contactBtn.className = 'fab-item flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-primary-orange text-white rounded-full shadow-lg';
-    contactBtn.innerHTML = '<i class="fas fa-phone"></i>';
-    container.appendChild(contactBtn);
-  }
-
-  // show/hide infoCard helper
-  const openCard = () => {
-    if (!infoCard) return;
-    infoCard.classList.remove('hidden','opacity-0','translate-y-2','pointer-events-none');
-    infoCard.classList.add('block','opacity-100','translate-y-0','pointer-events-auto');
-  };
-  const closeCard = () => {
-    if (!infoCard) return;
-    infoCard.classList.add('hidden','opacity-0','translate-y-2','pointer-events-none');
-    infoCard.classList.remove('block','opacity-100','translate-y-0','pointer-events-auto');
-  };
-
-  let opened = false;
-  contactBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    opened = !opened;
-    opened ? openCard() : closeCard();
-  });
-
-  document.addEventListener('click', (e) => {
-    if (opened && wrapper && !wrapper.contains(e.target)) {
-      opened = false;
-      closeCard();
+    if (!fabContainer) {
+        console.error('FAB container not found. Ensure fab-container.html is loaded.');
+        return;
     }
-  });
 
-  // scroll-to-top button handling (if exists)
-  const scrollBtn = container.querySelector('#scroll-to-top-btn');
-  if (scrollBtn) {
-    const update = () => {
-      if (window.scrollY > 300) scrollBtn.classList.remove('hidden'); else scrollBtn.classList.add('hidden');
-    };
-    window.addEventListener('scroll', update, { passive: true });
-    update();
-    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  }
-}
+    function showContactCard() {
+        console.log('Showing contact card');
+        if (!contactCard) return;
+        contactCard.classList.remove('hidden');
+        requestAnimationFrame(() => {
+            contactCard.classList.remove('opacity-0', 'translate-y-2', 'pointer-events-none');
+            contactCard.classList.add('opacity-100', 'translate-y-0');
+        });
+    }
+
+    function hideContactCard() {
+        console.log('Hiding contact card');
+        if (!contactCard) return;
+        contactCard.classList.add('opacity-0', 'translate-y-2', 'pointer-events-none');
+        contactCard.classList.remove('opacity-100', 'translate-y-0');
+        setTimeout(() => {
+            if (contactCard.classList.contains('opacity-0')) {
+                contactCard.classList.add('hidden');
+            }
+        }, 180);
+    }
+
+    if (contactButton && contactCard && contactWrapper) {
+        console.log('Attaching contact button event listener');
+        contactButton.addEventListener('click', (event) => {
+            console.log('Contact button clicked');
+            event.stopPropagation();
+            const isHidden = contactCard.classList.contains('hidden') || contactCard.classList.contains('opacity-0');
+            console.log('Is hidden:', isHidden);
+            if (isHidden) {
+                showContactCard();
+            } else {
+                hideContactCard();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!contactWrapper.contains(event.target)) {
+                hideContactCard();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                hideContactCard();
+            }
+        });
+    } else {
+        console.warn('Contact FAB elements missing.');
+    }
+
+    if (scrollTopButton) {
+        console.log('Setting up scroll-to-top button');
+        const toggleScrollButton = () => {
+            if (window.scrollY > 200) {
+                scrollTopButton.classList.remove('opacity-0', 'pointer-events-none', 'scale-90');
+                scrollTopButton.classList.add('opacity-100', 'scale-100');
+            } else {
+                scrollTopButton.classList.add('opacity-0', 'pointer-events-none', 'scale-90');
+                scrollTopButton.classList.remove('opacity-100', 'scale-100');
+            }
+        };
+
+        toggleScrollButton();
+        window.addEventListener('scroll', toggleScrollButton, { passive: true });
+
+        scrollTopButton.addEventListener('click', () => {
+            console.log('Scroll-to-top clicked');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    } else {
+        console.warn('Scroll-to-top FAB button not found.');
+    }
+});
