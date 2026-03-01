@@ -1,4 +1,4 @@
-<header class="nav-header fixed inset-x-0 top-0 z-40 border-b border-primary-gold/50 shadow-lg bg-gradient-to-r from-primary-navy via-primary-navy-light to-primary-navy">
+<header class="nav-header fixed inset-x-0 top-0 z-40 border-b border-primary-gold/70 shadow-lg bg-primary-navy">
     <style>
         /* Self-contained styles for mobile menu */
         #mobile-menu-panel {
@@ -47,17 +47,21 @@
         }
 
         .dropdown-menu {
-            border-radius: 0.5rem;
+            border-radius: 0.75rem;
             overflow: hidden;
+            background-color: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
         }
 
         .dropdown-menu a {
             transition: all 0.2s ease;
+            color: #f8fafc;
         }
 
         .dropdown-menu a:hover {
-            background-color: #fff9f0;
-            color: #D4AF37;
+            background-color: rgba(212, 175, 55, 0.22);
+            color: var(--primary-gold);
             padding-left: 1rem;
         }
 
@@ -67,9 +71,10 @@
         }
 
         .mobile-menu-item:hover {
-            background-color: rgba(212,175,55,0.1);
+            background-color: rgba(212, 175, 55, 0.2);
             color: var(--primary-gold);
             transform: translateX(5px);
+            border-color: var(--primary-gold);
         }
 
         .mobile-submenu-content {
@@ -82,23 +87,53 @@
         }
 
         .mobile-submenu-content a:hover {
-            background-color: #fff9f0;
-            color: #D4AF37;
+            background-color: rgba(212, 175, 55, 0.18);
+            color: var(--primary-gold);
             padding-left: 1rem;
+        }
+
+        .nav-header {
+            background-color: var(--primary-navy);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.7);
+            text-shadow: 0 3px 16px rgba(0, 0, 0, 0.7);
+        }
+
+        .nav-header .logo span,
+        .nav-links a,
+        .nav-links button,
+        .mobile-menu-item,
+        .mobile-submenu-toggle {
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .nav-header i,
+        .mobile-menu-item i,
+        .mobile-submenu-icon,
+        #mobile-menu-button svg {
+            color: var(--primary-gold) !important;
+        }
+
+        #mobile-menu-button {
+            color: var(--primary-gold);
+        }
+
+        .nav-links a::after {
+            background-color: rgba(212, 175, 55, 0.95);
         }
 
         /* Mobile-specific styles */
         @media (max-width: 1024px) {
             .nav-links {
-                background: rgba(44, 69, 99, 0.85);
-                backdrop-filter: blur(10px);
+                background: rgba(15, 23, 42, 0.95);
+                border: 1px solid rgba(212, 175, 55, 0.3);
+                backdrop-filter: blur(18px);
                 position: absolute;
                 top: 100%;
                 left: 0;
                 right: 0;
                 padding: 1rem;
-                border-radius: 0 0 0.5rem 0.5rem;
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 0.8rem 0.8rem;
+                box-shadow: 0 20px 35px rgba(0, 0, 0, 0.45);
                 display: none;
                 flex-direction: column;
                 z-index: 50;
@@ -125,8 +160,8 @@
             }
         }
     </style>
-    <div class="mx-auto flex h-12 lg:h-16 max-w-7xl items-center justify-between px-4 lg:px-6">
-<a href="index.html" class="flex items-center gap-3 transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500 rounded-md p-2">
+    <div class="mx-auto flex h-12 lg:h-12 max-w-7xl items-center justify-between px-4 lg:px-6">
+<a href="index.html" class="flex items-center gap-3 transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-navy rounded-md p-2">
             <img src="images/logo/logo.png" alt="Kha Dock & Homes Construction LLC logo" class="h-10 w-10 rounded-lg shadow-sm ring-2 ring-white/20" loading="eager" width="40" height="40">
             <div class="leading-tight">
                 <span class="text-xl font-extrabold text-white drop-shadow-sm">Kha Dock & Homes</span>
@@ -136,26 +171,26 @@
 
         <!-- Desktop Navigation -->
         <nav class="nav-links hidden items-center gap-1 lg:flex">
-            <a href="index.html" class="text-sm font-semibold text-white hover:text-primary-gold px-3 py-2 rounded-md transition-colors drop-shadow-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500">Home</a>
+            <a href="index.html" class="text-sm font-semibold text-white hover:text-primary-gold px-3 py-2 rounded-md transition-colors drop-shadow-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-navy">Home</a>
 
             <div class="relative group">
-                <button type="button" class="flex items-center text-sm font-semibold text-white hover:text-primary-gold px-3 py-2 rounded-md transition-colors drop-shadow-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500" aria-expanded="false" aria-haspopup="true">
+                <button type="button" class="flex items-center text-sm font-semibold text-white hover:text-primary-gold px-3 py-2 rounded-md transition-colors drop-shadow-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-navy" aria-expanded="false" aria-haspopup="true">
                     Services
                     <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
                 </button>
                 <div class="dropdown-menu invisible absolute left-0 mt-2 w-64 origin-top transform rounded-lg bg-white shadow-xl ring-1 ring-black ring-opacity-5 opacity-0 transition-all duration-300 group-hover:visible group-hover:scale-100 group-hover:opacity-100 z-50 focus:outline-none" role="menu" aria-label="Services menu">
                     <div class="p-2">
-                        <a href="services.html" class="block rounded-md px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:bg-primary-gold-light hover:text-primary-gold-dark focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2">All Services</a>
-                        <a href="services.html#dock" class="block rounded-md px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:bg-primary-gold-light hover:text-primary-gold-dark focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2">Dock Construction</a>
-                        <a href="services.html#remodeling" class="block rounded-md px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:bg-primary-gold-light hover:text-primary-gold-dark focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2">Remodeling &amp; Upgrade</a>
-                        <a href="services.html#repair" class="block rounded-md px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:bg-primary-gold-light hover:text-primary-gold-dark focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2">Repair &amp; Maintenance</a>
+                        <a href="services.html" class="block rounded-md px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-gold-light hover:text-primary-gold-dark focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2">All Services</a>
+                        <a href="services.html#dock" class="block rounded-md px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-gold-light hover:text-primary-gold-dark focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2">Dock Construction</a>
+                        <a href="services.html#remodeling" class="block rounded-md px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-gold-light hover:text-primary-gold-dark focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2">Remodeling &amp; Upgrade</a>
+                        <a href="services.html#repair" class="block rounded-md px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-gold-light hover:text-primary-gold-dark focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2">Repair &amp; Maintenance</a>
                     </div>
                 </div>
             </div>
 
-            <a href="projects.html" class="text-sm font-semibold text-white hover:text-primary-gold px-3 py-2 rounded-md transition-colors drop-shadow-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500">Projects</a>
-            <a href="design.html" class="text-sm font-semibold text-white hover:text-primary-gold px-3 py-2 rounded-md transition-colors drop-shadow-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500">Design</a>
-            <a href="about.html" class="text-sm font-semibold text-white hover:text-primary-gold px-3 py-2 rounded-md transition-colors drop-shadow-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500">About Us</a>
+            <a href="projects.html" class="text-sm font-semibold text-white hover:text-primary-gold px-3 py-2 rounded-md transition-colors drop-shadow-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-navy">Projects</a>
+            <a href="design.html" class="text-sm font-semibold text-white hover:text-primary-gold px-3 py-2 rounded-md transition-colors drop-shadow-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-navy">Design</a>
+            <a href="about.html" class="text-sm font-semibold text-white hover:text-primary-gold px-3 py-2 rounded-md transition-colors drop-shadow-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-navy">About Us</a>
 
             <div class="ml-4 flex items-center gap-3">
                 <a href="https://khadock.com" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-accent-purple/20 backdrop-blur-sm px-4 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-accent-purple/30 hover:shadow-md border border-accent-purple/30 focus:outline-none focus:ring-2 focus:ring-accent-purple focus:ring-offset-2"><span class="italic drop-shadow-sm">KhaDock.com</span></a>
@@ -176,7 +211,7 @@
 
     <!-- Mobile Menu Panel -->
     <div id="mobile-menu-panel" class="fixed inset-0 z-50 bg-primary-navy-dark/75 backdrop-blur-sm lg:hidden">
-        <nav class="mobile-menu-nav h-full w-11/12 max-w-sm bg-primary-navy text-white p-6 shadow-xl" role="navigation" aria-label="mobile menu">
+        <nav class="mobile-menu-nav h-full w-11/12 max-w-sm bg-gradient-to-br from-primary-navy-dark via-primary-navy to-primary-navy text-white p-6 shadow-2xl" role="navigation" aria-label="mobile menu">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-3 mb-6 focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2 rounded-md p-2">
                 <img src="images/logo/logo.png" alt="Kha Dock & Homes Construction LLC logo" class="h-10 w-10 rounded-lg shadow-sm" loading="eager" width="40" height="40">
@@ -184,7 +219,7 @@
             </a>
 
             <!-- Divider -->
-            <div class="border-b border-zinc-200 mb-4"></div>
+            <div class="border-b border-primary-navy-light mb-4"></div>
 
             <!-- Menu Items -->
             <div class="space-y-2">
@@ -201,16 +236,16 @@
                     <div id="mobile-services-menu-content" class="mobile-submenu-content ml-4 mt-2 overflow-hidden">
                         <div class="rounded-lg border border-primary-navy-light bg-primary-navy-dark p-2 space-y-1">
                             <a href="services.html" class="block rounded px-3 py-2 text-sm font-medium text-white transition hover:bg-primary-navy-light hover:text-primary-gold focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2" tabindex="0">
-                                <i class="fas fa-list mr-2 text-zinc-400 text-xs"></i>All Services
+                                <i class="fas fa-list mr-2 text-primary-gold text-xs"></i>All Services
                             </a>
                             <a href="services.html#dock" class="block rounded px-3 py-2 text-sm font-medium text-white transition hover:bg-primary-navy-light hover:text-primary-gold focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2" tabindex="0">
-                                <i class="fas fa-anchor mr-2 text-zinc-400 text-xs"></i>Dock Construction
+                                <i class="fas fa-anchor mr-2 text-primary-gold text-xs"></i>Dock Construction
                             </a>
                             <a href="services.html#remodeling" class="block rounded px-3 py-2 text-sm font-medium text-white transition hover:bg-primary-navy-light hover:text-primary-gold focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2" tabindex="0">
-                                <i class="fas fa-hammer mr-2 text-zinc-400 text-xs"></i>Remodeling & Upgrade
+                                <i class="fas fa-hammer mr-2 text-primary-gold text-xs"></i>Remodeling & Upgrade
                             </a>
                             <a href="services.html#repair" class="block rounded px-3 py-2 text-sm font-medium text-white transition hover:bg-primary-navy-light hover:text-primary-gold focus:outline-none focus:ring-2 focus:ring-primary-gold focus:ring-offset-2" tabindex="0">
-                                <i class="fas fa-wrench mr-2 text-zinc-400 text-xs"></i>Repair & Maintenance
+                                <i class="fas fa-wrench mr-2 text-primary-gold text-xs"></i>Repair & Maintenance
                             </a>
                         </div>
                     </div>
@@ -227,7 +262,7 @@
                 </a>
 
                 <!-- Buttons -->
-                <div class="!mt-6 pt-4 border-t border-zinc-200 space-y-3">
+                <div class="!mt-6 pt-4 border-t border-primary-navy-light space-y-3">
                     <a href="https://khadock.com" class="flex items-center justify-center rounded-lg bg-accent-purple px-4 py-3 text-base font-bold text-white shadow-md transition hover:bg-accent-purple-dark hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent-purple focus:ring-offset-2" tabindex="0">
                         <i class="fas fa-anchor mr-2"></i>KhaDock.com
                     </a>

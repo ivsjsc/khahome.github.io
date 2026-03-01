@@ -13,7 +13,7 @@
     --accent-purple-light: #9D4ED6;
     --ivs-bg-dark: #2C4563;
     --ivs-bg-medium: #3D5A7F;
-    --ivs-bg-light: #4A6B8A;
+    --ivs-bg-light: #F3E8FF;
     --ivs-text-primary: #ffffff;
     --ivs-text-secondary: #E0E0E0;
     --ivs-text-body: #333333;
@@ -43,6 +43,7 @@
     --ivs-glass-blur: blur(12px);
     --transition-ease: all 0.3s ease;
     --transition-cubic: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --light-lavender: #F3E8FF;
 }
 /* ...rest of header styles from the provided header.html <style> block... */
 /* (For brevity, all header/mobile menu CSS from the attachment should be appended here) */
@@ -61,8 +62,8 @@ body {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--ivs-white);
-    color: var(--ivs-text-body);
+    background-color: var(--light-lavender);
+    color: #0f172a;
     line-height: 1.7;
     overflow-x: hidden;
     font-size: 16px;
@@ -98,6 +99,45 @@ a:hover, a:focus {
 }
 .text-shadow {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2.25rem;
+    border-radius: 0.9rem;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(135deg, #F5D58C, #D4AF37);
+    box-shadow: 0 18px 35px rgba(212, 175, 55, 0.55);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+}
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 45px rgba(212, 175, 55, 0.65);
+}
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2.25rem;
+    border-radius: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #7B2CBF, #46106D);
+    border: 2px solid #D4AF37;
+    box-shadow: 0 14px 30px rgba(123, 44, 191, 0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    text-decoration: none;
+}
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 35px rgba(123, 44, 191, 0.6);
+    background: linear-gradient(135deg, #9D4ED6, #5A1F8F);
 }
 
 .nav-header {
@@ -886,7 +926,8 @@ a:hover, a:focus {
     font-weight: 800;
     text-align: center;
     margin-bottom: 1.5rem;
-    color: var(--ivs-gray-900);
+    color: var(--primary-navy-dark);
+    text-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
     position: relative;
 }
 
@@ -913,19 +954,14 @@ a:hover, a:focus {
     font-size: 1.25rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--ivs-gray-600);
+    color: rgba(17, 24, 39, 0.85);
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .section-subtitle.light {
-    color: var(--ivs-gray-400);
-}
-
-.section-bg-light {
-    /* soft lavender background for subtle color and contrast */
-    background-color: #f3e8ff;
+    color: rgba(74, 107, 138, 0.9);
 }
 
 .section-bg-dark {
@@ -1052,7 +1088,7 @@ a:hover, a:focus {
 
 .section-bg-light {
     /* soft lavender background for subtle color and contrast */
-    background-color: #f3e8ff;
+    background-color: var(--light-lavender);
 }
 
 .section-bg-dark {
@@ -1071,9 +1107,10 @@ a:hover, a:focus {
 
 /* Enhanced Footer Styles */
 .footer-section {
-    background: linear-gradient(135deg, var(--primary-navy), var(--primary-navy-dark));
+    background: linear-gradient(120deg, var(--primary-navy-dark), #14233a 45%, var(--primary-navy));
     padding-top: 5rem;
     padding-bottom: 2rem;
+    box-shadow: inset 0 30px 45px rgba(10, 15, 30, 0.7);
 }
 
 .cta-section {
@@ -1367,16 +1404,6 @@ a:hover, a:focus {
 .bottom-nav-label {
     font-size: 0.75rem; /* text-xs */
     margin-top: 0.25rem; /* mt-1 */
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #ffffff;
-    color: #0f172a;
 }
 
 h1, h2, h3, h4, h5, h6 {
