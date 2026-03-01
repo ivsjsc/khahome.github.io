@@ -133,6 +133,13 @@
             background-color: rgba(212, 175, 55, 0.95);
         }
 
+        .nav-links a[aria-current="page"],
+        .mobile-menu-item[aria-current="page"] {
+            color: var(--primary-gold);
+            font-weight: 700;
+            border-color: var(--primary-gold);
+        }
+
         /* Mobile-specific styles */
         @media (max-width: 1024px) {
             .nav-links {
@@ -405,5 +412,38 @@ document.addEventListener('DOMContentLoaded', function() {
             closeDesktopDropdown();
         }
     });
+
+    const normalizePage = (pathname) => {
+        const cleaned = pathname.replace(/\/+$/, '');
+        const slug = cleaned.split('/').pop();
+        return slug || 'index.html';
+    };
+
+    const highlightActiveLink = () => {
+        const currentPage = normalizePage(window.location.pathname);
+        const candidates = document.querySelectorAll('.nav-links a, .mobile-menu-item');
+        candidates.forEach(link => {
+            const href = link.getAttribute('href');
+            if (!href) {
+                link.removeAttribute('aria-current');
+                return;
+            }
+
+            try {
+                const linkUrl = new URL(href, window.location.origin);
+                const linkPage = normalizePage(linkUrl.pathname);
+                if (linkPage === currentPage) {
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            } catch {
+                link.removeAttribute('aria-current');
+            }
+        });
+    };
+
+    highlightActiveLink();
+    window.addEventListener('popstate', highlightActiveLink);
 });
 </script>
