@@ -104,23 +104,23 @@
   }
   
   .btn-secondary {
-    background: linear-gradient(135deg, #7B2CBF, #5A1F8F);
-    border: none;
+    background: #2C4563;
+    border: 2px solid #D4AF37;
     border-radius: 8px;
     padding: 12px 24px;
     font-weight: 600;
     font-size: 1rem;
     color: white;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     display: inline-block;
     text-decoration: none;
   }
   
   .btn-secondary:hover {
-    background: linear-gradient(135deg, #5A1F8F, #7B2CBF);
+    background: #4A6B8A;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(123, 44, 191, 0.4);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
     text-decoration: none;
     color: white;
   }
