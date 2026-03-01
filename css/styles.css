@@ -322,23 +322,25 @@ a:hover, a:focus {
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: var(--primary-gold);
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-purple-dark));
+    color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     font-weight: 600;
     text-align: center;
     transition: var(--transition-ease);
-    border: 2px solid var(--primary-gold);
+    border: none;
     cursor: pointer;
     display: inline-block;
+    box-shadow: 0 4px 6px rgba(123, 44, 191, 0.3);
 }
 
+
 .btn-secondary:hover {
-    background-color: var(--primary-gold);
+    background: linear-gradient(135deg, var(--accent-purple-dark), var(--accent-purple));
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 4px 6px rgba(123, 44, 191, 0.35);
 }
 
 .btn-accent {
@@ -922,7 +924,8 @@ a:hover, a:focus {
 }
 
 .section-bg-light {
-    background-color: var(--ivs-gray-50);
+    /* soft lavender background for subtle color and contrast */
+    background-color: #f3e8ff;
 }
 
 .section-bg-dark {
@@ -1048,7 +1051,8 @@ a:hover, a:focus {
 }
 
 .section-bg-light {
-    background-color: var(--ivs-gray-50);
+    /* soft lavender background for subtle color and contrast */
+    background-color: #f3e8ff;
 }
 
 .section-bg-dark {
@@ -2073,9 +2077,9 @@ p {
 }
 
 .notification-info {
-    background-color: #dbeafe;
-    color: #2563eb;
-    border-left: 4px solid #3b82f6;
+    background-color: #f3e8ff; /* light purple tint */
+    color: var(--accent-purple);
+    border-left: 4px solid var(--accent-purple);
 }
 
 .notification-warning {
