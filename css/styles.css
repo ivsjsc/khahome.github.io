@@ -84,12 +84,12 @@ img {
 }
 
 a {
-    color: #0ea5e9;
+    color: var(--primary-gold);
     text-decoration: none;
     transition: color 0.2s ease-in-out;
 }
 a:hover, a:focus {
-    color: #0284c7;
+    color: var(--primary-gold-dark);
     text-decoration: underline;
 }
 
@@ -101,14 +101,18 @@ a:hover, a:focus {
 }
 
 .nav-header {
-    background: linear-gradient(135deg, var(--ivs-bg-dark), var(--ivs-bg-medium));
+    /* fully opaque navy for maximum clarity */
+    background-color: var(--primary-navy);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 30px rgba(0,0,0,0.3);
+    border-bottom: 2px solid var(--primary-gold);
     transition: var(--transition-cubic);
     height: 5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.7);
 }
+
 
 .nav-header.shrink {
     height: 4rem;
@@ -398,18 +402,18 @@ a:hover, a:focus {
 
 .filter-button {
     transition: all 0.3s ease-in-out;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
 }
 .filter-button:hover {
-    background-color: #f0f9ff;
-    border-color: #7dd3fc;
-    color: #0369a1;
+    background-color: var(--primary-gold-light);
+    border-color: var(--primary-gold-dark);
 }
 .filter-button.active {
-    background-color: #0ea5e9;
+    background-color: var(--primary-gold);
     color: white;
-    border-color: #0ea5e9;
-    box-shadow: 0 4px 12px -1px rgba(14, 165, 233, 0.3), 0 2px 8px -1px rgba(14, 165, 233, 0.2);
+    border-color: var(--primary-gold);
+    box-shadow: 0 4px 12px -1px rgba(212, 175, 55, 0.3), 0 2px 8px -1px rgba(212, 175, 55, 0.2);
 }
 .project-card {
     transition: var(--transition-ease);
@@ -475,7 +479,7 @@ a:hover, a:focus {
     left: 0;
     width: 100%;
     height: 4px;
-    background: var(--ivs-accent-gradient);
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-gold));
     transform: scaleX(0);
     transform-origin: left;
     transition: var(--transition-ease);
@@ -554,7 +558,7 @@ a:hover, a:focus {
     border-radius: 10px;
 }
 .album-scroll-container::-webkit-scrollbar-thumb, .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: #94a3b8;
+    background: var(--primary-gold);
     border-radius: 10px;
     border: 2px solid #e2e8f0;
 }
@@ -691,11 +695,11 @@ a:hover, a:focus {
 .stats-counter {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #0EA5E9;
+    color: var(--primary-gold);
 }
 .highlight-box {
-    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(59, 130, 246, 0.05));
-    border-left: 4px solid #0EA5E9;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+    border-left: 4px solid var(--primary-gold);
 }
 
 .ai-design-section {
@@ -820,7 +824,7 @@ a:hover, a:focus {
     /* bottom: 2rem; Default, will be overridden for mobile */
     right: 2rem;
     z-index: 50; /* Ensure it's above bottom-nav if they overlap without spacing */
-    background-color: #0EA5E9;
+    background-color: var(--primary-gold);
     color: #ffffff;
     border: none;
     border-radius: 9999px;
@@ -843,7 +847,7 @@ a:hover, a:focus {
     visibility: visible;
 }
 #scrollToTopBtn:hover {
-    background-color: #0284c7;
+    background-color: var(--primary-gold-dark);
     transform: scale(1.1);
 }
 
@@ -892,7 +896,7 @@ a:hover, a:focus {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: var(--ivs-accent-gradient);
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-gold));
     border-radius: 2px;
 }
 
@@ -927,7 +931,7 @@ a:hover, a:focus {
 }
 
 .section-bg-accent {
-    background: linear-gradient(135deg, var(--primary-orange), var(--primary-orange-dark));
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-gold));
     color: white;
 }
 
@@ -1053,7 +1057,7 @@ a:hover, a:focus {
 }
 
 .section-bg-accent {
-    background: linear-gradient(135deg, var(--primary-orange), var(--primary-orange-dark));
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-gold));
     color: white;
 }
 
@@ -1063,7 +1067,7 @@ a:hover, a:focus {
 
 /* Enhanced Footer Styles */
 .footer-section {
-    background: linear-gradient(135deg, var(--ivs-bg-dark), var(--ivs-bg-medium));
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-navy-dark));
     padding-top: 5rem;
     padding-bottom: 2rem;
 }
@@ -1946,7 +1950,7 @@ p {
 
 .progress-bar-fill {
     height: 100%;
-    background: var(--ivs-accent-gradient);
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-gold));
     width: 0;
     transition: width 0.5s ease;
     animation: progressAnimation 1.5s ease-in-out forwards;
@@ -1970,7 +1974,7 @@ p {
 }
 
 .badge-primary {
-    background-color: var(--primary-orange);
+    background-color: var(--primary-gold);
     color: white;
 }
 
@@ -1980,7 +1984,7 @@ p {
 }
 
 .badge-accent {
-    background-color: var(--secondary-gold);
+    background-color: var(--primary-gold);
     color: white;
 }
 
@@ -2002,12 +2006,12 @@ p {
 }
 
 .chip-primary {
-    background-color: var(--primary-orange);
+    background-color: var(--primary-gold);
     color: white;
 }
 
 .chip-primary:hover {
-    background-color: var(--primary-orange-dark);
+    background-color: var(--primary-gold-dark);
 }
 
 /* Modern Card with Glass Effect */
@@ -2022,8 +2026,8 @@ p {
 /* Modern Button Variants */
 .btn-outline {
     background-color: transparent;
-    color: var(--primary-orange);
-    border: 2px solid var(--primary-orange);
+    color: var(--primary-gold);
+    border: 2px solid var(--primary-gold);
     padding: 0.65rem 1.5rem;
     border-radius: 0.5rem;
     font-weight: 600;
@@ -2034,10 +2038,10 @@ p {
 }
 
 .btn-outline:hover {
-    background-color: var(--primary-orange);
+    background-color: var(--primary-gold);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(249, 115, 22, 0.25);
+    box-shadow: 0 4px 6px rgba(212, 175, 55, 0.25);
 }
 
 .btn-icon {

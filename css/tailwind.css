@@ -82,7 +82,7 @@
   
   /* Button styles */
   .btn-primary {
-    background: linear-gradient(135deg, #FF8C00, #E67E00);
+    background: linear-gradient(135deg, #D4AF37, #B8941F);
     border: none;
     border-radius: 8px;
     padding: 12px 24px;
@@ -96,7 +96,7 @@
   }
   
   .btn-primary:hover {
-    background: linear-gradient(135deg, #E67E00, #CC6F00);
+    background: linear-gradient(135deg, #B8941F, #A17B49);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(255, 140, 0, 0.4);
     text-decoration: none;
@@ -169,7 +169,7 @@
   
   .reason-card:hover .reason-icon {
     transform: scale(1.1);
-    color: #FF8C00;
+    color: #D4AF37;
   }
   
   /* Album scroll */
@@ -208,7 +208,7 @@
     bottom: 2rem;
     right: 2rem;
     z-index: 50;
-    background-color: #FF8C00;
+    background-color: #D4AF37;
     color: #ffffff;
     border: none;
     border-radius: 9999px;
@@ -231,7 +231,7 @@
   }
   
   #scrollToTopBtn:hover {
-    background-color: #E67E00;
+    background-color: #B8941F;
     transform: scale(1.1);
   }
 }

@@ -71,10 +71,13 @@ Website chuyên nghiệp cho công ty xây dựng và cải tạo nhà ở tại
 ```
 
 ## 🎨 Color Palette
-- **Primary Orange**: #FF8C00
-- **Primary Orange Dark**: #E67E00
-- **Primary Orange Light**: #FFA500
-- **Primary Blue**: #2563eb
+- **Gold (Primary)**: #D4AF37
+- **Gold Dark**: #B8941F
+- **Gold Light**: #E8C956
+- **Navy (Background/Secondary)**: #2C4563
+- **Navy Dark**: #1A2A3A
+- **Navy Light**: #4A6B8A
+- **Accent Purple**: #7B2CBF
 - **Dark Contrast**: #0f172a
 - **Light Contrast**: #f8fafc
 
