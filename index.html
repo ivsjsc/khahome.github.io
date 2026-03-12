@@ -23,104 +23,577 @@
     <link rel="stylesheet" href="css/tailwind-output.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F3E8FF;
-            color: #0f172a;
-        }
-        /* Refined Color & Component Palette */
-        .text-primary-charcoal { color: #1A1A2E; }
-        .bg-primary-charcoal { background-color: #1A1A2E; }
-        .hover\:bg-primary-charcoal-dark:hover { background-color: #0f101d; }
-
-        .text-accent-gold { color: #D4AF37; }
-        .bg-accent-gold { background-color: #D4AF37; }
-        .hover\:bg-accent-gold-dark:hover { background-color: #B8941F; }
-
-        .section-title {
-            @apply text-3xl sm:text-4xl font-black text-center text-primary-charcoal mb-4;
-        }
-        .section-subtitle {
-            @apply text-lg text-center text-zinc-600 mb-12 max-w-3xl mx-auto;
-        }
-
-        /* Custom styles for enhanced UI */
-        .hero-section {
+        .hero-zone {
             position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            background: linear-gradient(135deg, #05060d, #0b1220 50%, #1e304d 95%);
+            color: #fefefe;
+            padding: 4.5rem 0 5rem;
+        }
+
+        .hero-zone::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.25), transparent 45%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-zone::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            right: -80px;
+            width: 420px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.25), transparent 65%);
+            z-index: 0;
+            filter: blur(1px);
+        }
+
+        .hero-zone .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            font-size: 0.85rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 600;
+        }
+
+        .hero-stats {
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 1rem;
+            padding: 1.25rem;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-card {
+            background: linear-gradient(180deg, rgba(28, 46, 77, 0.9), rgba(7, 12, 26, 0.9));
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
+            min-height: 420px;
+            position: relative;
             overflow: hidden;
         }
 
-        .hero-overlay {
+        .contact-card::after {
+            content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* more saturated navy overlay keeps the gradient and hero crisp */
-            background: linear-gradient(180deg, rgba(44, 69, 99, 0.95), rgba(9, 10, 20, 0.85));
-            z-index: 10;
+            inset: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.25), transparent 60%);
+            pointer-events: none;
         }
 
-        .hero-content {
+        .contact-card > * {
             position: relative;
-            z-index: 20;
-            max-width: 800px;
-            padding: 0 1.5rem;
-            text-shadow: 0 12px 45px rgba(0, 0, 0, 0.85);
+            z-index: 1;
         }
 
-        .hero-content h1 {
-            text-shadow: 0 18px 60px rgba(0, 0, 0, 0.9);
+        .contact-card-badge {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.4rem;
+            border-radius: 999px;
+            padding: 0.35rem 0.95rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
         }
 
-        .hero-content p {
-            color: rgba(255, 255, 255, 0.92);
-            text-shadow: 0 6px 25px rgba(0, 0, 0, 0.75);
+        .contact-card-badge span {
+            color: #fdf8f0;
+            font-weight: 600;
         }
 
-        .process-step {
-            transition: all 0.3s ease;
+        .contact-card p {
+            margin-top: 1rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.84);
         }
 
-        .process-step:hover {
-            transform: translateY(-10px);
+        .contact-row {
+            display: flex;
+            gap: 0.9rem;
+            align-items: flex-start;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 0.75rem;
+            margin-top: 1.35rem;
         }
 
-        .testimonial-card {
-            background: white;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            position: relative;
+        .contact-row:last-child {
+            border-bottom: none;
         }
 
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        .contact-row i {
+            font-size: 1.25rem;
+            color: var(--primary-gold);
+            width: 30px;
         }
 
-        .feature-icon {
-            width: 4rem;
-            height: 4rem;
+        .contact-row p {
+            margin: 0;
+        }
+
+        .contact-row .text-xs {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .floating-pill {
+            position: absolute;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: var(--primary-gold);
+            color: #0f172a;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+            transition: transform 0.3s ease;
+        }
+
+        .floating-pill a {
+            color: inherit;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .floating-pill-call {
+            bottom: -18px;
+            right: calc(50% - 30px);
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .floating-pill-whatsapp {
+            bottom: -18px;
+            right: -10px;
+            animation: float 5s ease-in-out infinite 0.4s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        .section-badge {
+            letter-spacing: 0.6em;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: clamp(2.25rem, 3.5vw, 3.5rem);
+            line-height: 1.2;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .section-subtitle {
+            color: #475569;
+            max-width: 640px;
+            margin: 0.75rem auto 0;
+            font-size: 1.05rem;
+        }
+
+        .projects-grid {
+            margin-top: 2.5rem;
+        }
+
+        .project-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            border: 1px solid rgba(15, 23, 42, 0.06);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 35px 60px rgba(15, 23, 42, 0.15);
+        }
+
+        .project-image {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.08);
+        }
+
+        .project-tag {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.85);
+            color: #fefefe;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+        }
+
+        .project-details {
+            padding: 1.5rem;
+        }
+
+        .project-details h3 {
+            margin-bottom: 0.15rem;
+            font-size: 1.4rem;
+        }
+
+        .project-details p {
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+        }
+
+        .project-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .project-link:hover i {
+            transform: translateX(4px);
+        }
+
+        .service-panel {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.3);
+            position: relative;
+            overflow: hidden;
+            min-height: 220px;
+        }
+
+        .service-panel::after {
+            content: '';
+            position: absolute;
+            inset: -40% -30%;
+            background: radial-gradient(circle, rgba(123, 44, 191, 0.25), transparent 70%);
+            opacity: 0.6;
+        }
+
+        .service-panel-icon {
+            width: 52px;
+            height: 52px;
             border-radius: 50%;
-            margin: 0 auto 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--primary-gold);
+            font-size: 1.25rem;
+            z-index: 1;
+        }
+
+        .service-panel h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .service-panel p {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6;
+            z-index: 1;
+        }
+
+        .service-panel-highlight {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: #fefefe;
+            z-index: 1;
+        }
+
+        .glass-panel {
+            border-radius: 1.25rem;
+            padding: 2.5rem;
+            background: #ffffff;
+            box-shadow: 0 25px 45px rgba(15, 23, 42, 0.08);
+        }
+
+        .contact-panel h2 {
+            color: #0f172a;
+        }
+
+        .process-panel {
+            background: #ffffff;
+            border-radius: 1.25rem;
+            padding: 2.5rem;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 25px 45px rgba(15, 23, 42, 0.08);
+        }
+
+        .process-step {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .process-step:last-child {
+            border-bottom: none;
+        }
+
+        .process-step-index {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--primary-gold);
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .process-step p {
+            margin: 0.25rem 0;
+            color: #475569;
+        }
+
+        .testimonial-panel {
+            background: white;
+            border-radius: 1.125rem;
+            padding: 2rem;
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .testimonial-panel p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #0f172a;
+        }
+
+        .testimonial-author {
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: #1e293b;
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+        }
+
+        .testimonials-grid {
+            margin-top: 2rem;
+        }
+
+        .contact-cta {
+            background: linear-gradient(135deg, #0b1220, #11182f 65%, #1e3c63 100%);
+            color: #fefefe;
+            border-radius: 1.5rem;
+            margin: 0 1rem;
+            padding: 3rem 1rem;
+            box-shadow: 0 30px 70px rgba(15, 23, 42, 0.5);
+        }
+
+        .contact-cta h2 {
+            color: #fff;
+        }
+
+        .contact-cta p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .contact-cta .btn-secondary {
+            border-color: rgba(255, 255, 255, 0.7);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-zone {
+                padding-top: 3rem;
+            }
+
+            .floating-pill-call {
+                right: 40%;
+            }
+
+            .floating-pill-whatsapp {
+                right: 0.5rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-zone {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            .contact-card {
+                min-height: auto;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-cta {
+                margin: 0;
+            }
         }
     </style>
+
 </head>
 <body class="antialiased">
     <div id="header-placeholder"></div>
 
     <main>
+        <!-- Featured Projects Section -->
+        <section class="py-16 md:py-24 section-bg-dark text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="section-title !text-white">Our Masterpieces</h2>
+                    <p class="section-subtitle !text-zinc-300">Explore our recent work showcasing quality craftsmanship.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="overflow-hidden rounded-t-xl">
+                            <img src="images/projects/kitchenremodel.png" alt="Modern Kitchen Remodel Project" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="400" height="256">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Modern Kitchen</h3>
+                            <p class="text-zinc-600 mb-4">Optimizing the space for both functionality and aesthetics.</p>
+                            <a href="projects.html" class="text-accent-gold font-semibold inline-flex items-center group-hover:gap-2 transition-all duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="overflow-hidden rounded-t-xl">
+                            <img src="images/projects/lux-bathroom.png" alt="Luxury Bathroom Renovation Project" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="400" height="256">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Luxury Bath Retreat</h3>
+                            <p class="text-zinc-600 mb-4">Turning an old bathroom into a high-end, spa-like space.</p>
+                            <a href="projects.html" class="text-accent-gold font-semibold inline-flex items-center group-hover:gap-2 transition-all duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card group" data-aos="fade-up" data-aos-delay="400">
+                        <div class="overflow-hidden rounded-t-xl">
+                            <img src="images/projects/wood-floor.png" alt="Natural Wood Flooring Installation Project" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="400" height="256">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Natural Wood Flooring</h3>
+                            <p class="text-zinc-600 mb-4">Bringing warmth and elegance to the home.</p>
+                            <a href="projects.html" class="text-accent-gold font-semibold inline-flex items-center group-hover:gap-2 transition-all duration-300">
+                                View Details <i class="fas fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="500">
+                    <a href="projects.html" class="btn-primary !bg-white !text-primary-charcoal hover:!bg-zinc-200">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="services" class="py-20 md:py-32 section-bg-light">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-subtitle">From minor updates to complete transformations, we have you covered.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-home text-5xl text-accent-gold mb-6"></i>
+                        <h3 class="text-2xl font-bold text-accent-gold mb-3">Full-Scale Renovations</h3>
+                        <p class="text-white">Completely refresh your living space, inside and out.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-sink text-5xl text-accent-gold mb-6"></i>
+                        <h3 class="text-2xl font-bold text-accent-gold mb-3">Kitchen & Bath Remodeling</h3>
+                        <p class="text-white">Transform functional spaces into areas of comfort and luxury.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-drafting-compass text-5xl text-accent-gold mb-6"></i>
+                        <h3 class="text-2xl font-bold text-accent-gold mb-3">Design & Consultation</h3>
+                        <p class="text-white">Our team of experts will work with you to conceptualize and bring your space to life.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="500">
+                    <a href="services.html" class="btn-primary">View All Services</a>
+                </div>
+            </div>
+        </section>
+
         <!-- Hero Section -->
         <section class="hero-section">
             <!-- Video Background -->
@@ -232,134 +705,81 @@
             </div>
         </section>
 
-
-        <!-- Featured Projects Section -->
-        <section class="py-20 md:py-32 section-bg-dark text-white">
+        <section class="py-20 md:py-32 bg-slate-900" data-aos="fade-up" id="contact-overview">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="section-title !text-white">Our Masterpieces</h2>
-                    <p class="section-subtitle !text-zinc-300">Discover some of our recent work that showcases our meticulous craftsmanship.</p>
+                <div class="text-center mb-16">
+                    <span class="inline-block text-sm font-semibold text-accent-gold uppercase tracking-wider mb-3">Contact Information</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-5">Get In Touch</h2>
+                    <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">We're here to help with your project. Reach out to us directly or connect with Mr. Kha Do.</p>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="card group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="overflow-hidden rounded-t-xl">
-                            <img src="images/projects/kitchenremodel.png" alt="Modern Kitchen Remodel Project" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="400" height="256">
-                        </div>
-                        <div class="card-content">
-                            <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Modern Kitchen</h3>
-                            <p class="text-zinc-600 mb-4">Optimizing the space for both functionality and aesthetics.</p>
-                            <a href="projects.html" class="text-accent-gold font-semibold inline-flex items-center group-hover:gap-2 transition-all duration-300">
-                                View Details <i class="fas fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card group" data-aos="fade-up" data-aos-delay="300">
-                        <div class="overflow-hidden rounded-t-xl">
-                            <img src="images/projects/lux-bathroom.png" alt="Luxury Bathroom Renovation Project" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="400" height="256">
-                        </div>
-                        <div class="card-content">
-                            <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Luxury Bath Retreat</h3>
-                            <p class="text-zinc-600 mb-4">Turning an old bathroom into a high-end, spa-like space.</p>
-                            <a href="projects.html" class="text-accent-gold font-semibold inline-flex items-center group-hover:gap-2 transition-all duration-300">
-                                View Details <i class="fas fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card group" data-aos="fade-up" data-aos-delay="400">
-                        <div class="overflow-hidden rounded-t-xl">
-                            <img src="images/projects/wood-floor.png" alt="Natural Wood Flooring Installation Project" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="400" height="256">
-                        </div>
-                        <div class="card-content">
-                            <h3 class="text-2xl font-bold text-primary-charcoal mb-2">Natural Wood Flooring</h3>
-                            <p class="text-zinc-600 mb-4">Bringing warmth and elegance to the home.</p>
-                            <a href="projects.html" class="text-accent-gold font-semibold inline-flex items-center group-hover:gap-2 transition-all duration-300">
-                                View Details <i class="fas fa-arrow-right ml-2 text-sm transition-transform group-hover:translate-x-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="500">
-                    <a href="projects.html" class="btn-primary !bg-white !text-primary-charcoal hover:!bg-zinc-200">View All Projects</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Services Section -->
-        <section id="services" class="py-20 md:py-32 section-bg-light">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="section-title">Our Services</h2>
-                    <p class="section-subtitle">From minor updates to complete transformations, we have you covered.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-home text-5xl text-accent-gold mb-6"></i>
-                        <h3 class="text-2xl font-bold text-accent-gold mb-3">Full-Scale Renovations</h3>
-                        <p class="text-white">Completely refresh your living space, inside and out.</p>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <i class="fas fa-sink text-5xl text-accent-gold mb-6"></i>
-                        <h3 class="text-2xl font-bold text-accent-gold mb-3">Kitchen & Bath Remodeling</h3>
-                        <p class="text-white">Transform functional spaces into areas of comfort and luxury.</p>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fas fa-drafting-compass text-5xl text-accent-gold mb-6"></i>
-                        <h3 class="text-2xl font-bold text-accent-gold mb-3">Design & Consultation</h3>
-                        <p class="text-white">Our team of experts will work with you to conceptualize and bring your space to life.</p>
-                    </div>
-                </div>
-
-                <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="500">
-                    <a href="services.html" class="btn-primary">View All Services</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonial Section -->
-        <section class="py-20 md:py-32 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="section-title">What Our Clients Say</h2>
-                </div>
-
-                <div class="relative max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testimonial-card mx-4">
-                        <div class="flex justify-center mb-6">
-                            <div class="flex text-accent-gold">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                <div class="max-w-4xl mx-auto bg-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-700 mb-12">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Contact Info Card 1 -->
+                        <div class="group text-center" data-aos="fade-up" data-aos-delay="100">
+                            <div class="flex justify-center mb-4">
+                                <div class="flex-shrink-0 w-14 h-14 rounded-full bg-sky-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-map-marker-alt fa-lg"></i>
+                                </div>
                             </div>
+                            <h4 class="text-lg font-bold text-white mb-2">Our Office</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">2055 W Bearss Ave, Tampa, FL 33618, USA</p>
                         </div>
-
-                        <p class="text-zinc-700 italic text-xl mb-6 text-center">
-                            “Fantastic service! Kha Dock & Homes Construction LLC transformed my old kitchen into a modern and fully functional space. The team was professional and dedicated throughout the entire process.”
-                        </p>
-
-                        <div class="flex items-center justify-center">
-                            <div class="text-center">
-                                <p class="font-bold text-primary-charcoal text-lg">Sarah M.</p>
-                                <p class="text-zinc-500">Orlando, FL</p>
+                        <!-- Contact Info Card 2 -->
+                        <div class="group text-center" data-aos="fade-up" data-aos-delay="150">
+                            <div class="flex justify-center mb-4">
+                                <div class="flex-shrink-0 w-14 h-14 rounded-full bg-sky-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-phone fa-lg"></i>
+                                </div>
                             </div>
+                            <h4 class="text-lg font-bold text-white mb-2">Phone</h4>
+                            <a href="tel:+18139393989" class="text-sky-400 hover:text-sky-300 transition-colors duration-300 text-sm font-semibold">+1 813-939-3989</a>
+                        </div>
+                        <!-- Contact Info Card 3 -->
+                        <div class="group text-center" data-aos="fade-up" data-aos-delay="200">
+                            <div class="flex justify-center mb-4">
+                                <div class="flex-shrink-0 w-14 h-14 rounded-full bg-sky-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                </div>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2">Email</h4>
+                            <a href="mailto:khallc3989@gmail.com" class="text-sky-400 hover:text-sky-300 transition-colors duration-300 text-sm font-semibold">khallc3989@gmail.com</a>
                         </div>
                     </div>
+                </div>
 
-                    <div class="absolute -top-6 -left-6 text-6xl text-accent-gold opacity-10">
-                        <i class="fas fa-quote-left"></i>
+                <!-- Profile Section -->
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white p-10 md:p-12 rounded-3xl shadow-lg border border-slate-100" data-aos="fade-up" data-aos-delay="250">
+                        <div class="flex flex-col items-center mb-8">
+                            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gradient-to-br from-accent-gold to-yellow-500 shadow-2xl mb-6 transition-transform duration-300 hover:scale-105">
+                                <img src="images/logo/doduykha.png" alt="Mr. Kha Do - KhaDock" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="text-3xl font-bold text-primary-charcoal">Mr. Kha Do</h4>
+                            <span class="text-base text-accent-gold font-semibold mt-1">Founder & Director</span>
+                        </div>
+                        <p class="text-center text-slate-600 mb-10 text-base leading-relaxed">Connect with us on social media or send a message directly. We're ready to discuss your project.</p>
+                        <div class="flex justify-center gap-6">
+                            <a href="https://www.facebook.com/profile.php?id=61575043076973" target="_blank" rel="noopener noreferrer" aria-label="KhaDock Facebook" class="social-icon-link w-12 h-12 rounded-full bg-slate-100 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg">
+                                <i class="fab fa-facebook-f fa-lg"></i>
+                            </a>
+                            <a href="http://m.me/doduy.kha" target="_blank" rel="noopener noreferrer" aria-label="KhaDock Messenger" class="social-icon-link w-12 h-12 rounded-full bg-slate-100 text-blue-500 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg">
+                                <i class="fab fa-facebook-messenger fa-lg"></i>
+                            </a>
+                            <a href="https://www.instagram.com/khadock/" target="_blank" rel="noopener noreferrer" aria-label="KhaDock Instagram" class="social-icon-link w-12 h-12 rounded-full bg-slate-100 text-pink-600 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                            <a href="https://wa.me/18139393989" target="_blank" rel="noopener noreferrer" aria-label="KhaDock WhatsApp" class="social-icon-link w-12 h-12 rounded-full bg-slate-100 text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg">
+                                <i class="fab fa-whatsapp fa-lg"></i>
+                            </a>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="absolute -bottom-6 -right-6 text-6xl text-accent-gold opacity-10">
-                        <i class="fas fa-quote-right"></i>
-                    </div>
+                <div class="text-center mt-12">
+                    <a href="contact.html" class="inline-block bg-gradient-to-r from-accent-gold to-yellow-500 hover:from-yellow-500 hover:to-accent-gold text-primary-charcoal font-bold py-4 px-12 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105 text-lg">Contact Us Now</a>
                 </div>
             </div>
         </section>
-
         <!-- Contact CTA Section -->
         <section class="py-20 md:py-32 section-bg-accent">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
