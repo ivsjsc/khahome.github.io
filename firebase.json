@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "khahome",
-    "public": "public",
+    "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
