@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind-output.css --minify",
     "dev": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind-output.css --watch",
-    "start": "npx serve ."
+    "start": "npx serve .",
+    "deploy": "npm run build && firebase deploy --only hosting:khahome",
+    "deploy:force": "npm run build && firebase deploy --only hosting:khahome --force"
   },
   "keywords": [
     "construction",
