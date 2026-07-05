@@ -16,6 +16,9 @@ build/
 .env.test.local
 .env.production.local
 
+# Firebase service account (contains sensitive credentials)
+firebase-service-account.json
+
 # IDE
 .vscode/
 .idea/
