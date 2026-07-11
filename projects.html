@@ -116,11 +116,19 @@
                     </a>
                 </div>
 
-                <div id="facebook-posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Facebook posts will be loaded dynamically here -->
-                    <div class="col-span-full text-center py-12 text-zinc-500">
-                        <i class="fab fa-facebook-f text-4xl mb-4"></i>
-                        <p>Loading latest posts...</p>
+                <div class="flex justify-center">
+                    <div class="w-full max-w-[500px] bg-white rounded-2xl shadow-xl p-3 border border-zinc-100 overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <iframe 
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkhadockllc&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" 
+                            width="100%" 
+                            height="600" 
+                            style="border:none;overflow:hidden;border-radius:12px;" 
+                            scrolling="no" 
+                            frameborder="0" 
+                            allowfullscreen="true" 
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                            title="Kha Dock & Homes Construction LLC Facebook Page Feed">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -140,7 +148,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/loadComponents.js" type="module" defer></script>
     <script src="js/app.js" type="module" defer></script>
-    <script src="js/facebook-posts.js" type="module" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Load header, footer, etc.

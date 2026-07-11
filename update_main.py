@@ -46,7 +46,7 @@ new_main = """    <main class=\"bg-slate-50 text-slate-900\">
                             <i class=\"fas fa-map-marker-alt\" aria-hidden=\"true\"></i>
                             <div>
                                 <p class=\"text-xs uppercase tracking-widest\">Office</p>
-                                <p class=\"text-base font-semibold\">2055 W Bearss Ave, Tampa, FL 33618</p>
+                                <a href=\"https://maps.app.goo.gl/CXb58ets1WuNQRaY9\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-base font-semibold hover:text-primary-gold transition-colors duration-300\">2025 W Bearss Ave, Tampa, FL 33618</a>
                             </div>
                         </div>
                         <div class=\"contact-row\">
