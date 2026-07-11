@@ -1,0 +1,239 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #0a2c5b;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 0.8em;
+    color: #f7d400;
+}
+
+.mobile-menu button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg');
+    background-size: cover;
+    color: white;
+    text-align: left;
+    padding: 20px;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #f7d400;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.hero h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0a2c5b;
+}
+
+.services {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.services li {
+    font-size: 1.2em;
+    color: white;
+    padding: 5px 10px;
+    background-color: #f7d400;
+    border-radius: 5px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-info span {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.free-estimate {
+    background-color: #f7d400;
+    color: #0a2c5b;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.signature-projects {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.signature-projects h4 {
+    font-size: 1.2em;
+    color: #f7d400;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.project-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-title {
+    background-color: #0a2c5b;
+    color: white;
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo h1 {
+        font-size: 1.2em;
+    }
+
+    .logo p {
+        font-size: 0.7em;
+    }
+
+    .mobile-menu button {
+        font-size: 1.8em;
+        margin-top: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero h3 {
+        font-size: 2em;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .services li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-info span {
+        font-size: 1.8em;
+    }
+
+    .free-estimate {
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .signature-projects h4 {
+        font-size: 1em;
+    }
+
+    .project-card {
+        max-width: 300px;
+    }
+}

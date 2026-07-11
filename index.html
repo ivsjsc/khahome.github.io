@@ -503,13 +503,20 @@
             }
         }
         
-        /* Banner section from old index.html */
+        /* Banner section optimized */
         .banner {
             width: 100%;
-            height: 500px;
+            height: 250px; /* Chiều cao vừa vặn cho điện thoại trên Mobile */
             overflow: hidden;
             position: relative;
             margin-bottom: 40px;
+        }
+
+        /* Khi lên màn hình máy tính (Desktop), tăng chiều cao lên */
+        @media (min-width: 768px) {
+            .banner {
+                height: 500px; 
+            }
         }
 
         .banner img {
@@ -532,8 +539,17 @@
 
     <!-- New Banner Section -->
     <section class="banner">
-        <div class="banner-container">
-            <img src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/742876227_122106972411384671_1625464234419296364_n.jpg?stp=dst-jpg_tt6&cstp=mx1942x809&ctp=s1942x809&_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Ycuhfp9skSoQ7kNvwGAXY8g&_nc_oc=AdpTmx_R8rI53EyiKKyoIHuqldxPVv1Rp9bIKqK0OgS9g1cM3p6tWNm2SglgyffcvF7yaRbbIi1AGGIiVyBrCErk&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=Wh0nTL-06RV3sTruqC2BTA&_nc_ss=7b2a8&oh=00_AQAdbvoac4oPTqoeY_CN8meq4FoyAGwv0KGJSn9Iqg4RTg&oe=6A584D77" alt="Kha Dock & Homes - Signature Projects" />
+        <div class="banner-container w-full h-full">
+            <picture class="w-full h-full">
+                <!-- Cấu hình cho ảnh Desktop (Màn hình từ 768px trở lên) -->
+                <source media="(min-width: 768px)" srcset="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/740779596_122107975719384671_4402344007420836583_n.jpg?stp=dst-jpg_tt6&cstp=mx1942x684&ctp=s1942x684&_nc_cat=102&ccb=1-7&_nc_sid=f727a1&_nc_ohc=Y8V9y_J-FYMQ7kNvwHQbkRH&_nc_oc=AdpFALN-15gCG36_GMk8fCt1EgC2x1UgIFnytkr7UUkzM-TKquerHHmTa2vf6tLXPSgXEL_s3W46KVRtRanfDZQv&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=BzRCYVyD9t7TBb339sqtCQ&_nc_ss=7b2a8&oh=00_AQBJYdG9kzx446DAY9oERcs1LMjQJufKXPq_ml7Zg2bTTg&oe=6A58643F">
+                
+                <!-- Cấu hình cho ảnh Mobile (Màn hình nhỏ hơn 768px) -->
+                <img src="https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-6/742278453_122107975083384671_1159838358709560782_n.jpg?stp=dst-jpg_tt6&cstp=mx506x663&ctp=s506x663&_nc_cat=103&ccb=1-7&_nc_sid=f727a1&_nc_ohc=PHOy7sVKAYMQ7kNvwGIwWLP&_nc_oc=AdpyMpfMNimHSqmGiQUcbc0es6wBFITz6hW3_QsonX--9Vb70_yHcTDjQgSjTz7XTF1D-XV3MlCdIpzFSXE2uuGv&_nc_zt=23&_nc_ht=scontent.fsgn2-9.fna&_nc_gid=4bJfo_n2HmoI3Ug_ehVYew&_nc_ss=7b2a8&oh=00_AQCRYh6LSSXb6IjKtyJnvN3Fgj4UJh99CgYTR2L0qnu7qg&oe=6A5851CF" 
+                     alt="Kha Dock & Homes - Signature Projects" 
+                     loading="eager" 
+                     class="w-full h-full object-cover block" />
+            </picture>
         </div>
     </section>
 
