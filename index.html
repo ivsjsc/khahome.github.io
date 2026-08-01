@@ -765,6 +765,43 @@
                         </div>
                     </article>
                 </div>
+
+                <!-- Google Review CTA Card -->
+                <div class="mt-12 max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-amber-100 text-center" data-aos="fade-up" data-aos-delay="350">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-50 text-amber-500 mb-4">
+                        <i class="fab fa-google text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Have you worked with us?</h3>
+                    <p class="text-slate-600 mb-6">Your feedback helps us grow and helps future clients find quality construction & remodeling services. We would love to hear your thoughts!</p>
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <a href="https://g.page/r/CYweTa8Vw9tPEAE/review" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <i class="fas fa-star text-yellow-200"></i>
+                            <span>Leave a Google Review</span>
+                            <i class="fas fa-external-link-alt text-xs opacity-80"></i>
+                        </a>
+                        <button onclick="document.getElementById('qr-modal').classList.remove('hidden')" class="inline-flex items-center gap-2 px-5 py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold rounded-xl transition-all duration-300">
+                            <i class="fas fa-qrcode text-amber-600"></i>
+                            <span>Scan QR Code</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- QR Modal -->
+                <div id="qr-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden p-4" onclick="if(event.target === this) this.classList.add('hidden')">
+                    <div class="bg-white rounded-2xl p-6 max-w-sm w-full text-center relative shadow-2xl animate-fade-in">
+                        <button onclick="document.getElementById('qr-modal').classList.add('hidden')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100 transition">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <h4 class="text-xl font-bold text-slate-900 mb-1">Scan to Review</h4>
+                        <p class="text-xs text-slate-500 mb-4">Kha Dock & Homes Construction LLC</p>
+                        <div class="bg-white p-3 border border-slate-200 rounded-xl inline-block shadow-inner mb-4">
+                            <img src="data:image/png;base64,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" alt="Google Review QR Code" class="w-44 h-44 mx-auto block">
+                        </div>
+                        <a href="https://g.page/r/CYweTa8Vw9tPEAE/review" target="_blank" rel="noopener noreferrer" class="block w-full py-2.5 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl transition text-sm">
+                            Open Direct Review Link
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
