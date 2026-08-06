@@ -1,36 +1,23 @@
-name: Build and Deploy KhaHome
+name: Manual Firebase Fallback
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '.deployment/status.json'
-  pull_request:
-    branches:
-      - main
-    types:
-      - closed
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: khahome-production
+  group: khahome-firebase-fallback
   cancel-in-progress: true
 
 jobs:
   build-and-deploy:
-    if: github.event_name != 'pull_request' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: main
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -55,7 +42,7 @@ jobs:
       - name: Install Firebase CLI
         run: npm install --global firebase-tools
 
-      - name: Deploy to Firebase Hosting
+      - name: Deploy Firebase Hosting fallback
         shell: bash
         env:
           FIREBASE_SERVICE_ACCOUNT_IVS_TECH: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_IVS_TECH }}
@@ -75,29 +62,3 @@ jobs:
             echo "Missing FIREBASE_SERVICE_ACCOUNT_IVS_TECH or FIREBASE_TOKEN repository secret." >&2
             exit 1
           fi
-
-      - name: Record deployment result
-        if: always()
-        shell: bash
-        env:
-          DEPLOY_STATUS: ${{ job.status }}
-          SOURCE_SHA: ${{ github.sha }}
-          RUN_ID: ${{ github.run_id }}
-        run: |
-          mkdir -p .deployment
-          cat > .deployment/status.json <<EOF
-          {
-            "status": "${DEPLOY_STATUS}",
-            "source_sha": "${SOURCE_SHA}",
-            "run_id": "${RUN_ID}",
-            "recorded_at_utc": "$(date -u +'%Y-%m-%dT%H:%M:%SZ')",
-            "hosting_site": "khahome",
-            "firebase_project": "ivs-tech"
-          }
-          EOF
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .deployment/status.json
-          git diff --cached --quiet || git commit -m "chore: record deployment ${DEPLOY_STATUS} [skip ci]"
-          git push
