@@ -1,8 +1,8 @@
 {
   "status": "failure",
-  "source_sha": "dd774b51ff60e3d893798df998ff131d2d4e670f",
-  "run_id": "31123903107",
-  "recorded_at_utc": "2026-08-06T17:43:50Z",
+  "source_sha": "e958c3ce25d00dc247a241dac692708c9c62a09b",
+  "run_id": "31124160464",
+  "recorded_at_utc": "2026-08-06T17:50:19Z",
   "hosting_site": "khahome",
   "firebase_project": "ivs-tech"
 }
