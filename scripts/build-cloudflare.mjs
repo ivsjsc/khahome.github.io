@@ -4,37 +4,61 @@ import path from 'node:path';
 const root = process.cwd();
 const dist = path.join(root, 'dist');
 
-const excludedRootEntries = new Set([
-  '.git',
-  '.github',
-  '.deployment',
-  '.firebase',
-  'dist',
-  'node_modules',
-  'scripts',
-  'firebase.json',
-  '.firebaserc',
-  'package.json',
-  'package-lock.json',
-  'tailwind.config.js',
-  'README.md',
-  'DEPLOY_TRIGGER.md'
+const allowedRootDirectories = new Set([
+  'assets',
+  'components',
+  'css',
+  'data',
+  'fonts',
+  'images',
+  'js',
+  'locales',
+  'media',
+  'videos'
+]);
+
+const allowedRootFiles = new Set([
+  '_headers',
+  '_redirects',
+  'CNAME',
+  'favicon.ico',
+  'manifest.webmanifest',
+  'robots.txt',
+  'sitemap.xml'
+]);
+
+const allowedRootExtensions = new Set([
+  '.html',
+  '.ico',
+  '.jpg',
+  '.jpeg',
+  '.png',
+  '.svg',
+  '.webp',
+  '.avif',
+  '.txt',
+  '.xml',
+  '.webmanifest'
 ]);
 
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
 
 for (const entry of await readdir(root)) {
-  if (excludedRootEntries.has(entry)) continue;
   const source = path.join(root, entry);
-  const target = path.join(dist, entry);
   const info = await stat(source);
 
-  if (info.isDirectory()) {
-    await cp(source, target, { recursive: true });
-  } else if (info.isFile()) {
-    await cp(source, target);
-  }
+  const shouldCopyDirectory = info.isDirectory() && allowedRootDirectories.has(entry);
+  const shouldCopyFile = info.isFile() && (
+    allowedRootFiles.has(entry) || allowedRootExtensions.has(path.extname(entry).toLowerCase())
+  );
+
+  if (!shouldCopyDirectory && !shouldCopyFile) continue;
+
+  await cp(source, path.join(dist, entry), {
+    recursive: info.isDirectory(),
+    force: true
+  });
 }
 
 console.log(`Cloudflare Pages output created at ${dist}`);
