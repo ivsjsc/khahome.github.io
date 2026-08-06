@@ -1,0 +1,67 @@
+name: Build and Deploy KhaHome
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: khahome-production
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Tailwind CSS
+        run: npm run build
+
+      - name: Validate generated site
+        shell: bash
+        run: |
+          test -s css/tailwind-output.css
+          test -s projects.html
+          grep -q "Mr. Jimmy’s Dock Renovation" projects.html
+          grep -q "https://khahome.com/projects.html" projects.html
+
+      - name: Install Firebase CLI
+        run: npm install --global firebase-tools
+
+      - name: Deploy to Firebase Hosting
+        shell: bash
+        env:
+          FIREBASE_SERVICE_ACCOUNT_IVS_TECH: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_IVS_TECH }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          if [ -n "${FIREBASE_SERVICE_ACCOUNT_IVS_TECH:-}" ]; then
+            CREDENTIALS_FILE="$RUNNER_TEMP/firebase-service-account.json"
+            printf '%s' "$FIREBASE_SERVICE_ACCOUNT_IVS_TECH" > "$CREDENTIALS_FILE"
+            chmod 600 "$CREDENTIALS_FILE"
+            export GOOGLE_APPLICATION_CREDENTIALS="$CREDENTIALS_FILE"
+            firebase deploy --only hosting:khahome --project ivs-tech --non-interactive
+          elif [ -n "${FIREBASE_TOKEN:-}" ]; then
+            firebase deploy --only hosting:khahome --project ivs-tech --token "$FIREBASE_TOKEN" --non-interactive
+          else
+            echo "Missing FIREBASE_SERVICE_ACCOUNT_IVS_TECH or FIREBASE_TOKEN repository secret." >&2
+            exit 1
+          fi
