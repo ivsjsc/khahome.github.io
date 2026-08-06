@@ -5,8 +5,10 @@
   "main": "index.html",
   "scripts": {
     "build": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind-output.css --minify",
+    "build:cloudflare": "npm run build && node scripts/build-cloudflare.mjs",
     "dev": "tailwindcss -i ./css/tailwind.css -o ./css/tailwind-output.css --watch",
     "start": "npx serve .",
+    "preview:cloudflare": "npx serve dist",
     "deploy": "npm run build && firebase deploy --only hosting:khahome --project ivs-tech",
     "deploy:force": "npm run build && firebase deploy --only hosting:khahome --force --project ivs-tech",
     "fetch-facebook": "node scripts/fetch-facebook-posts.js",
