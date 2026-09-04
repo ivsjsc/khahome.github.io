@@ -10,7 +10,7 @@ admin.initializeApp({
 const db = admin.firestore();
 
 // Facebook Graph API configuration
-const FACEBOOK_PAGE_ID = 'khadockllc';
+const FACEBOOK_PAGE_ID = 'khadockhomellc';
 const FACEBOOK_ACCESS_TOKEN = process.env.FACEBOOK_ACCESS_TOKEN;
 const FACEBOOK_API_VERSION = 'v18.0';
 

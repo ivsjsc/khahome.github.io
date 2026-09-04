@@ -121,7 +121,7 @@ function showEmptyState(container) {
         <div class="col-span-full text-center py-12 text-zinc-500">
             <i class="fab fa-facebook-f text-4xl mb-4"></i>
             <p>No posts available yet. Check back soon!</p>
-            <a href="https://www.facebook.com/khadockllc" target="_blank" rel="noopener noreferrer" 
+            <a href="https://www.facebook.com/khadockhomellc/" target="_blank" rel="noopener noreferrer" 
                class="inline-flex items-center gap-2 mt-4 text-accent-gold hover:text-accent-gold-dark font-semibold transition-colors">
                 <i class="fab fa-facebook-f"></i>
                 Visit Our Facebook Page
