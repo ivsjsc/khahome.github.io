@@ -120,6 +120,7 @@ Sử dụng AOS attributes:
 - **Địa chỉ**: 2055 W Bearss Ave, Tampa, FL 33618, USA
 - **Điện thoại**: +1 813-939-3989
 - **Email**: khallc3989@gmail.com
+- **Facebook**: [facebook.com/khadockhomellc](https://www.facebook.com/khadockhomellc/)
 - **Website**: Kha Dock & Homes Construction LLC.com
 
 ## 📄 License
@@ -127,11 +128,3 @@ Sử dụng AOS attributes:
 
 Designed by IVS Celestech, IVS JSC
 Website: ivsacademy.edu.vn
-<<<<<<< HEAD
-
-
-
-
-
-=======
->>>>>>> 9137edde7ea98fb5661a41ce98427aaa1694c7b3

@@ -6,7 +6,7 @@
    - Go to Facebook Developer Portal: https://developers.facebook.com/
    - Create an app or use existing one
    - Add "Facebook Login" product
-   - Get a Page Access Token for your page (khadockllc)
+   - Get a Page Access Token for your page (khadockhomellc)
    - Set the environment variable: `FACEBOOK_ACCESS_TOKEN=your_token_here`
 
 2. **Firebase Service Account**
